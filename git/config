@@ -1,0 +1,80 @@
+[user]
+    name = Sam Hollyer
+    email = rsamhollyer@gmail.com
+
+[core]
+    editor = nvim
+    excludesfile = /home/sam/.config/git/.gitignore_global
+
+[init]
+    defaultBranch = main
+
+[push]
+    default = upstream
+    rebase = true
+    followTags = true
+
+[pull]
+    rebase = true
+
+[commit]
+    verbose = true
+
+[column]
+    ui = auto
+
+[fetch]
+    prune = true
+
+[diff]
+    colorMoved = zebra
+
+[color]
+    ui = true
+
+[color "status"]
+    added = green reverse
+    changed = yellow reverse
+    untracked = red reverse
+
+[apply]
+    ignorewhitespace = change
+    whitespace = nowarn
+
+[hub]
+	protocol = git
+[pretty]
+    custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+#                     │        │            │            │             └─ author name
+#                     │        │            │            └─ message
+#                     │        │            └─ date (relative)
+#                     │        └─ decorations (branch, heads or tags)
+#                     └─ hash (abbreviated)
+
+[alias]
+    lg = log -m --simplify-merges --color --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%ar) %Cblue%an <%ae>%Creset' --abbrev-commit --date=relative
+    gone = "!f() { git fetch --all --prune; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D; }; f"
+    br = branch -a --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+
+    dd = diff --check --dirstat --find-copies --find-renames --histogram --color
+
+    ll = log --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%cn]%Creset %Cblue%G?%Creset'
+
+    undo = reset HEAD~1 --mixed
+    rhh = reset --hard HEAD
+    res = !git reset --hard
+    s = status
+    c = clone
+    co = checkout
+    b = branch
+    cob = checkout -b
+    del = branch -d
+
+    uncommit = reset --soft HEAD~1
+    cleanout = !git clean -df && git checkout -- .
+
+    # Output the current branch name
+    get-branch = !git rev-parse --abbrev-ref HEAD
+
+    # Shortcut to add, commit and push in one command.
+    out = "!f() { git add \"$1\" && git commit -m \"$2\" && git push; }; f"

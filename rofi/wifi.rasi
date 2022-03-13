@@ -1,0 +1,74 @@
+* {
+     font: "CaskaydiaCove Nerd Font 13";
+}
+window {
+    padding:          10;
+    height:           15%;
+    width:            15.5%;
+    location:         north east;
+    anchor:           north east;
+    x-offset:         -40%;
+    y-offset:         3%;
+    background-color: @background;
+    border-radius:    6px ;
+    border-color:     @border-color;
+    border:           0px ;
+    children: [listview];
+}
+entry {
+    spacing:    0;
+    text-color: @foreground;
+}
+mainbox {
+    padding:      0;
+    border-color: @border-color;
+    border:       0px ;
+    children:     [ inputbar,listview ];
+}
+listview {
+    fixed-height: 0;
+    padding:      5px ;
+    scrollbar:    false;
+    dynamic:      true;
+    border-color: @border-color;
+    columns:      1;
+    spacing:      4px ;
+    border:       0px ;
+}
+element-text {
+    background-color: rgba ( 0, 0, 0, 0 % );
+    text-color:       inherit;
+}
+element {
+    padding:       5px ;
+    border:        0px ;
+    border-radius: 4px ;
+    horizontal-align: 0.5;
+}
+
+
+element normal.normal {
+    background-color: @normal-background;
+    text-color:      @normal-foreground;
+}
+element normal.active {
+   background-color: @active-background;
+   text-color:       @active-foreground;
+}
+element selected.normal {
+  background-color: @active;
+  text-color:       @color15;
+}
+element selected.active {
+     background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+@import "wpg.rasi"

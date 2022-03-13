@@ -1,0 +1,58 @@
+* {
+
+}
+window {
+    background-color: @background;
+    text-color: @foreground;
+    border: 0px;
+    border-radius: 0px;
+    border-color: @border;
+    width: 20%;
+    location: center;
+    anchor: center;
+    children: [ listview ];
+}
+mainbox {
+    border: 10px;
+}
+inputbar {
+    enabled: false;
+}
+message {
+    enabled: false;
+}
+textbox {
+    enabled: false;
+}
+listview {
+    columns: 1;
+    lines: 10;
+    spacing: 4px;
+    layout: vertical;
+}
+element {
+    text-color: @background;
+    orientation: vertical;
+    border-radius: 16px;
+    margin: 5px 5px 5px 5px;
+    padding: 20px 0px 10px 0px;
+}
+
+element-icon {
+    size: 64px;
+    border: 0px;
+}
+
+element-text {
+    background-color: rgba ( 0, 0, 0, 0 % );
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    margin: 5px 10px 0px 10px;
+}
+
+element-icon selected{
+    background-color: @selected-active-background;
+}
+
+
+@import "wpg.rasi"

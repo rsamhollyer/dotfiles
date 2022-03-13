@@ -1,0 +1,63 @@
+[global_config]
+  focus = 'mouse'
+  handle_size = 10
+  geometry_hinting = True
+  inactive_color_offset = 0.9022435897435898
+  suppress_multiple_term_dialog = True
+  title_use_system_font = False
+  title_font = CaskaydiaCove Nerd Font Mono Bold Italic 13.5
+[keybindings]
+  zoom_in = <Primary>KP_Add
+  zoom_out = <Primary>KP_Subtract
+  new_tab = <Primary>t
+  split_horiz = <Primary><Shift>z
+  split_vert = <Primary><Shift>x
+  close_term = <Primary>w
+  close_window = <Primary>q
+  toggle_zoom = ""
+  scaled_zoom = ""
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_6 = <Alt>6
+  switch_to_tab_7 = <Alt>7
+  switch_to_tab_8 = <Alt>8
+  switch_to_tab_9 = <Alt>9
+  switch_to_tab_10 = <Alt>0
+  new_terminator = <Primary>n
+  edit_window_title = ""
+  edit_tab_title = ""
+  edit_terminal_title = ""
+[profiles]
+  [[default]]
+    urgent_bell = True
+    icon_bell = False
+    cursor_color = "#aaaaaa"
+    font = CaskaydiaCove Nerd Font Mono Bold Italic 14
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 50000
+    scrollback_infinite = True
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 300:150
+      maximised = False
+      fullscreen = False
+      size = 1800, 1200
+      title = sam@arch:~/.local/samsprojects/MS_DockerKub/compose
+      last_active_term = 57e71ab8-e341-42e6-a963-931fa3852d29
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = default
+      uuid = 57e71ab8-e341-42e6-a963-931fa3852d29
+[plugins]

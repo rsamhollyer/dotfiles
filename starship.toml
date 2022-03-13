@@ -1,0 +1,134 @@
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[character]
+error_symbol = "[ ✖](bold red) "
+success_symbol = "[   ](bold fg:27)"
+
+[cmd_duration]
+min_time = 5_000
+format = " [$duration]($style)"
+
+[directory]
+truncation_length = 5
+read_only = " "
+format = " [$path]($style)[$lock_symbol]($lock_style) "
+style = "bold blue"
+
+[git_branch]
+format = '\[[$symbol$branch]($style)\]'
+symbol = " "
+style = "bold purple"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold orange"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\)'
+
+[git_status]
+conflicted = "ﲅ (bold red)"
+ahead = "   x${count} (bold blue)"
+behind = " 🐢 x${count} (bold purple)"
+diverged = "     x${ahead_count} 🐢 x${behind_count}"
+untracked = "  x${count}"
+stashed = "📦 "
+modified = "📝x${count}"
+staged = "  x${count}"
+renamed = "  x ${count}"
+deleted = "﫧 x ${count}"
+format = '\[$all_status$ahead_behind\]'
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+trim_at = "-"
+style = "bold dimmed red"
+disabled = false
+
+[memory_usage]
+symbol = "  "
+format = '\[$symbol[$ram( | $swap)]($style)\]'
+
+[package]
+symbol = " "
+format = '\[[$symbol$version]($style)\]'
+
+[nodejs]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[python]
+symbol = " "
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+
+[ruby]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[rust]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[golang]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[php]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[scala]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[shell]
+zsh_indicator = " "
+unknown_indicator = "mystery shell"
+disabled = false
+style ="fg:122"
+
+[nix_shell]
+symbol = " "
+format = '\[[$symbol$state( \($name\))]($style)\]'
+
+[julia]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[java]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[docker_context]
+symbol = " "
+format = '\[[$symbol$context]($style)\]'
+
+[aws]
+symbol = "  "
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+
+[conda]
+symbol = " "
+format = '\[[$symbol$environment]($style)\]'
+
+[dart]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[time]
+time_format = "%T"
+format = "$time($style) "
+style = "dimmed green"
+disabled = true
+
+[username]
+style_user = "bold blue"
+show_always = true

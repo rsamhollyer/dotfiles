@@ -1,0 +1,62 @@
+docker
+QtProject.conf
+mimeapps.list
+dconf
+user-dirs.dirs
+user-dirs.locale
+vivaldi
+yay
+paru
+autostart
+Code - Insiders/*
+# Negate this directory
+!Code - Insiders/User
+# Except these files/directories
+Code - Insiders/User/workspaceStorage
+Code - Insiders/User/globalStorage
+.zcompdump-arch-5.8
+zsh-history
+TabNine
+xed
+configstore/
+gcloud/
+.zsh_history
+pcmanfm*
+Slack*
+wpg
+wal
+/polybar/scripts/config.toml
+oh-my-zsh
+weather.sh
+*.zcompdump*
+pulse
+gtk*
+nextjs*
+GIMP
+configstore
+wpg.rasi
+java
+minikube
+wget*
+mplayer
+spacefm/*
+Electron
+cef_user_data
+balena-etcher
+vscode-sqltools
+lutris
+Thunar
+xfce4
+deepin
+btop
+gpick
+npm
+libreoffice
+nvim
+coc
+QtProject
+gatsby
+sanity
+SpeedCrunch
+google-chrome
+font*

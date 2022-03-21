@@ -1,6 +1,14 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "alt+shift+a",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && !editorHasSelection",
+        "args": {
+            "snippet": "console.log($1)$2;"
+        }
+    },
+    {
         "key": "ctrl+shift+s",
         "command": "-workbench.action.files.saveAs"
     },
@@ -210,5 +218,31 @@
         "key": "ctrl+alt+e",
         "command": "-mysql.runQuery",
         "when": "editorLangId == 'sql'"
+    },
+    {
+        "key": "ctrl+shift+alt+z",
+        "command": "editor.action.inlineSuggest.trigger",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "alt+\\",
+        "command": "-editor.action.inlineSuggest.trigger",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "ctrl+shift+alt+a",
+        "command": "workbench.files.action.createFileFromExplorer"
+    },
+    {
+        "key": "ctrl+alt+meta+n",
+        "command": "-welcome.showNewFileEntries"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "shift+alt+q",
+        "command": "explorer.newFolder"
     }
 ]

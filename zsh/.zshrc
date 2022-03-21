@@ -73,7 +73,7 @@ zstyle ':omz:update' mode auto # update automatically without asking
 # Add wisely, as too many plugins slow down shell startup.
 # cd will suggest dotted folders/files. This also affects "k" that will display dotted files no matter what.
 
-plugins=(git wd ripgrep docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-nvm zsh-pyenv sudo pip rust ripgrep gcloud)
+plugins=(git wd ng ripgrep docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-nvm zsh-pyenv sudo pip rust ripgrep gcloud)
 
 export HISTFILE="$XDG_STATE_HOME/zsh/zsh-history"
 export SHELL_SESSION_DIR="$XDG_STATE_HOME/zsh/sessions"

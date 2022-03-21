@@ -34,16 +34,16 @@ style = "bold orange"
 format = '\([$state( $progress_current/$progress_total)]($style)\)'
 
 [git_status]
-conflicted = "ﲅ (bold red)"
-ahead = "   x${count} (bold blue)"
-behind = " 🐢 x${count} (bold purple)"
-diverged = "     x${ahead_count} 🐢 x${behind_count}"
-untracked = "  x${count}"
+conflicted = " ﲅ (bold red)"
+ahead = " x${count} (bold blue) "
+behind = "🐢x${count} (bold purple) "
+diverged = "     x${ahead_count} 🐢x${behind_count} "
+untracked = "x${count} "
 stashed = "📦 "
-modified = "📝x${count}"
-staged = "  x${count}"
-renamed = "  x ${count}"
-deleted = "﫧 x ${count}"
+modified = "📝x${count} "
+staged = " x${count} "
+renamed = " x${count} "
+deleted = "﫧x${count} "
 format = '\[$all_status$ahead_behind\]'
 
 [hostname]

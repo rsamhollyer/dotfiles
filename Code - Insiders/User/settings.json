@@ -1,4 +1,5 @@
 {
+  "editor.snippetSuggestions": "top",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -31,7 +32,7 @@
           "                    source.yaml"
         ],
         "settings": {
-          "foreground": "#00fff2",
+          "foreground": "#dda188",
           "fontStyle": "bold"
         }
       },
@@ -42,7 +43,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#ffbf00"
+          "foreground": "#158b77"
         }
       }
     ]
@@ -86,10 +87,9 @@
     "diffEditor.insertedTextBackground": "#7bd42833",
     "diffEditor.border": "#ffffff"
   },
-  "workbench.iconTheme": "icons",
+  "workbench.iconTheme": "helium-icon-theme",
   "workbench.colorTheme": "Wal Bordered",
   "walTheme.autoUpdate": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact",
@@ -134,8 +134,7 @@
     "*": true,
     "yaml": true,
     "plaintext": true,
-    "markdown": true,
-    "javascript": true
+    "markdown": false
   },
   "telemetry.telemetryLevel": "off",
   "editor.inlineSuggest.enabled": false,
@@ -207,8 +206,16 @@
   "editor.minimap.enabled": false,
   "redhat.telemetry.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.productIconTheme": "fluent-icons",
-  "window.zoomLevel": 1,
   "xml.codeLens.enabled": true,
-  "xml.format.closingBracketNewLine": true
+  "xml.format.closingBracketNewLine": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "workbench.productIconTheme": "icons-carbon",
+  "tabnine.experimentalAutoImports": true,
+  "vs-kubernetes": {
+    "vscode-kubernetes.kubectl-path.linux": "/home/sam/.vs-kubernetes/tools/kubectl/kubectl",
+    "vscode-kubernetes.helm-path.linux": "/home/sam/.vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vscode-kubernetes.minikube-path.linux": "/home/sam/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+  },
+  "window.zoomLevel": 0.85,
+  "yaml.format.enable": false
 }

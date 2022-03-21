@@ -14,6 +14,7 @@ Code - Insiders/*
 # Except these files/directories
 Code - Insiders/User/workspaceStorage
 Code - Insiders/User/globalStorage
+Code - Insiders/User/History
 .zcompdump-arch-5.8
 zsh-history
 TabNine

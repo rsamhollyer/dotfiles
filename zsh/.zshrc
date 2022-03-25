@@ -98,7 +98,7 @@ setopt HIST_SAVE_NO_DUPS
 export NVM_COMPLETION=true
 export NVM_AUTO_USE=true
 
-# Create a cache folder if it isn't exists
+# Create a cache folder if it doesn't exist
 if [ ! -d "$HOME/.cache/zsh" ]; then
     mkdir -p $HOME/.cache/zsh
 fi
@@ -108,14 +108,14 @@ export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
 
 (cat $HOME/.config/wpg/sequences &) # WPG terminal colors
 fpath=(~/.config/zsh/completions $fpath)
-autoload -U compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-$ZSH_VERSION"
+autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-$ZSH_VERSION"
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -124,18 +124,6 @@ autoload -U compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdu
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 eval "$(starship init zsh)"
 
 if [[ -d "$HOME/.local/bin" ]]; then
@@ -143,43 +131,14 @@ if [[ -d "$HOME/.local/bin" ]]; then
 fi
 
 
-export RBENV_SHELL=zsh
-source '/home/sam/.local/share/rbenv/libexec/../completions/rbenv.zsh'
-command rbenv rehash 2>/dev/null
-rbenv() {
-    local command
-    command="${1:-}"
-    if [ "$#" -gt 0 ]; then
-        shift
-    fi
-
-    case "$command" in
-    rehash | shell)
-        eval "$(rbenv "sh-$command" "$@")"
-        ;;
-    *)
-        command rbenv "$command" "$@"
-        ;;
-    esac
-}
-
-
 # PATH
-path=( /home/sam/.local/share/rbenv/shims:/home/sam/.local/share/rbenv/bin:$path $path )
 path+=(/home/sam/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /home/sam/.local/bin /usr/local/go/bin "$GOPATH/bin")
 # Prepend Path
 export PATH
-# ZSH only - keeps array PATH entries unique
 
-source $ZSH/oh-my-zsh.sh
-eval "$(rbenv init - zsh)"
+source $HOME/.config/oh-my-zsh/oh-my-zsh.sh
 export ARCHFLAGS="-arch x86_64"
 typeset -aU path
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/sam/.local/share/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sam/.local/share/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/sam/.local/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sam/.local/share/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Ctrl+Space to accept suggestion from zsh-autosuggestions (MUST come after sourcing oh my zsh stuff see https://github.com/zsh-users/zsh-autosuggestions/issues/471#issuecomment-573500890)
 bindkey '^ ' autosuggest-accept

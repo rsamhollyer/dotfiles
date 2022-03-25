@@ -244,5 +244,10 @@
     {
         "key": "shift+alt+q",
         "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-mysql.runAllQuery",
+        "when": "editorLangId == 'cql' || editorLangId == 'sql'"
     }
 ]

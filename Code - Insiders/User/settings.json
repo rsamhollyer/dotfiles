@@ -32,7 +32,7 @@
           "                    source.yaml"
         ],
         "settings": {
-          "foreground": "#dda188",
+          "foreground": "#3592bb",
           "fontStyle": "bold"
         }
       },
@@ -43,7 +43,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#158b77"
+          "foreground": "#7a8368"
         }
       }
     ]
@@ -217,5 +217,6 @@
     "vscode-kubernetes.minikube-path.linux": "/home/sam/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
   },
   "window.zoomLevel": 0.85,
-  "yaml.format.enable": false
+  "yaml.format.enable": false,
+  "database-client.showFilter": true
 }

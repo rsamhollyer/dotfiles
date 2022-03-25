@@ -52,6 +52,7 @@
 #                     └─ hash (abbreviated)
 
 [alias]
+    ph = push -u origin HEAD
     sm = switch main
     lg = log -m --simplify-merges --color --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%ar) %Cblue%an <%ae>%Creset' --abbrev-commit --date=relative
     gone = "!f() { git fetch --all --prune; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D; }; f"
@@ -63,19 +64,18 @@
 
     undo = reset HEAD~1 --mixed
     rhh = reset --hard HEAD
-    res = !git reset --hard
     s = status
+    sw = switch
     c = clone
     co = checkout
     b = branch
     cob = checkout -b
     del = branch -d
-
     uncommit = reset --soft HEAD~1
     cleanout = !git clean -df && git checkout -- .
 
     # Output the current branch name
-    get-branch = !git rev-parse --abbrev-ref HEAD
+    get = !git rev-parse --abbrev-ref HEAD
 
     # Shortcut to add, commit and push in one command.
-    out = "!f() { git add \"$1\" && git commit -m \"$2\" && git push; }; f"
+    out = "!f() { git add \"$1\" && git commit -m \"$2\" && git push origin; }; f"

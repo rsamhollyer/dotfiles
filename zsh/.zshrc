@@ -130,7 +130,6 @@ if [[ -d "$HOME/.local/bin" ]]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-
 # PATH
 path+=(/home/sam/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /home/sam/.local/bin /usr/local/go/bin "$GOPATH/bin")
 # Prepend Path

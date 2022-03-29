@@ -210,11 +210,6 @@
         "command": "workbench.action.splitEditorDown"
     },
     {
-        "key": "shift+enter",
-        "command": "mysql.runQuery",
-        "when": "editorLangId == 'sql'"
-    },
-    {
         "key": "ctrl+alt+e",
         "command": "-mysql.runQuery",
         "when": "editorLangId == 'sql'"

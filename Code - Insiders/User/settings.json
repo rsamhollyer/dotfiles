@@ -32,15 +32,18 @@
                     "                    source.yaml"
                 ],
                 "settings": {
-                    "foreground": "#dda188",
+                    "foreground": "#ff8732",
                     "fontStyle": "bold"
                 }
             },
             {
-                "scope": ["entity.name.tag.yaml", "support.type.property-name.json"],
+                "scope": [
+                    "entity.name.tag.yaml",
+                    "support.type.property-name.json"
+                ],
                 "settings": {
                     "fontStyle": "italic",
-                    "foreground": "#158b77"
+                    "foreground": "#279aa8"
                 }
             }
         ]
@@ -122,6 +125,7 @@
     "python.sortImports.path": "/home/sam/.local/bin/isort",
     "python.formatting.blackArgs": ["--line-length=88"],
     "python.sortImports.args": ["--profile=black"],
+
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
@@ -130,6 +134,7 @@
     "python.analysis.completeFunctionParens": true,
     "python.defaultInterpreterPath": "python",
     "window.restoreWindows": "folders",
+
     "files.hotExit": "off",
     "github.copilot.inlineSuggest.enable": true,
     "github.copilot.enable": {
@@ -138,6 +143,7 @@
         "plaintext": true,
         "markdown": false
     },
+
     "telemetry.telemetryLevel": "off",
     "editor.inlineSuggest.enabled": false,
     "path-autocomplete.extensionOnImport": true,
@@ -155,12 +161,19 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
+
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.rustfmt.enableRangeFormatting": true,
     "[rust]": {
         "editor.defaultFormatter": "matklad.rust-analyzer",
-        "editor.formatOnType": true
+        "editor.formatOnType": true,
+        "editor.formatOnSave": true
     },
+    "rust-analyzer.completion.autoimport.enable": true,
+
     "[javascript][javascriptreact][typescript][typescriptreact]": {
-        "editor.formatOnSave": false
+        "editor.formatOnSave": false,
+        "editor.formatOnType": false
     },
     "[jsonc][json][html][css][scss][less][sass][dockercompose]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -168,6 +181,11 @@
     "[yaml][yml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
+
+    "[toml]": {
+        "editor.defaultFormatter": "be5invis.toml"
+    },
+
     "prettier.arrowParens": "avoid",
     "prettier.embeddedLanguageFormatting": "auto",
     "prettier.proseWrap": "always",

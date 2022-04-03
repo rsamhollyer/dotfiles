@@ -3,7 +3,6 @@
 
     monitor = 0
     follow = mouse
-
     indicate_hidden = yes
     shrink = no
     transparency = 0
@@ -33,7 +32,7 @@
     #   %%  Literal %
     # Markup is allowed
     format = "<b>%s </b>\n%b"
-    alignment = center
+    alignment = right
     show_age_threshold = 60
     word_wrap = yes
     ellipsize = middle
@@ -44,8 +43,9 @@
 
     ### Icons ###
     icon_position = left
+    min_icon_size = 0
     max_icon_size = 64
-    icon_path = .icons/flattrcolor/status/24:.icons/flattrcolor/devices/48:.icons/flattrcolor/apps/scalable:.icons/flattrcolor/actions/scalable
+    icon_path = $HOME/.local/share/icons/flattrcolor/status/22:$HOME/.local/share/icons/flattrcolor/devices/64:$HOME/.local/share/icons/flattrcolor/apps/scalable:$HOME/.local/share/icons/flattrcolor/actions/scalable
 
     ### History ###
     sticky_history = yes

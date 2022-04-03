@@ -132,7 +132,7 @@ fi
 
 # PATH
 path+=(/home/sam/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /home/sam/.local/bin /usr/local/go/bin "$GOPATH/bin")
-# Prepend Path
+# Prepend Path\
 export PATH
 
 source $HOME/.config/oh-my-zsh/oh-my-zsh.sh

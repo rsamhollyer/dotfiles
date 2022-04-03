@@ -30,7 +30,11 @@ hyper + {_,shift + }e
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}
-    tdrop -am -w 98% -h 50% -x 1% -y 30% -n 0 terminator;
+    tdrop -am -w 50% -h 75% -x 25% -y 13% -n 0 terminator -r main;
+
+## Background Terminal
+alt + shift + {Return,KP_Enter}
+    tdrop -am -w 25% -h 25% -x 0 -y 0 -n 3 terminator -r tiny;
 
 ## btop
 {super,hyper} + semicolon

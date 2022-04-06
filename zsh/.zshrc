@@ -73,7 +73,7 @@ zstyle ':omz:update' mode auto # update automatically without asking
 # Add wisely, as too many plugins slow down shell startup.
 # cd will suggest dotted folders/files. This also affects "k" that will display dotted files no matter what.
 
-plugins=(git wd ng ripgrep docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-nvm zsh-pyenv sudo pip rust ripgrep gcloud)
+plugins=(git forgit wd ng fzf ripgrep docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-nvm zsh-pyenv sudo pip rust ripgrep gcloud)
 
 export HISTFILE="$XDG_STATE_HOME/zsh/zsh-history"
 export SHELL_SESSION_DIR="$XDG_STATE_HOME/zsh/sessions"
@@ -135,6 +135,15 @@ path+=(/home/sam/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /home/s
 # Prepend Path\
 export PATH
 
+# FZF
+[ -f ~/.config/.fzf.zsh ] && source ~/.config/.fzf.zsh
+
+DISABLE_FZF_AUTO_COMPLETION="false"
+export FZF_BASE=$XDG_CONFIG_HOME/fzf/
+export FZF_COMPLETION_TRIGGER="~~"
+export FZF_DEFAULT_OPS="--extended"
+
+
 source $HOME/.config/oh-my-zsh/oh-my-zsh.sh
 export ARCHFLAGS="-arch x86_64"
 typeset -aU path
@@ -143,6 +152,9 @@ typeset -aU path
 bindkey '^ ' autosuggest-accept
 bindkey '^H' backward-kill-word  # Ctrl + backspace
 bindkey '^[[3;5~' backward-kill-word  # Ctrl + delete
+bindkey -r '^T' # Remove Ctrl + T for fzf
+bindkey '^Z' fzf-file-widget # Rebind to Ctlr + A
+
 
 # do not suggest . and .. when doing cd <TAB>
 zstyle ':completion:*' special-dirs false

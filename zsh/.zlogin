@@ -1,9 +1,10 @@
-# Execute code in the background to not affect the current session
-{
-  # Compile the completion dump to increase startup speed.
-  zcompdump="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
-  if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
-    zcompile "$zcompdump"
-  fi
-} &!
-# This is not an error, but a feature of running processes of zsh
+
+# Create a cache folder if it doesn't exist
+if [ ! -d "$HOME/.cache/zsh" ]; then
+    mkdir -p $HOME/.cache/zsh
+fi
+# Define a custom file for compdump
+export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
+
+
+autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-$ZSH_VERSION"

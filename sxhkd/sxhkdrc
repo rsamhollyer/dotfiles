@@ -7,6 +7,10 @@
 #     \_____\/ \_\/  \__\/ \__\/ \::\/ \__\/\__\/  \____/_/
 
 
+# OPEN NEXT HORIZ. OR
+super + {l,k}
+    bspc node -p {east,south}
+
 # SWITCH DISPLAYS
 super + shift + m
     sh ~/.config/screenlayout/docked.sh
@@ -30,19 +34,11 @@ hyper + {_,shift + }e
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}
-    tdrop -am -w 50% -h 75% -x 25% -y 13% -n 0 terminator -r main;
-
-## Background Terminal
-alt + shift + {Return,KP_Enter}
-    tdrop -am -w 25% -h 25% -x 0 -y 0 -n 3 terminator -r tiny;
-
-## btop
-{super,hyper} + semicolon
-    tdrop -am -w 1800 -h 1200 -x 300 -y 150 -n 1 terminator -e btop;
+    tdrop -am -w 50% -h 75% -x 25% -y 13% -n 1 terminator;
 
 ## Thunar
 {super,hyper} + slash
-    tdrop -am -w 75% -h 75% -x 13% -y 13% -n 2 thunar;
+    tdrop -am -w 75% -h 75% -x 13% -y 13% thunar;
 
 # BROWSER
 hyper + a
@@ -58,7 +54,7 @@ hyper + s
 
 # NEOVIM
 hyper + d
-    terminator -x nvim --name nvim;
+    terminator -e nvim ;
 
 # FILE
 hyper + f
@@ -110,10 +106,6 @@ super + {_,shift + }{1-5}
 # RIGHT MONITOR
 hyper + {_,shift + }{1-5}
     bspc {desktop -f,node -d} {6-9,10} --follow;
-
-# LAPTOP
-alt + super + {_,shift + }{1-5}
-    bspc {desktop -f,node -d} {11,12,13,14,15} --follow;
 
 # MOVE TO NEXT DESKTOP
 hyper + {Left,Right}

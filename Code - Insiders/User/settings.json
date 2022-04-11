@@ -36,7 +36,7 @@
           "keyword.other.data-integrity.sql"
         ],
         "settings": {
-          "foreground": "#e8ddb2",
+          "foreground": "#f29199",
           "fontStyle": "bold"
         }
       },
@@ -48,7 +48,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#7db7ab"
+          "foreground": "#5393c5"
         }
       }
     ]
@@ -251,6 +251,6 @@
   "autoimport.autoComplete": true,
   "autoimport.filesToScan": "**/*.{ts,tsx,js,jsx}",
   "autoimport.spaceBetweenBraces": true,
-  "window.zoomLevel": 1,
-  "git.ignoreMissingGitWarning": true
+  "git.ignoreMissingGitWarning": true,
+  "window.zoomLevel": 1
 }

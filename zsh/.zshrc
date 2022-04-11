@@ -73,7 +73,7 @@ zstyle ':omz:update' mode auto # update automatically without asking
 # Add wisely, as too many plugins slow down shell startup.
 # cd will suggest dotted folders/files. This also affects "k" that will display dotted files no matter what.
 
-plugins=(git forgit wd ng fzf ripgrep docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-nvm zsh-pyenv sudo pip rust ripgrep gcloud)
+plugins=(git forgit wd ng fzf ripgrep docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-nvm zsh-pyenv sudo pip rust ripgrep gcloud colored-man-pages)
 
 export HISTFILE="$XDG_STATE_HOME/zsh/zsh-history"
 export SHELL_SESSION_DIR="$XDG_STATE_HOME/zsh/sessions"
@@ -98,17 +98,11 @@ setopt HIST_SAVE_NO_DUPS
 export NVM_COMPLETION=true
 export NVM_AUTO_USE=true
 
-# Create a cache folder if it doesn't exist
-if [ ! -d "$HOME/.cache/zsh" ]; then
-    mkdir -p $HOME/.cache/zsh
-fi
 
-# Define a custom file for compdump
-export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
+
 
 (cat $HOME/.config/wpg/sequences &) # WPG terminal colors
 fpath=(~/.config/zsh/completions $fpath)
-autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-$ZSH_VERSION"
 
 # User configuration
 
@@ -117,12 +111,6 @@ export MANPATH="/usr/local/man:$MANPATH"
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 eval "$(starship init zsh)"
 
@@ -131,7 +119,7 @@ if [[ -d "$HOME/.local/bin" ]]; then
 fi
 
 # PATH
-path+=(/home/sam/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /home/sam/.local/bin /usr/local/go/bin "$GOPATH/bin")
+path+=(/home/sam/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin")
 # Prepend Path\
 export PATH
 

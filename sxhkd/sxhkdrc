@@ -13,7 +13,7 @@ super + {l,k}
 
 # SWITCH DISPLAYS
 super + shift + m
-    sh ~/.config/screenlayout/docked.sh
+    sh $HOME/.local/bin/docked
 
 # RELOAD SXHKD
 {super,hyper} + q

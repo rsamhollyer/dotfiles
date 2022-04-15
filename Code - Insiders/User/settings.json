@@ -1,5 +1,13 @@
 {
   "editor.snippetSuggestions": "top",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.parameterHints.enabled": true,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -36,7 +44,7 @@
           "keyword.other.data-integrity.sql"
         ],
         "settings": {
-          "foreground": "#f29199",
+          "foreground": "#ff8732",
           "fontStyle": "bold"
         }
       },
@@ -48,7 +56,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#5393c5"
+          "foreground": "#279aa8"
         }
       }
     ]
@@ -192,15 +200,22 @@
   "less.format.newlineBetweenRules": true,
   "less.format.newlineBetweenSelectors": true,
   "less.format.spaceAroundSelectorSeparator": true,
+  "[toml]": {
+    "editor.defaultFormatter": "be5invis.toml"
+  },
   "[jsonc][json][html][dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml][yml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "[toml]": {
-    "editor.defaultFormatter": "be5invis.toml"
-  },
+  "yaml.completion": true,
+  "yaml.format.bracketSpacing": true,
+  "yaml.format.printWidth": 100,
+  "yaml.schemaStore.enable": true,
+  "yaml.format.enable": true,
+  "yaml.hover": true,
+  "yaml.validate": true,
   "prettier.arrowParens": "avoid",
   "prettier.embeddedLanguageFormatting": "auto",
   "prettier.proseWrap": "always",
@@ -246,8 +261,6 @@
     "vscode-kubernetes.helm-path.linux": "/home/sam/.vs-kubernetes/tools/helm/linux-amd64/helm",
     "vscode-kubernetes.minikube-path.linux": "/home/sam/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
   },
-  "yaml.format.enable": false,
-  "database-client.showFilter": true,
   "autoimport.autoComplete": true,
   "autoimport.filesToScan": "**/*.{ts,tsx,js,jsx}",
   "autoimport.spaceBetweenBraces": true,

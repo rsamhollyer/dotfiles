@@ -34,7 +34,7 @@ hyper + {_,shift + }e
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}
-    tdrop -am -w 50% -h 75% -x 25% -y 13% -n 1 terminator;
+    tdrop -am -w 70% -h 75% -x 15% -y 13% -n 1 terminator;
 
 ## Thunar
 {super,hyper} + slash

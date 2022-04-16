@@ -2,7 +2,7 @@
 alias code='code-insiders'
 
 # NVIM
-alias v='/usr/bin/nvim'
+alias v='nvim'
 
 # QUICK CLEAR
 alias c='clear && clear'
@@ -22,7 +22,6 @@ alias nodemon='./node_modules/.bin/nodemon'
 
 # SSH
 alias static='ssh -i ~/.ssh/statickey.pem ubuntu@ec2-3-134-112-153.us-east-2.compute.amazonaws.com'
-alias awsec2='ssh -i ~/.ssh/example1.pem ec2-user@ec2-3-143-22-29.us-east-2.compute.amazonaws.com'
 
 # ZSH
 alias zz='source $ZDOTDIR/.zshrc && source ~/.zshenv'

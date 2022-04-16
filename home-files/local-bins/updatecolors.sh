@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/env bash
+
 
 WAL_JSON_PATH=~/.cache/wal/colors.json
 WAL_COLOR=$(jq .colors.color4 $WAL_JSON_PATH)
@@ -15,3 +16,4 @@ tmpfile2=$(mktemp)
 
 jq --arg newval2 "$WAL_COLOR2" '."editor.tokenColorCustomizations".textMateRules[1].settings.foreground |= $newval2' "$VSCODE_SETS" > "$tmpfile2" && mv "$tmpfile2" "$VSCODE_SETS"
 
+exit 0

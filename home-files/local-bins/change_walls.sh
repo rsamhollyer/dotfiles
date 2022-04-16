@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/env bash
+
 walls_dir=$HOME/.config/wpg/wallpapers
 declare -a walls_arr=("Add New  " "Random ﮼ ")
 
@@ -20,11 +21,12 @@ if [[ $choice == "Random ﮼ " ]];then
     bspc config active_border_color "$color12"
     sh ~/.local/bin/updatecolors.sh
     picom --experimental-backends -b &
+    pkill -USR1 -x sxhkd
 fi
 
 if [[ -z ${choice} ]];then
 # If no choice is made, then exit
-    exit 1
+    exit 0
 else
 # Else, set that wallpaper theme
     wpg -s "$choice"
@@ -34,5 +36,7 @@ else
     bspc config active_border_color "$color12"
     sh ~/.local/bin/updatecolors.sh
     picom --experimental-backends -b &
-
+    pkill -USR1 -x sxhkd
 fi
+
+exit 0

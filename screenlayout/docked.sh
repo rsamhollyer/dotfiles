@@ -1,10 +1,8 @@
-#!/bin/sh
+#!/bin/env bash
 
-monitor_count="$(xrandr -q | rg " connected" | wc -l)"
-all_monitors=($(xrandr -q | rg " connected" | awk '{print $1}'))
+monitor_count="$(xrandr -q | grep " connected" | wc -l)"
+all_monitors=($(xrandr -q | grep " connected" | awk '{print $1}'))
 
-echo "$monitor_count"
-echo "$all_monitors"
 
 case $monitor_count in
 3)
@@ -22,6 +20,9 @@ case $monitor_count in
     ;;
 esac
     pgrep -x sxhkd > /dev/null || sxhkd &
-    picom --experimental-backends -b  &
+    pgrep -x picom > /dev/null || picom --experimental-backends -b  &
     bspc wm -r
     xmodmap ~/.Xmodmap
+    wpg -s $(wpg -c)
+
+exit 0

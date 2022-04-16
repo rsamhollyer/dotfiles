@@ -1,12 +1,5 @@
 {
   "editor.snippetSuggestions": "top",
-  "editor.quickSuggestions": {
-    "other": "on",
-    "comments": "off",
-    "strings": "off"
-  },
-  "editor.suggest.localityBonus": true,
-  "editor.suggest.insertMode": "replace",
   "editor.parameterHints.enabled": true,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -26,7 +19,7 @@
           "source.yaml"
         ],
         "settings": {
-          "foreground": "#8ef0ba",
+          "foreground": "#7d7b77",
           "fontStyle": "italic bold"
         }
       },
@@ -44,7 +37,7 @@
           "keyword.other.data-integrity.sql"
         ],
         "settings": {
-          "foreground": "#ff8732",
+          "foreground": "#a2d924",
           "fontStyle": "bold"
         }
       },
@@ -56,7 +49,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#279aa8"
+          "foreground": "#52f2e2"
         }
       }
     ]
@@ -76,10 +69,10 @@
     "editorGroup.border": "#DCFFFF",
     "activityBar.border": "#DCFFFF",
     "activityBar.foreground": "#DCFFFF",
-    "editor.lineHighlightBackground": "#333244",
+    "editor.lineHighlightBackground": "#9c94ff3f",
     "editorLineNumber.foreground": "#ededed",
-    "editor.selectionBackground": "#ededed",
-    "editor.selectionHighlightBackground": "#928b7c",
+    "editor.selectionBackground": "#ededed4a",
+    "editor.selectionHighlightBackground": "#f4dfae52",
     "editorSuggestWidget.background": "#333244",
     "editorSuggestWidget.border": "#DCFFFF",
     "editorSuggestWidget.selectedBackground": "#8becec4f",
@@ -162,8 +155,6 @@
   "editor.inlineSuggest.enabled": false,
   "path-autocomplete.extensionOnImport": true,
   "typescript.suggest.paths": true,
-  "javascript.suggest.autoImports": true,
-  "typescript.suggest.autoImports": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.importModuleSpecifier": "relative",
@@ -265,5 +256,6 @@
   "autoimport.filesToScan": "**/*.{ts,tsx,js,jsx}",
   "autoimport.spaceBetweenBraces": true,
   "git.ignoreMissingGitWarning": true,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "typescript.preferences.importModuleSpecifier": "relative"
 }

@@ -13,7 +13,7 @@ super + {l,k}
 
 # SWITCH DISPLAYS
 super + shift + m
-    sh $HOME/.local/bin/docked
+    bash $HOME/.local/bin/docked
 
 # RELOAD SXHKD
 {super,hyper} + q
@@ -54,11 +54,16 @@ hyper + s
 
 # NEOVIM
 hyper + d
-    terminator -e nvim ;
+    terminator -e nvim;
 
-# FILE
+# FILE MANAGER
 hyper + f
     $FILE_MANAGER;
+
+# SPEED CRUNCH (Calculator)
+hyper + b
+    speedcrunch
+
 
 # ROFI
 

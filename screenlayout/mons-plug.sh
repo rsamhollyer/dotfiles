@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/env bash
 
-all_monitors=($(xrandr -q | rg " connected" | awk '{print $1}'))
+all_monitors=($(xrandr -q | grep " connected" | awk '{print $1}'))
 
 case ${MONS_NUMBER} in
     3)
@@ -21,4 +21,6 @@ esac
     pgrep -x picom > /dev/null || picom --experimental-backends -b  &
     bspc wm -r
     xmodmap ~/.Xmodmap
+    wpg -s $(wpg -c)
 
+exit 0

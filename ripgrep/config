@@ -10,7 +10,7 @@
 --glob=!{package-lock.json}
 
 # Don't let ripgrep vomit really long lines to my terminal, and show a preview.
---max-columns=150
+--max-columns=0
 --max-columns-preview
 
 # Because who cares about case!?
@@ -28,10 +28,9 @@
 # Sort by file path.
 --sort=path
 
-# Configure color settings and styles.
---colors=path:bg:0x3b,0x3b,0x3b
---colors=path:fg:magenta
---colors=line:fg:0xf2,0xc2,0x60
---colors=match:bg:0x2b,0x83,0xa6
---colors=match:fg:0xff,0xff,0xff
---colors=match:style:nobold
+--heading
+--color=always
+--colors=match:none
+--colors=match:bg:0x33,0x66,0xFF
+--colors=match:fg:red
+--colors=match:style:bold

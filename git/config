@@ -2,6 +2,14 @@
     name = Sam Hollyer
     email = rsamhollyer@gmail.com
 
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+
 [core]
     editor = nvim
     excludesfile = /home/sam/.config/git/.gitignore_global
@@ -51,8 +59,6 @@
     ignorewhitespace = change
     whitespace = nowarn
 
-[hub]
-	protocol = git
 [pretty]
     custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
 #                     │        │            │            │             └─ author name

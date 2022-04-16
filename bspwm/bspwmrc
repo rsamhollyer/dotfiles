@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/env bash
 
 #####################################################
 # ______  ___________ _    ____  ___
@@ -10,7 +10,7 @@
 #
 #####################################################
 source "$HOME/.cache/wal/colors.sh"
-THIRD_MONITOR=$( xrandr -q | rg " connected" | rg ^DisplayPort | awk '{print $1}' )
+THIRD_MONITOR=$( xrandr -q | grep " connected" | grep ^DisplayPort | awk '{print $1}' )
 
 ##############################
 # AUTOSTART

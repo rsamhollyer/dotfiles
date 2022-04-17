@@ -46,7 +46,7 @@ export NVM_AUTO_USE=true
 
 
 (cat $HOME/.config/wpg/sequences &) # WPG terminal colors
-fpath=(~/.config/zsh/completions $fpath)
+fpath=($HOME/.config/zsh/completions $fpath)
 
 # User configuration
 
@@ -58,17 +58,8 @@ export LANG=en_US.UTF-8
 
 eval "$(starship init zsh)"
 
-if [[ -d "$HOME/.local/bin" ]]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# PATH
-path+=(/home/sam/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin")
-# Prepend Path\
-export PATH
-
 # FZF
-[ -f ~/.config/.fzf.zsh ] && source ~/.config/.fzf.zsh
+[ -f $HOME/.config/.fzf.zsh ] && source $HOME/.config/.fzf.zsh
 
 DISABLE_FZF_AUTO_COMPLETION="false"
 export FZF_BASE=$XDG_CONFIG_HOME/fzf
@@ -76,11 +67,22 @@ export FZF_COMPLETION_TRIGGER="~~"
 export FZF_DEFAULT_OPS="--extended"
 
 
+
+if [[ -d "$HOME/.local/bin" ]]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# PATH
+# Prepend Path\
+path+=($HOME/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin")
+export PATH
+
 # Place completion dump file (zcompdump) in cache directory using the OMZ varialbe ZSH_COMPDUMP
 export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
 autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-$HOST-$ZSH_VERSION"
 
 source $HOME/.config/oh-my-zsh/oh-my-zsh.sh
+
 export ARCHFLAGS="-arch x86_64"
 typeset -aU path
 
@@ -91,6 +93,9 @@ bindkey '^[[3;5~' backward-kill-word  # Ctrl + delete
 bindkey -r '^T' # Remove Ctrl + T for fzf
 bindkey '^Z' fzf-file-widget # Rebind to Ctlr + A
 
+
+# FORGIT
+[ -f $HOME/.local/forgit/forgit.plugin.zsh ] && source $HOME/.local/forgit/forgit.plugin.zsh
 
 # do not suggest . and .. when doing cd <TAB>
 zstyle ':completion:*' special-dirs false

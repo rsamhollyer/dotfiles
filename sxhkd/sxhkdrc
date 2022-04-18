@@ -54,7 +54,7 @@ hyper + s
 
 # NEOVIM
 hyper + d
-    terminator -e nvim;
+    sakura --class=NVIM --name=nvim -e nvim $HOME;
 
 # FILE MANAGER
 hyper + f
@@ -63,7 +63,6 @@ hyper + f
 # SPEED CRUNCH (Calculator)
 hyper + b
     speedcrunch
-
 
 # ROFI
 
@@ -102,7 +101,6 @@ hyper + bracket{left,right}
 # focus the last node/desktop
 super + {grave,Tab}
     bspc {node,desktop} -f last;
-
 
 # LEFT MONITOR
 super + {_,shift + }{1-5}

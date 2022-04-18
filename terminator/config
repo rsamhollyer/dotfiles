@@ -35,7 +35,7 @@
     urgent_bell = True
     icon_bell = False
     cursor_color = "#aaaaaa"
-    font = CaskaydiaCove Nerd Font Mono Bold Italic 14
+    font = CaskaydiaCove Nerd Font Mono Bold Italic 13
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 50000

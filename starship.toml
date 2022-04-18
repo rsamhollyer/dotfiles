@@ -1,30 +1,30 @@
 [battery]
-full_symbol = "🔋 "
 charging_symbol = "⚡️ "
 discharging_symbol = "💀 "
+full_symbol = "🔋 "
 
 [[battery.display]]
-threshold = 30
 style = "bold red"
+threshold = 30
 
 [character]
 error_symbol = "[ ✖](bold red) "
 success_symbol = "[   ](bold fg:27)"
 
 [cmd_duration]
-min_time = 5_000
 format = " [$duration]($style)"
+min_time = 5_000
 
 [directory]
-truncation_length = 5
-read_only = " "
 format = " [$path]($style)[$lock_symbol]($lock_style) "
+read_only = " "
 style = "bold blue"
+truncation_length = 5
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
-symbol = " "
 style = "bold purple"
+symbol = " "
 
 [git_commit]
 commit_hash_length = 8
@@ -34,101 +34,113 @@ style = "bold orange"
 format = '\([$state( $progress_current/$progress_total)]($style)\)'
 
 [git_status]
-conflicted = " ﲅ (bold red)"
 ahead = " x${count} (bold blue) "
 behind = "🐢x${count} (bold purple) "
-diverged = "     x${ahead_count} 🐢x${behind_count} "
-untracked = "x${count} "
-stashed = "📦 "
-modified = "📝x${count} "
-staged = " x${count} "
-renamed = " x${count} "
+conflicted = " ﲅ (bold red)"
 deleted = "﫧x${count} "
+diverged = "     x${ahead_count} 🐢x${behind_count} "
 format = '\[$all_status$ahead_behind\]'
+modified = "📝x${count} "
+renamed = " x${count} "
+staged = " x${count} "
+stashed = "📦 "
+untracked = "x${count} "
 
 [hostname]
-ssh_only = false
-format = "[$hostname]($style)"
-trim_at = "-"
-style = "bold dimmed red"
 disabled = false
+format = "[$hostname]($style)"
+ssh_only = false
+style = "bold dimmed red"
+trim_at = "-"
 
 [memory_usage]
-symbol = "  "
 format = '\[$symbol[$ram( | $swap)]($style)\]'
+symbol = "  "
 
 [package]
-symbol = " "
 format = '\[[$symbol$version]($style)\]'
+symbol = " "
 
 [nodejs]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
+
+[cmake]
+format = '\[[$symbol($version)]($style)\]'
+symbol = "△ "
+
+[perl]
+format = '\[[$symbol($version)]($style)\]'
+symbol = " "
+
+[lua]
+format = '\[[$symbol($version)]($style)\]'
+symbol = "🌙 "
 
 [python]
-symbol = " "
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+symbol = " "
 
 [ruby]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [rust]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [golang]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [php]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [scala]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [shell]
-zsh_indicator = " "
-unknown_indicator = "mystery shell"
 disabled = false
-style ="fg:122"
+style = "fg:122"
+unknown_indicator = "mystery shell"
+zsh_indicator = " "
 
 [nix_shell]
-symbol = " "
 format = '\[[$symbol$state( \($name\))]($style)\]'
+symbol = " "
 
 [julia]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [java]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [docker_context]
-symbol = " "
 format = '\[[$symbol$context]($style)\]'
+symbol = " "
 
 [aws]
-symbol = "  "
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+symbol = "  "
 
 [conda]
-symbol = " "
 format = '\[[$symbol$environment]($style)\]'
+symbol = " "
 
 [dart]
-symbol = " "
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [time]
-time_format = "%T"
+disabled = true
 format = "$time($style) "
 style = "dimmed green"
-disabled = true
+time_format = "%T"
 
 [username]
-style_user = "bold blue"
 show_always = true
+style_user = "bold blue"

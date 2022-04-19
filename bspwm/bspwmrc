@@ -10,7 +10,7 @@
 #
 #####################################################
 source "$HOME/.cache/wal/colors.sh"
-THIRD_MONITOR=$( xrandr -q | grep " connected" | grep ^DisplayPort | awk '{print $1}' )
+THIRD_MONITOR=$(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}')
 
 ##############################
 # AUTOSTART

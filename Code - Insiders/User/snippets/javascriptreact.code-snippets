@@ -45,5 +45,10 @@
         "prefix": "rta",
         "body": ["const $1 = $2.reduce((acc,curr)=>{$3},[])"],
         "description": "Quickly create a reduce array"
+    },
+    "PHP Tags": {
+        "scope": "html,php",
+        "prefix": "ptags",
+        "body": ["<?php $1 ?>"]
     }
 }

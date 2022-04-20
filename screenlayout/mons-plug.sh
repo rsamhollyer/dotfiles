@@ -1,19 +1,22 @@
 #!/bin/env bash
 
-all_monitors=($(xrandr -q | grep " connected" | awk '{print $1}'))
+eDP=eDP
+HDMI=$(xrandr -q | grep 'HDMI-A-0 connected' | awk '{print $1}')
+DP=$(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}')
+
 
 case ${MONS_NUMBER} in
-    3)
-    xrandr --output "${all_monitors[0]}" --off --output "${all_monitors[1]}" --primary --mode 2560x1440 --rate 143.86 --pos 0x0 --rotate normal --output "${all_monitors[2]}" --mode 2560x1440 --pos 2560x0 --rotate normal --rate 119.88
+3)
+    xrandr --output "$eDP" --off --output "$HDMI" --primary --mode 2560x1440 --pos 0x0 --rotate normal --output "$DP" --mode 2560x1440 --pos 2560x0 --rotate normal
 
     ;;
-    2)
+2)
 
-    xrandr --output "${all_monitors[0]}" --mode 1920x1080 --pos 0x0 --output "${all_monitors[1]}" --primary --mode 2560x1440 --pos 1920x0 --rotate normal
+    xrandr --output "$eDP" --mode 1920x1080 --pos 0x0 --output "$HDMI" --primary --mode 2560x1440 --pos 1920x0 --rotate normal
 
     ;;
-    1)
-    xrandr --output "${all_monitors[0]}" --mode 1920x1080 --rate 60.01 --pos 0x0 --rotate normal
+1)
+    xrandr --auto
 
     ;;
 esac

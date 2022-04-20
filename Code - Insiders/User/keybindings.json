@@ -274,5 +274,9 @@
         "key": "ctrl+j",
         "command": "editor.action.joinLines",
         "when": "editorTextFocus && editorLangId == 'javascript'"
+    },
+    {
+        "key": "ctrl+meta+right",
+        "command": "workbench.files.action.collapseExplorerFolders"
     }
 ]

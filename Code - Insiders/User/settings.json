@@ -37,7 +37,7 @@
           "keyword.other.data-integrity.sql"
         ],
         "settings": {
-          "foreground": "#a2d924",
+          "foreground": "#5056bf",
           "fontStyle": "bold"
         }
       },
@@ -49,7 +49,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#52f2e2"
+          "foreground": "#7f8b77"
         }
       }
     ]
@@ -232,6 +232,9 @@
     "html",
     "php"
   ],
+  "intelephense.format.braces": "k&r",
+  "intelephense.format.enable": true,
+  "intelephense.diagnostics.enable": true,
   "search.useGlobalIgnoreFiles": false,
   "workbench.startupEditor": "newUntitledFile",
   "security.workspace.trust.untrustedFiles": "open",

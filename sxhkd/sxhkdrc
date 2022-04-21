@@ -36,6 +36,11 @@ hyper + {_,shift + }e
 hyper + {Return,KP_Enter}
     tdrop -am -w 70% -h 75% -x 15% -y 13% -n 1 terminator;
 
+## BTOP
+{super,hyper} + semicolon
+    tdrop -am -w 70% -h 75% -x 15% -y 13% -n 1 xfce4-terminal --title=BTOP --role=BTOP -x btop;
+
+
 ## Thunar
 {super,hyper} + slash
     tdrop -am -w 75% -h 75% -x 13% -y 13% thunar;

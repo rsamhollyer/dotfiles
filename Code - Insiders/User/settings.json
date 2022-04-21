@@ -149,7 +149,7 @@
     "*": true,
     "yaml": true,
     "plaintext": true,
-    "markdown": false
+    "markdown": true
   },
   "telemetry.telemetryLevel": "off",
   "editor.inlineSuggest.enabled": false,

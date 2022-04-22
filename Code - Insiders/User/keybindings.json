@@ -280,7 +280,7 @@
         "command": "workbench.files.action.collapseExplorerFolders"
     },
     {
-        "key": "ctrl+shift+;",
+        "key": "ctrl+shift+z",
         "command": "macros.insertSemicolons",
         "when": "editorTextFocus && editorLangId == 'php'"
     }

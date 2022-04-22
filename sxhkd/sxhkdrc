@@ -47,7 +47,11 @@ hyper + {Return,KP_Enter}
 
 # BROWSER
 hyper + a
-    $BROWSER;
+    $BROWSER --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end;
+
+# SCROT
+super + s
+    deepin-screenshot;
 
 # SLACK
 super + a

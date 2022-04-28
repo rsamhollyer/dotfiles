@@ -13,18 +13,24 @@
     // 	"description": "Log output to console"
     // }
 
-    "Print to Consol[e": {
+    "Print to Console": {
         "scope": "javascriptreact,javascript,typescript,typescriptreact",
         "prefix": "l",
         "body": "console.log(${1:object})$2;",
         "description": "Displays a message in the console"
     },
 
-    "Use State": {
+    "Function": {
         "scope": "javascriptreact,javascript,typescript,typescriptreact",
-        "prefix": "us",
-        "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);"],
-        "description": "Quickly set up useState"
+        "prefix": "f",
+        "body": "function ${1:name}(${2:parameters}) {\n\t$0\n}",
+        "description": "Creates a function"
+    },
+    "Arrow Function": {
+        "scope": "javascriptreact,javascript,typescript,typescriptreact",
+        "prefix": "af",
+        "body": "(${1:parameters}) => {\n\t$0\n}",
+        "description": "Creates an arrow function"
     },
 
     "Form Submit Handler": {
@@ -45,6 +51,25 @@
         "prefix": "rta",
         "body": ["const $1 = $2.reduce((acc,curr)=>{$3},[])"],
         "description": "Quickly create a reduce array"
+    },
+    "Use State": {
+        "scope": "javascriptreact,javascript,typescript,typescriptreact",
+        "prefix": "us",
+        "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);"],
+        "description": "Quickly set up useState"
+    },
+    "Use Effect": {
+        "scope": "javascriptreact,javascript,typescript,typescriptreact",
+        "prefix": "ue",
+        "body": ["useEffect(()=>{$1},[$2])"],
+        "description": "Quickly create a useEffect"
+    },
+
+    "Use Context": {
+        "scope": "javascriptreact,javascript,typescript,typescriptreact",
+        "prefix": "uc",
+        "body": ["const $1 = useContext($2)"],
+        "description": "Quickly create a useContext"
     },
     "PHP Tags": {
         "scope": "html,php",

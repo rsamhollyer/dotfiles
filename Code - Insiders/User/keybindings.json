@@ -1,14 +1,6 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "alt+shift+a",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && !editorHasSelection",
-        "args": {
-            "snippet": "console.log($1)$2;"
-        }
-    },
-    {
         "key": "ctrl+shift+s",
         "command": "-workbench.action.files.saveAs"
     },
@@ -283,5 +275,23 @@
         "key": "ctrl+shift+z",
         "command": "macros.insertSemicolons",
         "when": "editorTextFocus && editorLangId == 'php'"
+    },
+    {
+        "key": "ctrl+shift+alt+r",
+        "command": "workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "alt+z",
+        "command": "editor.emmet.action.wrapWithAbbreviation"
+    },
+    {
+        "key": "alt+z",
+        "command": "-editor.action.toggleWordWrap"
     }
 ]

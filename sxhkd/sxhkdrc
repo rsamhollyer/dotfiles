@@ -7,9 +7,9 @@
 #     \_____\/ \_\/  \__\/ \__\/ \::\/ \__\/\__\/  \____/_/
 
 
-# OPEN NEXT HORIZ. OR
-super + {l,k}
-    bspc node -p {east,south}
+# MANULLY TILE
+ctrl + hyper + {a,s,z,w}
+    bspc node -p {west,east,south,north}
 
 # SWITCH DISPLAYS
 super + shift + m
@@ -40,10 +40,13 @@ hyper + {Return,KP_Enter}
 {super,hyper} + semicolon
     tdrop -am -w 70% -h 75% -x 15% -y 13% -n 1 xfce4-terminal --title=BTOP --role=BTOP -x btop;
 
-
 ## Thunar
 {super,hyper} + slash
     tdrop -am -w 75% -h 75% -x 13% -y 13% thunar;
+
+## SPEED CRUNCH (Calculator)
+hyper + b
+    tdrop -am -w 25% -h 25% -x 37% -y 37% -n 3 speedcrunch
 
 # BROWSER
 hyper + a
@@ -69,12 +72,7 @@ hyper + d
 hyper + f
     $FILE_MANAGER;
 
-# SPEED CRUNCH (Calculator)
-hyper + b
-    speedcrunch
-
 # ROFI
-
 ## Menu
 hyper + space
     rofi -show drun -theme $HOME/.config/rofi/drun.rasi;
@@ -132,7 +130,6 @@ super + ctrl + {m,x,y,z}
     bspc node -g {marked,locked,sticky,private};
 
 # MOVE AND RESIZE
-
 # Resize a Node Window
 # - Horizontal Shrink, Vertical Grow, Vertical Shrink, Horizontal Grow
 hyper + {h,j,k,l}

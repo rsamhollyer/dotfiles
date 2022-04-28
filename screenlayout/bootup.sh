@@ -14,5 +14,9 @@ elif [[ -n $HDMI ]]; then
 else
     xrandr --auto
 fi
-
+pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x picom > /dev/null || picom --experimental-backends -b  &
+bspc wm -r
+xmodmap ~/.Xmodmap
+wpg -s $(wpg -c)
 exit 0

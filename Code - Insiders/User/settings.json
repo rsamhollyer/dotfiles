@@ -48,7 +48,7 @@
 					"keyword.other.data-integrity.sql"
 				],
 				"settings": {
-					"foreground": "#33ade1",
+					"foreground": "#18ffff",
 					"fontStyle": "bold"
 				}
 			},
@@ -56,13 +56,12 @@
 				"scope": ["entity.name.tag.yaml", "support.type.property-name.json", "source.sql"],
 				"settings": {
 					"fontStyle": "italic",
-					"foreground": "#c6ed71"
+					"foreground": "#bf2604"
 				}
 			}
 		]
 	},
 	"thunder-client.codeSnippetLanguage": "js-axios",
-
 	"editor.linkedEditing": true,
 	"editor.suggestSelection": "first",
 	"editor.snippetSuggestions": "top",
@@ -202,7 +201,7 @@
 	"bladeFormatter.format.enabled": true,
 	"bladeFormatter.format.wrapLineLength": 100,
 	"bladeFormatter.format.indentSize": 1,
-	"bladeFormatter.format.wrapAttributes": "aligned-multiple",
+	"bladeFormatter.format.wrapAttributes": "force",
 	"[blade]": {
 		"editor.autoClosingBrackets": "always",
 		"editor.defaultFormatter": "shufo.vscode-blade-formatter"
@@ -261,7 +260,8 @@
 		"*.tsx": "typescriptreact",
 		"sxhkdrc": "shellscript",
 		"bspwmrc": "shellscript",
-		"config": "properties"
+		"config": "properties",
+		"gtkrc": "properties"
 	},
 	"auto-rename-tag.activationOnLanguage": [
 		"javascript",
@@ -275,7 +275,6 @@
 	"security.workspace.trust.untrustedFiles": "open",
 	"explorer.confirmDelete": false,
 	"update.mode": "none",
-
 	"diffEditor.ignoreTrimWhitespace": false,
 	"xml.codeLens.enabled": false,
 	"xml.format.closingBracketNewLine": true,

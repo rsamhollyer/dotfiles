@@ -49,6 +49,7 @@ bspc config focus_follows_pointer true
 bspc config center_pseudo_tiled true
 bspc config directional_focus_tightness low
 bspc config top_padding 15
+bspc config ignore_ewmh_fullscreen enter
 
 ##############################
 # WINDOW RULES

@@ -48,7 +48,7 @@
           "keyword.other.data-integrity.sql"
         ],
         "settings": {
-          "foreground": "#3592bb",
+          "foreground": "#f2ae30",
           "fontStyle": "bold"
         }
       },
@@ -60,7 +60,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#9fb66f"
+          "foreground": "#bf622c"
         }
       }
     ]
@@ -81,6 +81,7 @@
   "editor.fontWeight": 400,
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
+  "editor.quickSuggestions": true,
   "editor.quickSuggestionsDelay": 7,
   "editor.inlineSuggest.enabled": true,
   "editor.formatOnSave": true,
@@ -172,13 +173,13 @@
   "python.defaultInterpreterPath": "python",
   "files.hotExit": "off",
   "github.copilot.inlineSuggest.enable": true,
+  "github.copilot.advanced": {
+    "debug.showScores": true,
+    "inlineSuggestCount": 5,
+    "listCount": 20
+  },
   "github.copilot.enable": {
     "*": true
-  },
-  "github.copilot.advanced": {
-    "listCount": 20,
-    "inlineSuggestCount": 3,
-    "top_p": 1
   },
   "path-autocomplete.extensionOnImport": true,
   "typescript.suggest.paths": true,
@@ -207,9 +208,10 @@
   "intelephense.format.enable": true,
   "intelephense.diagnostics.enable": true,
   "bladeFormatter.format.enabled": true,
-  "bladeFormatter.format.wrapLineLength": 100,
+  "bladeFormatter.format.wrapLineLength": 120,
   "bladeFormatter.format.indentSize": 1,
-  "bladeFormatter.format.wrapAttributes": "force",
+  "bladeFormatter.format.wrapAttributes": "preserve",
+  "bladeFormatter.format.sortTailwindcssClasses": true,
   "[blade]": {
     "editor.autoClosingBrackets": "always",
     "editor.defaultFormatter": "shufo.vscode-blade-formatter"
@@ -249,7 +251,7 @@
   "yaml.validate": true,
   "prettier.arrowParens": "avoid",
   "prettier.useTabs": true,
-  "prettier.tabWidth": 2,
+  "prettier.tabWidth": 1,
   "prettier.trailingComma": "all",
   "prettier.embeddedLanguageFormatting": "auto",
   "prettier.proseWrap": "always",
@@ -299,8 +301,8 @@
   "autoimport.useSemiColon": true,
   "git.ignoreMissingGitWarning": true,
   "typescript.preferences.importModuleSpecifier": "relative",
-  "Lua.telemetry.enable": false,
-  "telemetry.telemetryLevel": "off",
-  "redhat.telemetry.enabled": false,
+  "Lua.telemetry.enable": true,
+  "telemetry.telemetryLevel": "all",
+  "redhat.telemetry.enabled": true,
   "window.zoomLevel": 0.7
 }

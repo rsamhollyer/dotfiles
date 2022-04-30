@@ -207,7 +207,7 @@
 		"when": "editorLangId == 'sql'"
 	},
 	{
-		"key": "ctrl+shift+alt+z",
+		"key": "alt+a",
 		"command": "editor.action.inlineSuggest.trigger",
 		"when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
 	},
@@ -293,5 +293,41 @@
 	{
 		"key": "alt+z",
 		"command": "-editor.action.toggleWordWrap"
+	},
+	{
+		"key": "tab",
+		"command": "editor.action.inlineSuggest.commit",
+		"when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
+	},
+	{
+		"key": "tab",
+		"command": "-editor.action.inlineSuggest.commit",
+		"when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated"
+	},
+	{
+		"key": "ctrl+alt+down",
+		"command": "workbench.action.moveActiveEditorGroupDown"
+	},
+	{
+		"key": "ctrl+k down",
+		"command": "-workbench.action.moveActiveEditorGroupDown"
+	},
+	{
+		"key": "ctrl+alt+up",
+		"command": "workbench.action.moveActiveEditorGroupUp"
+	},
+	{
+		"key": "ctrl+k up",
+		"command": "-workbench.action.moveActiveEditorGroupUp"
 	}
 ]

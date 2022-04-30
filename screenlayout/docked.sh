@@ -22,7 +22,7 @@ case $monitor_count in
     ;;
 esac
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep -x picom > /dev/null || picom --experimental-backends -b  &
+picom --experimental-backends -b  &
 bspc wm -r
 xmodmap ~/.Xmodmap
 wpg -s $(wpg -c)

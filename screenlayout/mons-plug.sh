@@ -20,7 +20,7 @@ case ${MONS_NUMBER} in
 
     ;;
 esac
-pgrep -x sxhkd > /dev/null || sxhkd &
+pkill -USR1 -x sxhkd
 picom --experimental-backends -b  &
 bspc wm -r
 xmodmap ~/.Xmodmap

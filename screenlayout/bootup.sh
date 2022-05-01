@@ -14,7 +14,7 @@ elif [[ -n $HDMI ]]; then
 else
     xrandr --auto
 fi
-pgrep -x sxhkd > /dev/null || sxhkd &
+pkill -USR1 -x sxhkd
 picom --experimental-backends -b  &
 bspc wm -r
 xmodmap ~/.Xmodmap

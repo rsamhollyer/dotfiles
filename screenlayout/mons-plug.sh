@@ -21,9 +21,7 @@ case ${MONS_NUMBER} in
     ;;
 esac
 pkill -USR1 -x sxhkd
-picom --experimental-backends -b  &
 bspc wm -r
-xmodmap ~/.Xmodmap
 wpg -s $(wpg -c)
 
 exit 0

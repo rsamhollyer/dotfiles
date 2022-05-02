@@ -15,8 +15,7 @@ else
     xrandr --auto
 fi
 pkill -USR1 -x sxhkd
-picom --experimental-backends -b  &
 bspc wm -r
-xmodmap ~/.Xmodmap
 wpg -s $(wpg -c)
+
 exit 0

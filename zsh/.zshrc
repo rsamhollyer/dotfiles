@@ -99,7 +99,7 @@ bindkey '^Z' fzf-file-widget # Rebind to Ctlr + A
 
 
 # FORGIT
-[ -f $HOME/.local/forgit/forgit.plugin.zsh ] && source $HOME/.local/forgit/forgit.plugin.zsh
+[[ -f $HOME/.local/forgit/forgit.plugin.zsh ]] && source $HOME/.local/forgit/forgit.plugin.zsh
 
 # do not suggest . and .. when doing cd <TAB>
 zstyle ':completion:*' special-dirs false

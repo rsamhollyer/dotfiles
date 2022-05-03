@@ -1,5 +1,5 @@
 [global_config]
-  focus = 'mouse'
+  focus = mouse
   handle_size = 10
   geometry_hinting = True
   inactive_color_offset = 0.9022435897435898
@@ -35,7 +35,7 @@
     urgent_bell = True
     icon_bell = False
     cursor_color = "#aaaaaa"
-    font = CaskaydiaCove Nerd Font Mono Bold Italic 16
+    font = CaskaydiaCove Nerd Font Mono Bold Italic 15
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 50000

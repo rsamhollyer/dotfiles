@@ -21,7 +21,7 @@ case $monitor_count in
 
     ;;
 esac
-pkill -USR1 -x sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd &
 bspc wm -r
 wpg -s $(wpg -c)
 

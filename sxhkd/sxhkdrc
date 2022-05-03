@@ -17,7 +17,7 @@ super + shift + m
 
 # RELOAD SXHKD
 {super,hyper} + q
-    pkill -USR1 -x sxhkd;notify-send 'SXHKD configured';
+    pkill -x sxhkd && sxhkd & 
 
 # CLOSE AND KILL
 hyper + {_,shift + }w
@@ -34,11 +34,11 @@ hyper + {_,shift + }e
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}
-    tdrop -am -w 70% -h 75% -x 15% -y 13% -n 1 terminator;
+    tdrop -am -w 70% -h 75% -x 15% -y 13% terminator;
 
 ## BTOP
 {super,hyper} + semicolon
-    tdrop -am -w 70% -h 75% -x 15% -y 13% -n 1 xfce4-terminal --title=BTOP --role=BTOP -x btop;
+    tdrop -am -w 70% -h 75% -x 15% -y 13% xfce4-terminal --title=BTOP --role=BTOP -x btop;
 
 ## Thunar
 {super,hyper} + slash
@@ -46,7 +46,7 @@ hyper + {Return,KP_Enter}
 
 ## SPEED CRUNCH (Calculator)
 hyper + b
-    tdrop -am -w 25% -h 25% -x 37% -y 37% -n 3 speedcrunch
+    tdrop -am -w 25% -h 25% -x 37% -y 37% speedcrunch
 
 # BROWSER
 hyper + a

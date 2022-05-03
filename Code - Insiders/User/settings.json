@@ -137,8 +137,6 @@
   "workbench.editor.untitled.hint": "hidden",
   "workbench.sideBar.location": "right",
   "workbench.colorTheme": "Wal Bordered",
-  "workbench.activityBar.visible": true,
-  "workbench.statusBar.visible": true,
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.editor.tabSizing": "fit",
   "workbench.editor.scrollToSwitchTabs": true,
@@ -306,5 +304,7 @@
   "Lua.telemetry.enable": true,
   "telemetry.telemetryLevel": "all",
   "redhat.telemetry.enabled": true,
-  "window.zoomLevel": 0.7
+  "window.zoomLevel": 0.7,
+  "debug.allowBreakpointsEverywhere": true,
+  "window.menuBarVisibility": "toggle"
 }

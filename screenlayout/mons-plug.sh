@@ -20,8 +20,8 @@ case ${MONS_NUMBER} in
 
     ;;
 esac
-pkill -USR1 -x sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd &
 bspc wm -r
 wpg -s $(wpg -c)
-
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exit 0

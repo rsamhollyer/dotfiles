@@ -56,6 +56,7 @@ bspc config ignore_ewmh_fullscreen enter
 ##############################
 bscp rule -r "*"
 bspc rule -a '*' rectangle="1800x1200+0+0" center=true
+bspc rule -a Pacfinder rectangle="1800x1200+0+0" state=floating center=true
 bspc rule -a Nsxiv state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a Timeshift-gtk state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a feh state=floating rectangle="1000x1000+0+0" center=true

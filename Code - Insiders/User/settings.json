@@ -65,7 +65,6 @@
       }
     ]
   },
-  "thunder-client.codeSnippetLanguage": "js-axios",
   "editor.linkedEditing": true,
   "editor.suggestSelection": "first",
   "editor.snippetSuggestions": "top",
@@ -88,7 +87,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true,
-    "source.sortMembers": true
+    "source.fixAll.eslint": true,
+    "source.addMissingImports": true
   },
   "editor.largeFileOptimizations": false,
   "editor.minimap.enabled": false,
@@ -163,9 +163,7 @@
     "--profile=black"
   ],
   "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
+    "editor.formatOnSave": true
   },
   "python.analysis.completeFunctionParens": true,
   "python.defaultInterpreterPath": "python",
@@ -180,10 +178,6 @@
     "*": true
   },
   "path-autocomplete.extensionOnImport": true,
-  "typescript.suggest.paths": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.preferences.importModuleSpecifier": "relative",
   "git.autofetch": false,
   "git.enabled": true,
   "git.confirmSync": false,
@@ -199,6 +193,10 @@
     "editor.formatOnSave": false,
     "editor.formatOnType": false
   },
+  "typescript.suggest.paths": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "relative",
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -304,7 +302,23 @@
   "Lua.telemetry.enable": true,
   "telemetry.telemetryLevel": "all",
   "redhat.telemetry.enabled": true,
-  "window.zoomLevel": 0.7,
   "debug.allowBreakpointsEverywhere": true,
-  "window.menuBarVisibility": "toggle"
+  "window.menuBarVisibility": "toggle",
+  "indentRainbow.colors": [
+    "rgba(108,88,203,0.3)",
+    "rgba(86,98,32,0.3)",
+    "rgba(188,170,18,0.3)",
+    "rgba(100,156,165,0.3)",
+    "rgba(144,66,73,0.3)",
+    "rgba(102,40,98,0.3)"
+  ],
+  "indentRainbow.ignoreErrorLanguages": [
+    "blade",
+    "php",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "window.zoomLevel": 1
 }

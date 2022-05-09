@@ -150,7 +150,7 @@
 		"command": "workbench.action.openSettingsJson"
 	},
 	{
-		"key": "ctrl+numpad7",
+		"key": "home",
 		"command": "cursorTop",
 		"when": "textInputFocus"
 	},
@@ -160,7 +160,7 @@
 		"when": "textInputFocus"
 	},
 	{
-		"key": "ctrl+numpad1",
+		"key": "end",
 		"command": "cursorBottom",
 		"when": "textInputFocus"
 	},
@@ -170,7 +170,7 @@
 		"when": "textInputFocus"
 	},
 	{
-		"key": "ctrl+shift+end",
+		"key": "shift+end",
 		"command": "cursorBottomSelect",
 		"when": "textInputFocus"
 	},
@@ -180,7 +180,7 @@
 		"when": "textInputFocus"
 	},
 	{
-		"key": "ctrl+shift+home",
+		"key": "shift+home",
 		"command": "cursorTopSelect",
 		"when": "textInputFocus"
 	},
@@ -190,11 +190,11 @@
 		"when": "textInputFocus"
 	},
 	{
-		"key": "ctrl+shift+end",
+		"key": "shift+end",
 		"command": "cursorBottomSelect"
 	},
 	{
-		"key": "ctrl+shift+home",
+		"key": "shift+home",
 		"command": "cursorTopSelect"
 	},
 	{
@@ -329,5 +329,25 @@
 	{
 		"key": "ctrl+k up",
 		"command": "-workbench.action.moveActiveEditorGroupUp"
+	},
+	{
+		"key": "ctrl+alt+n",
+		"command": "code-runner.run"
+	},
+	{
+		"key": "ctrl+alt+n",
+		"command": "-code-runner.run"
+	},
+	{
+		"key": "ctrl+shift+alt+left",
+		"command": "workbench.action.positionPanelLeft"
+	},
+	{
+		"key": "ctrl+shift+alt+right",
+		"command": "workbench.action.positionPanelRight"
+	},
+	{
+		"key": "ctrl+shift+alt+down",
+		"command": "workbench.action.positionPanelBottom"
 	}
 ]

@@ -52,12 +52,14 @@
     history_length = 20
 
     ### Misc/Advanced ###
-    dmenu = /usr/bin/rofi -show run -p dunst:
-    browser = /usr/bin/vivaldi-stable
+    dmenu = "/usr/bin/rofi -dmenu -p dunst:"
+    browser = "xdg-open"
     always_run_script = true
     title = Dunst
     class = Dunst
     force_xinerama = false
+
+context = ctrl+shift+period
 
 [experimental]
     per_monitor_dpi = false

@@ -66,7 +66,7 @@ hyper + s
 
 # NEOVIM
 hyper + d
-    sakura --class=NVIM --name=nvim -e nvim $HOME;
+    sakura --class="LVIM" --name="lvim" -e lvim $HOME;
 
 # FILE MANAGER
 hyper + f

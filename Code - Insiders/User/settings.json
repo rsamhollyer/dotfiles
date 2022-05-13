@@ -48,7 +48,7 @@
           "keyword.other.data-integrity.sql"
         ],
         "settings": {
-          "foreground": "#be7e62",
+          "foreground": "#8181ff",
           "fontStyle": "bold"
         }
       },
@@ -60,7 +60,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#497867"
+          "foreground": "#ffda6a"
         }
       }
     ]
@@ -77,8 +77,9 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.fontFamily": "CaskaydiaCove Nerd Font",
-  "editor.fontWeight": 400,
-  "editor.fontSize": 14,
+  "editor.fontWeight": 700,
+  "editor.fontSize": 18,
+  "editor.lineHeight": 1.7,
   "editor.fontLigatures": true,
   "editor.quickSuggestions": true,
   "editor.quickSuggestionsDelay": 7,
@@ -93,8 +94,8 @@
   "editor.largeFileOptimizations": false,
   "editor.minimap.enabled": false,
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontWeightBold": 400,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeightBold": 700,
   "terminal.integrated.lineHeight": 1,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.cwd": "${fileDirname}",
@@ -324,5 +325,5 @@
   "indentRainbow.ignoreErrorLanguages": [
     "*"
   ],
-  "window.zoomLevel": 1
+  "window.zoomLevel": -0.3
 }

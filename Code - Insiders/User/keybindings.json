@@ -349,5 +349,15 @@
 	{
 		"key": "ctrl+shift+alt+down",
 		"command": "workbench.action.positionPanelBottom"
+	},
+	{
+		"key": "ctrl+shift+enter",
+		"command": "mysql.runSQL",
+		"when": "editorLangId == 'cql' || editorLangId == 'sql'"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-mysql.runSQL",
+		"when": "editorLangId == 'cql' || editorLangId == 'sql'"
 	}
 ]

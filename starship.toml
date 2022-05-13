@@ -8,8 +8,8 @@ style = "bold red"
 threshold = 30
 
 [character]
-error_symbol = "[ ✖](bold red) "
-success_symbol = "[   ](bold fg:27)"
+error_symbol = "[😦](bold red) "
+success_symbol = "[😀](bold fg:50)"
 
 [cmd_duration]
 format = " [$duration]($style)"

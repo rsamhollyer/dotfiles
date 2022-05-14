@@ -78,7 +78,7 @@ fi
 
 # PATH
 # Prepend Path\
-path+=($HOME/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin")
+path+=($HOME/.config/rofi/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin" "$HOME/.config/composer/vendor/bin")
 export PATH
 
 # Place completion dump file (zcompdump) in cache directory using the OMZ varialbe ZSH_COMPDUMP

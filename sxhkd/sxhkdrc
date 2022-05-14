@@ -17,15 +17,17 @@ super + shift + m
 
 # RELOAD SXHKD
 {super,hyper} + q
-    pkill -x sxhkd && sxhkd & 
+    pkill -x sxhkd && sxhkd & \
+    dunstify 'sxhkd' 'reloaded'
 
 # CLOSE AND KILL
 hyper + {_,shift + }w
-    bspc node -{c,k};
+    bspc node -{c,k}
 
 # RESTART AND QUIT
 hyper + {_,shift + }e
-    bspc {wm -r,quit}
+    bspc {wm -r,quit}; \
+    dunstify 'bspc' 'reloaded'
 
 # TERMINAL
 {super,hyper} + apostrophe
@@ -64,9 +66,9 @@ super + a
 hyper + s
     code-insiders;
 
-# NEOVIM
+# NEOVIM - Just giving this a class name so I can use it in the rules with lvim
 hyper + d
-    sakura --class="LVIM" --name="lvim" -e lvim $HOME;
+    tdrop -am sakura --class="LVIM" --name="lvim" -e "lvim";
 
 # FILE MANAGER
 hyper + f

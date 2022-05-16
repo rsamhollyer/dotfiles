@@ -48,7 +48,7 @@
 					"keyword.other.data-integrity.sql"
 				],
 				"settings": {
-					"foreground": "#8181ff",
+					"foreground": "#1698cd",
 					"fontStyle": "bold"
 				}
 			},
@@ -56,7 +56,7 @@
 				"scope": ["entity.name.tag.yaml", "support.type.property-name.json", "source.sql"],
 				"settings": {
 					"fontStyle": "italic",
-					"foreground": "#bfa65c"
+					"foreground": "#b487d0"
 				}
 			}
 		]
@@ -150,7 +150,8 @@
 	"emmet.includeLanguages": {
 		"javascript": "javascriptreact",
 		"typescript": "typescriptreact",
-		"vue-html": "html"
+		"vue-html": "html",
+		"vue": "html"
 	},
 	"python.languageServer": "Pylance",
 	"python.linting.enabled": true,
@@ -189,7 +190,7 @@
 		"editor.formatOnSave": true
 	},
 	"rust-analyzer.completion.autoimport.enable": true,
-	"[javascript][javascriptreact][typescript][typescriptreact]": {
+	"[javascript][javascriptreact][typescript][typescriptreact][vue]": {
 		"editor.formatOnSave": false,
 		"editor.formatOnType": false
 	},
@@ -321,6 +322,6 @@
 		"rgba(102,40,98,0.1)"
 	],
 	"indentRainbow.ignoreErrorLanguages": ["*"],
-	"window.zoomLevel": 0.25,
+	"window.zoomLevel": 0.2,
 	"editor.unicodeHighlight.ambiguousCharacters": false
 }

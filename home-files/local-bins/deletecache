@@ -1,0 +1,2 @@
+#!/bin/env bash
+rm -rf $(ls ~/.cache | grep -v 'wal')

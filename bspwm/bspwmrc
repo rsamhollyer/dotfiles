@@ -65,7 +65,7 @@ bspc rule -a Gpick state=floating center=true
 bspc rule -a Pavucontrol state=floating center=true
 bspc rule -a Lxappearance state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a Wpg state=floating rectangle="1000x1000+0+0" center=true
-bspc rule -a Slack desktop=^10
+bspc rule -a Slack:slack desktop=^10 state=tiled
 bspc rule -a Gimp-2.10 state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Thunar:thunar state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Thunar:thunar:'File Operation Progress' state=floating rectangle="800x600+0+0" center=true

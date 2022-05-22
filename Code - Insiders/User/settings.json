@@ -74,7 +74,7 @@
 	"editor.bracketPairColorization.enabled": true,
 	"editor.fontFamily": "CaskaydiaCove Nerd Font",
 	"editor.fontWeight": 700,
-	"editor.fontSize": 18,
+	"editor.fontSize": 16,
 	"editor.lineHeight": 1.7,
 	"editor.fontLigatures": true,
 	"editor.quickSuggestions": {
@@ -322,6 +322,6 @@
 		"rgba(102,40,98,0.1)"
 	],
 	"indentRainbow.ignoreErrorLanguages": ["*"],
-	"window.zoomLevel": 0.2,
+	"window.zoomLevel": 0.1,
 	"editor.unicodeHighlight.ambiguousCharacters": false
 }

@@ -68,7 +68,7 @@ hyper + s
 
 # NEOVIM - Just giving this a class name so I can use it in the rules with lvim
 hyper + d
-    tdrop -am sakura --class="LVIM" --name="lvim" -e "lvim";
+    tdrop -am sakura --class="LVIM" --name="lvim";
 
 # FILE MANAGER
 hyper + f

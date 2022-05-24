@@ -31,7 +31,7 @@ hyper + {_,shift + }e
 
 # TERMINAL
 {super,hyper} + apostrophe
-    terminator;
+    tilix;
 
 # SCRATCH PADS
 ## Terminal

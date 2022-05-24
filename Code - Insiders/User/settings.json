@@ -48,7 +48,7 @@
 					"keyword.other.data-integrity.sql"
 				],
 				"settings": {
-					"foreground": "#1698cd",
+					"foreground": "#3592bb",
 					"fontStyle": "bold"
 				}
 			},
@@ -56,7 +56,7 @@
 				"scope": ["entity.name.tag.yaml", "support.type.property-name.json", "source.sql"],
 				"settings": {
 					"fontStyle": "italic",
-					"foreground": "#b487d0"
+					"foreground": "#9fb66f"
 				}
 			}
 		]
@@ -75,7 +75,7 @@
 	"editor.fontFamily": "CaskaydiaCove Nerd Font",
 	"editor.fontWeight": 700,
 	"editor.fontSize": 16,
-	"editor.lineHeight": 1.7,
+	"editor.lineHeight": 1.5,
 	"editor.fontLigatures": true,
 	"editor.quickSuggestions": {
 		"comments": "on",
@@ -94,7 +94,7 @@
 	"editor.largeFileOptimizations": false,
 	"editor.minimap.enabled": false,
 	"terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
-	"terminal.integrated.fontSize": 18,
+	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.fontWeightBold": 700,
 	"terminal.integrated.lineHeight": 1,
 	"terminal.integrated.gpuAcceleration": "on",
@@ -149,16 +149,14 @@
 	"workbench.startupEditor": "newUntitledFile",
 	"emmet.includeLanguages": {
 		"javascript": "javascriptreact",
-		"typescript": "typescriptreact",
-		"vue-html": "html",
-		"vue": "html"
+		"typescript": "typescriptreact"
 	},
 	"python.languageServer": "Pylance",
 	"python.linting.enabled": true,
 	"python.formatting.provider": "black",
 	"python.formatting.blackPath": "/home/sam/.local/bin/black",
 	"python.sortImports.path": "/home/sam/.local/bin/isort",
-	"python.formatting.blackArgs": ["--line-length=100"],
+	"python.formatting.blackArgs": ["--line-length=90"],
 	"python.sortImports.args": ["--profile=black"],
 	"[python]": {
 		"editor.formatOnSave": true
@@ -190,7 +188,7 @@
 		"editor.formatOnSave": true
 	},
 	"rust-analyzer.completion.autoimport.enable": true,
-	"[javascript][javascriptreact][typescript][typescriptreact][vue]": {
+	"[javascript][javascriptreact][typescript][typescriptreact]": {
 		"editor.formatOnSave": false,
 		"editor.formatOnType": false
 	},
@@ -201,23 +199,6 @@
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features",
 		"editor.matchBrackets": "always"
-	},
-	"[php]": {
-		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-	},
-	"intelephense.format.braces": "k&r",
-	"intelephense.format.enable": true,
-	"intelephense.diagnostics.enable": true,
-	"bladeFormatter.format.enabled": true,
-	"bladeFormatter.format.wrapLineLength": 135,
-	"bladeFormatter.format.indentSize": 1,
-	"bladeFormatter.format.wrapAttributes": "aligned-multiple",
-	"bladeFormatter.format.sortTailwindcssClasses": true,
-	"bladeFormatter.format.useTabs": false,
-	"[blade]": {
-		"editor.autoClosingBrackets": "always",
-		"editor.defaultFormatter": "shufo.vscode-blade-formatter",
-		"editor.formatOnSave": true
 	},
 	"[css][scss][less]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
@@ -236,6 +217,23 @@
 	"less.format.newlineBetweenRules": true,
 	"less.format.newlineBetweenSelectors": true,
 	"less.format.spaceAroundSelectorSeparator": true,
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+	},
+	"intelephense.format.braces": "k&r",
+	"intelephense.format.enable": true,
+	"intelephense.diagnostics.enable": true,
+	"bladeFormatter.format.enabled": true,
+	"bladeFormatter.format.wrapLineLength": 135,
+	"bladeFormatter.format.indentSize": 1,
+	"bladeFormatter.format.wrapAttributes": "aligned-multiple",
+	"bladeFormatter.format.sortTailwindcssClasses": true,
+	"bladeFormatter.format.useTabs": false,
+	"[blade]": {
+		"editor.autoClosingBrackets": "always",
+		"editor.defaultFormatter": "shufo.vscode-blade-formatter",
+		"editor.formatOnSave": true
+	},
 	"[toml]": {
 		"editor.defaultFormatter": "be5invis.toml"
 	},
@@ -291,7 +289,6 @@
 	"search.useGlobalIgnoreFiles": false,
 	"security.workspace.trust.untrustedFiles": "open",
 	"explorer.confirmDelete": false,
-	"update.mode": "none",
 	"diffEditor.ignoreTrimWhitespace": false,
 	"xml.codeLens.enabled": false,
 	"xml.format.closingBracketNewLine": true,
@@ -302,10 +299,6 @@
 		"vscode-kubernetes.helm-path.linux": "/home/sam/.vs-kubernetes/tools/helm/linux-amd64/helm",
 		"vscode-kubernetes.minikube-path.linux": "/home/sam/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
 	},
-	"autoimport.autoComplete": true,
-	"autoimport.filesToScan": "**/*.{ts,tsx,js,jsx,php,py}",
-	"autoimport.spaceBetweenBraces": true,
-	"autoimport.useSemiColon": true,
 	"git.ignoreMissingGitWarning": true,
 	"typescript.preferences.importModuleSpecifier": "relative",
 	"Lua.telemetry.enable": true,
@@ -322,6 +315,6 @@
 		"rgba(102,40,98,0.1)"
 	],
 	"indentRainbow.ignoreErrorLanguages": ["*"],
-	"window.zoomLevel": 0.1,
+	"window.zoomLevel": 0.44,
 	"editor.unicodeHighlight.ambiguousCharacters": false
 }

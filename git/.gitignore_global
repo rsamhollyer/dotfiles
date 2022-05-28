@@ -56,3 +56,5 @@ __pycache__
 .next
 dist
 build
+# For Rust #
+target

@@ -66,7 +66,7 @@ super + a
 hyper + s
     code-insiders;
 
-# NEOVIM - Just giving this a class name so I can use it in the rules with lvim
+# LVIM
 hyper + d
     tdrop -am sakura --class="LVIM" --name="lvim";
 

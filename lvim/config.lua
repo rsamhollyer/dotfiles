@@ -11,8 +11,9 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "gruvbox-baby"
-lvim.background_color = 'medium'
+lvim.catppuccin_flavour = "mocha"
+lvim.colorscheme = "catppuccin"
+-- lvim.background_color = 'medium'
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -154,6 +155,8 @@ lvim.plugins = {
     requires = "hrsh7th/nvim-cmp",
     event = "InsertEnter" },
   { 'luisiacc/gruvbox-baby', branch = 'main' },
+  { "catppuccin/nvim",
+    as = "catppuccin" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

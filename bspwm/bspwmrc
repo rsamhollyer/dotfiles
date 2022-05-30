@@ -40,7 +40,7 @@ bspc config active_border_color "$color12"
 ##############################
 # BSPWM CONFIGURATIONS
 ##############################
-bspc config border_width         1
+bspc config border_width         4
 bspc config borderless_monocle   false
 bspc config window_gap            20
 bspc config split_ratio           0.50
@@ -65,6 +65,7 @@ bspc rule -a Gpick state=floating center=true
 bspc rule -a Pavucontrol state=floating center=true
 bspc rule -a Lxappearance state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a Wpg state=floating rectangle="1000x1000+0+0" center=true
+bspc rule -a copyq:copyq state=floating rectangle="1000x1000+0+0" center=true
 
 # bspc rule -a Slack:slack:"browser-window" state=tiled desktop=^10
 bspc rule -a Slack:slack desktop=^10

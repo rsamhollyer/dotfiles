@@ -1,5 +1,5 @@
 #!/bin/env bash
-sleep 3
+sleep 1
 
 eDP=eDP
 HDMI=$(xrandr -q | grep 'HDMI-A-0 connected' | awk '{print $1}')

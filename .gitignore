@@ -31,7 +31,6 @@ oh-my-zsh
 weather.sh
 *.zcompdump*
 pulse
-gtk*
 nextjs*
 GIMP
 configstore

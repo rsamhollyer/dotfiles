@@ -157,6 +157,7 @@ lvim.plugins = {
   { 'luisiacc/gruvbox-baby', branch = 'main' },
   { "catppuccin/nvim",
     as = "catppuccin" },
+  { "rebelot/kanagawa.nvim" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

@@ -1,19 +1,19 @@
+#!/bin/env bash
 
-#!/bin/sh
-if [ -f ~/.zshenv ]; then
-    source ~/.zshenv
-fi
+[[ -f ~/.zshenv ]] && source ~/.zshenv
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+[[ -f ~/.Xresources ]] && xrdb ~/.Xresources
 
-sh ~/.config/wpg/init_wpg.sh
-xrdb ~/.Xresources
-numlockx on
 xsettingsd &
-/usr/lib/polkit-kde-authentication-agent-1 &
+dunst &
 xfce4-power-manager &
 xmousepasteblock &
-mons -a -x ~/.config/screenlayout/mons-plug.sh &
-pgrep -x redshift > /dev/null || redshift -P -c ~/.config/redshift.conf &
+/usr/lib/polkit-kde-authentication-agent-1 &
+mons -a -x ~/.config/screenlayout/mons-plug.sh & 
 pgrep -x sxhkd > /dev/null || sxhkd &
-pgrep -x picom > /dev/null || picom --config /home/sam/.config/picom/picom.conf --experimental-backends -b  &
-dunst --config "$HOME/.config/dunst/dunstrc" &
-xmodmap ~/.Xmodmap
+pgrep -x redshift > /dev/null || redshift -P -c $HOME/.config/redshift.conf &
+picom --config $HOME/.config/picom/picom.conf --experimental-backends -b  &
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/pipewire-media-session &
+wpg -s $(wpg -c)

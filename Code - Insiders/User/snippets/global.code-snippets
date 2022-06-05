@@ -100,5 +100,10 @@
 		"scope": "php,blade",
 		"prefix": "vd",
 		"body": ["var_dump($1)"]
+	},
+	"Rust PrintLn": {
+		"scope": "rust",
+		"prefix": "pl",
+		"body": ["println!($1)"]
 	}
 }

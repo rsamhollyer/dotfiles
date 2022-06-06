@@ -15,5 +15,5 @@ pgrep -x redshift > /dev/null || redshift -P -c $HOME/.config/redshift.conf &
 picom --config $HOME/.config/picom/picom.conf --experimental-backends -b  &
 /usr/bin/pipewire &
 /usr/bin/pipewire-pulse &
-/usr/bin/pipewire-media-session &
+/usr/bin/wireplumber &
 wpg -s $(wpg -c)

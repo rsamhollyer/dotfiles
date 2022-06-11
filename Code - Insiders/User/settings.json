@@ -48,7 +48,7 @@
           "keyword.other.data-integrity.sql"
         ],
         "settings": {
-          "foreground": "#b16286",
+          "foreground": "#d172ff",
           "fontStyle": "bold"
         }
       },
@@ -60,7 +60,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#458588"
+          "foreground": "#59b7ff"
         }
       }
     ]

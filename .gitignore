@@ -15,6 +15,11 @@ Code - Insiders/*
 Code - Insiders/User/workspaceStorage
 Code - Insiders/User/globalStorage
 Code - Insiders/User/History
+
+nvim/*
+!nvim/lua/sam
+!nvim/lua/sam/init.lua
+
 .zcompdump-arch-5.8
 zsh-history
 TabNine
@@ -52,7 +57,7 @@ btop
 gpick
 npm
 libreoffice
-nvim
+
 coc
 QtProject
 gatsby

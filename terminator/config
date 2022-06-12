@@ -5,7 +5,7 @@
   inactive_color_offset = 0.9022435897435898
   suppress_multiple_term_dialog = True
   title_use_system_font = False
-  title_font = CaskaydiaCove Nerd Font Mono Bold Italic 16.0
+  title_font = CaskaydiaCove Nerd Font Mono Bold Italic 13.0
 [keybindings]
   zoom_in = <Primary>KP_Add
   zoom_out = <Primary>KP_Subtract
@@ -35,7 +35,7 @@
     urgent_bell = True
     icon_bell = False
     cursor_color = "#aaaaaa"
-    font = CaskaydiaCove Nerd Font Mono Bold Italic 14
+    font = CaskaydiaCove Nerd Font Mono Bold Italic 13.5
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 50000

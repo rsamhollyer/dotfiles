@@ -11,6 +11,10 @@
 ctrl + hyper + {a,s,z,w}
     bspc node -p {west,east,south,north}
 
+# GENERATE PASSWORD https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#generate-a-random-password-to-clipboard
+super + r ; g ; p
+    tr -dc "a-zA-Z0-9_#@.-" < /dev/urandom | head -c 14 | xclip -selection clipboard
+
 # SWITCH DISPLAYS
 super + shift + m
     bash $HOME/.local/bin/docked
@@ -38,6 +42,15 @@ hyper + {_,shift + }e
 hyper + {Return,KP_Enter}
     tdrop -am -w 70% -h 75% -x 15% -y 13% terminator;
 
+# CLIPMENU https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofiRQQR
+{hyper,super} + comma
+    CM_LAUNCHER=rofi clipmenu \
+        -location 1 \
+        -m -3 \
+        -no-show-icons \
+        -theme-str '* \{ font: 12px; \}' \
+        -theme-str 'listview \{ spacing: 0; \}' \
+        -theme-str 'window \{ width: 20em; \}'
 ## BTOP
 {super,hyper} + semicolon
     tdrop -am -w 70% -h 75% -x 15% -y 13% xfce4-terminal --title=BTOP --role=BTOP -x btop;
@@ -66,9 +79,9 @@ super + a
 hyper + s
     code-insiders;
 
-# LVIM
+# NVIM
 hyper + d
-    tdrop -am sakura --class="LVIM" --name="lvim";
+    tdrop -am sakura --class="NVIM" --name="nvim" -e "$HOME/.local/bin/nvim";
 
 # FILE MANAGER
 hyper + f

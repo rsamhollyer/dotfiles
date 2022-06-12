@@ -78,6 +78,5 @@ bspc rule -a Nm-connection-editor state=floating rectangle="1800x1200+0+0" cente
 bspc rule -a Virt-manager state=floating rectangle='1200x1000+0+0' center=true
 bspc rule -a Dconf-editor state=floating rectangle="1200x1000+0+0" center=true
 bspc rule -a SpeedCrunch state=floating rectangle="1060x750+0+0" center=true
-bspc rule -a LVIM:lvim state=fullscreen
 bspc rule -a firefox:Devtools state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a polkit-kde-authentication-agent-1 state=floating rectangle="400x300+0+0" center=true

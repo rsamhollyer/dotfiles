@@ -171,9 +171,8 @@
 	},
 	"github.copilot.enable": {
 		"*": true,
-		"yaml": false,
-		"plaintext": true,
-		"markdown": true
+		"plaintext": false,
+		"markdown": false
 	},
 	"path-autocomplete.extensionOnImport": true,
 	"git.autofetch": false,
@@ -263,21 +262,7 @@
 	"html.autoClosingTags": true,
 	"html.format.indentInnerHtml": true,
 	"emmet.triggerExpansionOnTab": true,
-	"files.associations": {
-		"*.html": "html",
-		"*.react.js": "javascriptreact",
-		"*.jsx": "javascriptreact",
-		"*.tsx": "typescriptreact",
-		"sxhkdrc": "shellscript",
-		"bspwmrc": "shellscript",
-		"config": "properties",
-		"gtkrc": "properties",
-		"*.blade.php": "blade",
-		"*.php": "php",
-		"*.desktop": "properties",
-		"*.list": "properties",
-		".xsettingsd": "ini"
-	},
+
 	"auto-rename-tag.activationOnLanguage": [
 		"javascript",
 		"javascriptreact",
@@ -299,11 +284,10 @@
 		"vscode-kubernetes.helm-path.linux": "/home/sam/.vs-kubernetes/tools/helm/linux-amd64/helm",
 		"vscode-kubernetes.minikube-path.linux": "/home/sam/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
 	},
-	"git.ignoreMissingGitWarning": true,
 	"typescript.preferences.importModuleSpecifier": "relative",
-	"Lua.telemetry.enable": true,
+	"Lua.telemetry.enable": false,
 	"telemetry.telemetryLevel": "all",
-	"redhat.telemetry.enabled": true,
+	"redhat.telemetry.enabled": false,
 	"debug.allowBreakpointsEverywhere": true,
 	"window.menuBarVisibility": "toggle",
 	"indentRainbow.colors": [
@@ -316,11 +300,25 @@
 	],
 	"indentRainbow.ignoreErrorLanguages": ["*"],
 	"window.zoomLevel": 0.44,
-	"editor.unicodeHighlight.ambiguousCharacters": false,
 
+	"files.associations": {
+		"*.html": "html",
+		"*.react.js": "javascriptreact",
+		"*.jsx": "javascriptreact",
+		"*.tsx": "typescriptreact",
+		"sxhkdrc": "shellscript",
+		"bspwmrc": "shellscript",
+		"config": "properties",
+		"gtkrc": "properties",
+		"*.blade.php": "blade",
+		"*.php": "php",
+		"*.desktop": "properties",
+		"*.list": "properties",
+		".xsettingsd": "ini"
+	},
 	"files.exclude": {
-		"**/.git": true,
 		"**/.gitignore": false,
+		"**/.git": true,
 		"**/.svn": true,
 		"**/.hg": true,
 		"**/CVS": true,

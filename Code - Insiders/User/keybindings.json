@@ -367,5 +367,9 @@
 	{
 		"key": "ctrl+shift+alt+`",
 		"command": "workbench.action.createTerminalEditorSide"
+	},
+	{
+		"key": "ctrl+shift+alt+meta+down",
+		"command": "workbench.action.terminal.moveToTerminalPanel"
 	}
 ]

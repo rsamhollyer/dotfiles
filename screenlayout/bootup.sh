@@ -14,8 +14,9 @@ elif [[ -n $HDMI ]]; then
 else
     xrandr --auto
 fi
-pgrep -x sxhkd > /dev/null || sxhkd &
+
+pgrep -x sxhkd >/dev/null || sxhkd &
 bspc wm -r
-wpg -s $(wpg -c)
+wpg -s "$(wpg -c)"
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exit 0

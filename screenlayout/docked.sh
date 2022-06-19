@@ -1,22 +1,18 @@
 #!/bin/env bash
 
-monitor_count="$(xrandr -q | grep " connected" | wc -l)"
+monitor_count="$(xrandr -q | grep -c " connected ")"
 eDP=eDP
 HDMI=$(xrandr -q | grep 'HDMI-A-0 connected' | awk '{print $1}')
 DP=$(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}')
 
-
-function disconnect_dp(){
-    active_monitors=($(xrandr --listactivemonitors | grep 'DisplayPort-[0-9]' | awk '{print $4}'))
-    connect_monitors=($(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}'))
-
+function disconnect_dp() {
+    active_monitors=("$(xrandr --listactivemonitors | grep 'DisplayPort-[0-9]' | awk '{print $4}')")
+    connect_monitors=("$(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}')")
 
     for i in "${active_monitors[@]}"; do
         [[ $i != "${connect_monitors[0]}" ]] && echo "Disconnecting $i" && xrandr --output "$i" --off
     done
 }
-
-
 
 case $monitor_count in
 3)
@@ -35,7 +31,8 @@ case $monitor_count in
 
     ;;
 esac
-pgrep -x sxhkd > /dev/null || sxhkd &
+
+pgrep -x sxhkd >/dev/null || sxhkd &
 bspc wm -r
 wpg -s $(wpg -c)
 

@@ -316,7 +316,7 @@
     "*.react.js": "javascriptreact",
     "*.jsx": "javascriptreact",
     "*.tsx": "typescriptreact",
-    "sxhkdrc": "shellscript",
+    "sxhkdrc": "ini",
     "bspwmrc": "shellscript",
     "config": "properties",
     "gtkrc": "properties",

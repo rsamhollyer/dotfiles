@@ -81,7 +81,7 @@ hyper + s
 
 # NVIM
 hyper + d
-    tdrop -am sakura --class="NVIM" --name="nvim" -e "$HOME/.local/bin/nvim";
+    tdrop -am sakura --class="NVIM" --name="nvim" -e "$HOME/.local/bin/lvim";
 
 # FILE MANAGER
 hyper + f

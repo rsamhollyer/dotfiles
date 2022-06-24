@@ -9,7 +9,7 @@
 [keybindings]
   zoom_in = <Primary>KP_Add
   zoom_out = <Primary>KP_Subtract
-  new_tab = <Primary>t
+  new_tab = <Primary><Shift>t
   split_horiz = <Primary><Shift>z
   split_vert = <Primary><Shift>x
   close_term = <Primary>w

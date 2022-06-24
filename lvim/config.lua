@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "kanagawa"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -150,6 +150,8 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+  { "rebelot/kanagawa.nvim" },
+  { "github/copilot.vim" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

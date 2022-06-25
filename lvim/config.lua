@@ -63,6 +63,9 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
+-- Set node verion for Copilot
+vim.g.copilot_node_command = "~/.local/share/nvm/versions/node/v16.15.1/bin/node"
+
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",

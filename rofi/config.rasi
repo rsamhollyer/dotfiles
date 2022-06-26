@@ -4,7 +4,7 @@ configuration {
   show-icons: true;
   icon-theme: "Qogir-dark";
   font: "CaskaydiaCove Nerd Font 10";
-  terminal: "alacritty";
+  terminal: "terminator";
   modi: "drun,run,window";
   ssh-client: "ssh";
   ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";

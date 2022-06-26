@@ -54,7 +54,8 @@ export LANG=en_US.UTF-8
 eval "$(starship init zsh)"
 
 # FZF
-[ -f $HOME/.config/.fzf.zsh ] && source $HOME/.config/.fzf.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 
 if [[ -d "$HOME/.local/bin" ]]; then
     PATH="$HOME/.local/bin:$PATH"

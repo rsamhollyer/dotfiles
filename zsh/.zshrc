@@ -41,7 +41,6 @@ setopt HIST_BEEP
 export NVM_COMPLETION=true
 export NVM_AUTO_USE=true
 
-(cat $HOME/.config/wpg/sequences &) # WPG terminal colors
 fpath=($HOME/.config/zsh/completions $fpath)
 
 # User configuration

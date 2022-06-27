@@ -155,6 +155,7 @@ lvim.plugins = {
   },
   { "rebelot/kanagawa.nvim" },
   { "github/copilot.vim" },
+  { 'b4skyx/serenade' },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

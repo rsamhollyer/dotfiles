@@ -16,6 +16,6 @@ else
 fi
 
 pgrep -x sxhkd >/dev/null || sxhkd &
-bspc wm -r
+~/.fehbg &
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exit 0

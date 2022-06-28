@@ -33,6 +33,6 @@ case $monitor_count in
 esac
 
 pgrep -x sxhkd >/dev/null || sxhkd &
-bspc wm -r
+~/.fehbg &
 
 exit 0

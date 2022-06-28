@@ -32,6 +32,6 @@ case ${MONS_NUMBER} in
 esac
 
 pgrep -x sxhkd >/dev/null || sxhkd &
-bspc wm -r
+~/.fehbg &
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exit 0

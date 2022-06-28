@@ -1,41 +1,22 @@
 #!/bin/env bash
+walls_dir=$HOME/.config/wallpapers
+prepend_command="feh --no-fehbg --bg-fill"
 
-walls_dir=$HOME/.config/wpg/wallpapers
-declare -a walls_arr=("Add New  " "Random ﮼ ")
+for file in "$walls_dir"/*; do
+    file="$(basename "$file")"
+    walls_arr+=("$file")
+done
 
-for file in $(ls $walls_dir)
-    do
-        walls_arr+=("$file")
-    done
+choice=$(printf '%s\n' "${walls_arr[@]}" | rofi -dmenu -i -theme "$HOME"/.config/rofi/wallpaper.rasi)
 
-choice=$(printf '%s\n' "${walls_arr[@]}" | rofi -dmenu -i -theme $HOME/.config/rofi/wallpaper.rasi)
-
-[[ $choice == "Add New  " ]] && exec wpg
-[[ $choice == "Random ﮼ " ]]
-
-if [[ $choice == "Random ﮼ " ]];then
-    wpg -m
-    source "$HOME/.cache/wal/colors.sh"
-    bspc config focused_border_color "$color9"
-    bspc config normal_border_color "$color12"
-    bspc config active_border_color "$color12"
-    sh ~/.local/bin/updatecolors.sh
-    picom --experimental-backends -b &
-    pkill -USR1 -x sxhkd
-fi
-
-if [[ -z ${choice} ]];then
-# If no choice is made, then exit
-    exit 0
+if [[ -z ${choice} ]]; then
+    # If no choice is made, then exit
+    exit 1
 else
-# Else, set that wallpaper theme
-    wpg -s "$choice"
-    source "$HOME/.cache/wal/colors.sh"
-    bspc config focused_border_color "$color9"
-    bspc config normal_border_color "$color12"
-    bspc config active_border_color "$color12"
-    sh ~/.local/bin/updatecolors.sh
+    # Else, set that wallpaper theme
+    printf "#!/bin/env bash\n%s $prepend_command $walls_dir/$choice" >~/.fehbg
     picom --experimental-backends -b &
+    ~/.fehbg &
     pkill -USR1 -x sxhkd
 fi
 

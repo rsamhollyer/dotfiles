@@ -371,5 +371,9 @@
 	{
 		"key": "ctrl+shift+alt+meta+down",
 		"command": "workbench.action.terminal.moveToTerminalPanel"
+	},
+	{
+		"key": "alt+d",
+		"command": "editor.action.smartSelect.grow"
 	}
 ]

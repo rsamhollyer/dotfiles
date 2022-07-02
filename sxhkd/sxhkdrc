@@ -11,6 +11,14 @@
 ctrl + hyper + {a,s,z,w}
     bspc node -p {west,east,south,north}
 
+# Show help
+hyper + slash
+    ~/.local/bin/sxhkd-help
+
+# Rotate tree
+super + shift + {d,a}
+    bspc node @/ -C {forward,backward}
+
 # GENERATE PASSWORD https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#generate-a-random-password-to-clipboard
 super + r ; g ; p
     tr -dc "a-zA-Z0-9_#@.-" < /dev/urandom | head -c 14 | xclip -selection clipboard
@@ -55,9 +63,6 @@ hyper + {Return,KP_Enter}
 {super,hyper} + semicolon
     tdrop -am -w 70% -h 75% -x 15% -y 13% xfce4-terminal --title=BTOP --role=BTOP -x btop;
 
-## Thunar
-{super,hyper} + slash
-    tdrop -am -w 75% -h 75% -x 13% -y 13% thunar;
 
 ## SPEED CRUNCH (Calculator)
 hyper + b

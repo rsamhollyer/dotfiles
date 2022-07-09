@@ -20,10 +20,18 @@
 				"settings": {
 					"fontStyle": "italic bold"
 				}
+			},
+			{
+				"scope": ["comment", "comment.block", "comment.block.documentation", "comment.line"],
+				"settings": {
+					"fontStyle": "italic bold",
+					"foreground": "#d9f890c7"
+				}
 			}
 		]
 	},
 
+	"editor.hover.enabled": true,
 	"editor.linkedEditing": true,
 	"editor.suggestSelection": "first",
 	"editor.snippetSuggestions": "top",
@@ -40,7 +48,7 @@
 	// "editor.fontFamily": "DankMono Nerd Font",
 	// "editor.fontFamily": "Dank Mono",
 	"editor.fontWeight": "500",
-	"editor.fontSize": 16.5,
+	"editor.fontSize": 15,
 	"editor.lineHeight": 1.5,
 	"editor.fontLigatures": true,
 	"editor.quickSuggestions": {
@@ -151,8 +159,11 @@
 		"editor.formatOnSave": true
 	},
 	"rust-analyzer.checkOnSave.command": "clippy",
+	"rust-analyzer.trace.server": "verbose",
 	"rust-analyzer.cargo.autoreload": true,
 	"rust-analyzer.completion.autoimport.enable": true,
+	"rust-analyzer.hover.actions.enable": true,
+	"rust-analyzer.hover.documentation.enable": true,
 	"[javascript][javascriptreact][typescript][typescriptreact]": {
 		"editor.formatOnSave": false,
 		"editor.formatOnType": false

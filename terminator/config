@@ -5,7 +5,7 @@
   inactive_color_offset = 0.9022435897435898
   suppress_multiple_term_dialog = True
   title_use_system_font = False
-  title_font = DaddyTimeMono Nerd Font Bold 17
+  title_font = Operator Mono Lig Bold Italic 16
 [keybindings]
   zoom_in = <Primary>KP_Add
   zoom_out = <Primary>KP_Subtract
@@ -36,13 +36,13 @@
     icon_bell = False
     background_color = "#282828"
     cursor_color = "#aaaaaa"
-    font = DankMono Nerd Font Bold 18.5
+    font = Operator Mono Lig Bold Italic 16.5
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 50000
     scrollback_infinite = True
-    palette =  "#090618:#c34043:#76946a:#c0a36e:#7e9cd8:#957fb8:#6a9589:#c8c093:#727169:#e82424:#98bb6c:#e6c384:#7fb4ca:#938aa9:#7aa89f:#dcd7ba"
+    palette = "#090618:#c34043:#76946a:#c0a36e:#7e9cd8:#957fb8:#6a9589:#c8c093:#727169:#e82424:#98bb6c:#e6c384:#7fb4ca:#938aa9:#7aa89f:#dcd7ba"
     use_system_font = False
     bold_is_bright = True
   [[kanagawa]]

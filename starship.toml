@@ -1,7 +1,7 @@
 [battery]
 charging_symbol = "⚡️ "
 discharging_symbol = "💀 "
-full_symbol = " "
+full_symbol = ""
 
 [[battery.display]]
 style = "bold red"
@@ -23,8 +23,6 @@ truncation_length = 5
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
-style = "bold purple"
-symbol = " "
 
 [git_commit]
 commit_hash_length = 8
@@ -59,19 +57,15 @@ symbol = "  "
 
 [package]
 format = '\[[$symbol$version]($style)\]'
-symbol = " "
 
 [nodejs]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [cmake]
 format = '\[[$symbol($version)]($style)\]'
-symbol = "△ "
 
 [perl]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [lua]
 format = '\[[$symbol($version)]($style)\]'
@@ -87,7 +81,6 @@ symbol = " "
 
 [rust]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [golang]
 format = '\[[$symbol($version)]($style)\]'

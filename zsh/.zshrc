@@ -1,11 +1,5 @@
-# Path to your oh-my-zsh installation.
 export ZSH="/home/sam/.config/oh-my-zsh"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
 
@@ -14,29 +8,44 @@ zstyle ':omz:update' mode auto # update automatically without asking
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git wd ng ripgrep docker docker-compose zsh-autosuggestions zsh-syntax-highlighting zsh-nvm zsh-pyenv fuzzy-sys fuzzy-kill sudo pip rust ripgrep gcloud colored-man-pages)
+plugins=(git
+    wd
+    ng
+    ripgrep
+    docker
+    docker-compose
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-nvm
+    zsh-pyenv
+    fuzzy-sys
+    fuzzy-kill
+    sudo
+    pip
+    rust
+    gcloud
+    colored-man-pages
+)
 
 export HISTFILE="$XDG_STATE_HOME/zsh/zsh-history"
 export SHELL_SESSION_DIR="$XDG_STATE_HOME/zsh/sessions"
 export SHELL_SESSION_FILE="$SHELL_SESSION_DIR/$TERM_SESSION_ID"
 export LESSHISTFILE=/dev/null
 
-HISTSIZE=15000
-SAVEHIST=10000
+HISTSIZE=8000
+SAVEHIST=5000
 
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
 setopt globdots
 
 # remove dups
-setopt histignorealldups
-setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
-setopt HIST_BEEP
+setopt histignorealldups
 
 export NVM_COMPLETION=true
 export NVM_AUTO_USE=true

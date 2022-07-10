@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "kanagawa"
+lvim.colorscheme = "gruvbox"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -156,6 +156,7 @@ lvim.plugins = {
   { "rebelot/kanagawa.nvim" },
   { "github/copilot.vim" },
   { 'b4skyx/serenade' },
+  { 'morhetz/gruvbox' }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

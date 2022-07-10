@@ -8,8 +8,8 @@ style = "bold red"
 threshold = 30
 
 [character]
-error_symbol = "[X](bold red) "
-success_symbol = "[ ](bold fg:50)"
+error_symbol = "[😓 ](bold red)"
+success_symbol = "[🚀 ](bold fg:50)"
 
 [cmd_duration]
 format = " [$duration]($style)"
@@ -53,7 +53,6 @@ trim_at = "-"
 
 [memory_usage]
 format = '\[$symbol[$ram( | $swap)]($style)\]'
-symbol = "  "
 
 [package]
 format = '\[[$symbol$version]($style)\]'
@@ -69,64 +68,45 @@ format = '\[[$symbol($version)]($style)\]'
 
 [lua]
 format = '\[[$symbol($version)]($style)\]'
-symbol = "🌙 "
 
 [python]
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
-symbol = " "
 
 [ruby]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [rust]
 format = '\[[$symbol($version)]($style)\]'
 
 [golang]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [php]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [scala]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
-
-[shell]
-disabled = false
-style = "fg:122"
-unknown_indicator = "mystery shell"
-zsh_indicator = " "
 
 [nix_shell]
 format = '\[[$symbol$state( \($name\))]($style)\]'
-symbol = " "
 
 [julia]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [java]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [docker_context]
 format = '\[[$symbol$context]($style)\]'
-symbol = " "
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
-symbol = "  "
 
 [conda]
 format = '\[[$symbol$environment]($style)\]'
-symbol = " "
 
 [dart]
 format = '\[[$symbol($version)]($style)\]'
-symbol = " "
 
 [time]
 disabled = true

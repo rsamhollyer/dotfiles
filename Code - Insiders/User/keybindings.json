@@ -371,5 +371,9 @@
 	{
 		"key": "alt+d",
 		"command": "editor.action.smartSelect.grow"
+	},
+	{
+		"key": "ctrl+k ctrl+c",
+		"command": "workbench.action.toggleCenteredLayout"
 	}
 ]

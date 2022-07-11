@@ -177,9 +177,11 @@
 		"editor.defaultFormatter": "vscode.html-language-features",
 		"editor.matchBrackets": "always"
 	},
+
 	"[css][scss][less]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
+
 	"css.format.maxPreserveNewLines": 1,
 	"css.format.enable": true,
 	"css.format.newlineBetweenRules": true,

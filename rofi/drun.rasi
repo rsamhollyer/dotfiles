@@ -27,12 +27,12 @@ window {
     border:                  		0px;
     border-radius:                  0px;
     border-color:                  	@border;
-    height:                         93%;
-    width:                          98%;
+    height:                         60%;
+    width:                          60%;
     location:                       center;
     anchor:                         center;
     x-offset:                       0;
-    y-offset:                       10;
+    y-offset:                            0;
 }
 
 prompt {

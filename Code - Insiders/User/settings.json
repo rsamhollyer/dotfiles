@@ -49,7 +49,7 @@
 	// "editor.fontFamily": "DankMono Nerd Font",
 	// "editor.fontFamily": "Dank Mono",
 	"editor.fontWeight": "500",
-	"editor.fontSize": 15,
+	"editor.fontSize": 18,
 	"editor.lineHeight": 1.5,
 	"editor.fontLigatures": true,
 	"editor.quickSuggestions": {
@@ -147,7 +147,7 @@
 		"*": true,
 		"yaml": false,
 		"plaintext": true,
-		"markdown": false
+		"markdown": true
 	},
 	"path-autocomplete.extensionOnImport": true,
 	"git.autofetch": false,
@@ -165,6 +165,7 @@
 	"rust-analyzer.completion.autoimport.enable": true,
 	"rust-analyzer.hover.actions.enable": true,
 	"rust-analyzer.hover.documentation.enable": true,
+	"editor.inlayHints.enabled": "offUnlessPressed",
 	"[javascript][javascriptreact][typescript][typescriptreact]": {
 		"editor.formatOnSave": false,
 		"editor.formatOnType": false
@@ -279,7 +280,7 @@
 		"rgba(102,40,98,0.1)"
 	],
 	"indentRainbow.ignoreErrorLanguages": ["*"],
-	"window.zoomLevel": 0.44,
+	"window.zoomLevel": 0.1,
 	"files.associations": {
 		"*.html": "html",
 		"*.react.js": "javascriptreact",

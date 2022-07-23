@@ -35,4 +35,4 @@ esac
 pgrep -x sxhkd >/dev/null || sxhkd &
 ~/.fehbg &
 bspc wm -r
-exit 0
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap

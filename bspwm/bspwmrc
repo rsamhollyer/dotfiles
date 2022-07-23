@@ -55,6 +55,7 @@ bspc config top_padding 30
 ##############################
 bscp rule -r "*"
 bspc rule -a '*' rectangle="1800x1200+0+0" center=true
+bspc rule -a Slack:slack desktop=^10 state=floating
 bspc rule -a Pacfinder rectangle="1800x1200+0+0" state=floating center=true
 bspc rule -a Nsxiv state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a Timeshift-gtk state=floating rectangle="1000x1000+0+0" center=true
@@ -65,10 +66,6 @@ bspc rule -a Pavucontrol state=floating center=true
 bspc rule -a Lxappearance state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a Wpg state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a copyq:copyq state=floating rectangle="1000x1000+0+0" center=true
-
-# bspc rule -a Slack:slack:"browser-window" state=tiled desktop=^10
-bspc rule -a Slack:slack desktop=^10
-
 bspc rule -a Gimp-2.10 state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Thunar:thunar state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Thunar:thunar:'File Operation Progress' state=floating rectangle="800x600+0+0" center=true

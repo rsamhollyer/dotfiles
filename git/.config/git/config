@@ -1,0 +1,98 @@
+[user]
+name = Sam Hollyer
+email = rsamhollyer@gmail.com
+
+[credential "https://github.com"]
+helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+helper = !/usr/bin/gh auth git-credential
+
+[core]
+editor = lvim
+excludesfile = /home/sam/.config/git/.gitignore_global
+pager = delta --line-numbers
+autocrlf = input # Force replacing CRLF line endings with LF
+ignorecase = false
+
+[interactive]
+diffFilter = delta --color-only --line-numbers
+
+[add.interactive]
+useBuiltin = false # required for git 2.37.0
+
+[delta]
+navigate = true # use n and N to move between diff sections
+
+[pager]
+diff = delta
+log = delta
+reflog = delta
+show = delta
+
+[merge]
+conflictstyle = diff3
+
+[init]
+defaultBranch = main
+
+[push]
+default = upstream
+rebase = true
+followTags = true
+
+[pull]
+rebase = true
+
+[commit]
+verbose = true
+
+[column]
+ui = auto
+
+[fetch]
+prune = true
+
+[diff]
+colorMoved = default
+
+[color]
+ui = true
+
+[color "status"]
+added = green reverse
+changed = yellow reverse
+untracked = red reverse
+
+[apply]
+ignorewhitespace = change
+whitespace = nowarn
+
+[alias]
+ph = push -u origin HEAD
+sm = switch main
+lg = log -m --simplify-merges --pretty --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%ar) %Cblue%an <%ae>%Creset' --abbrev-commit --date=relative
+gone = "!f() { git fetch --all --prune; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D; }; f"
+br = branch -a --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+
+dd = diff --check --dirstat --find-copies --find-renames --histogram --pretty
+
+ll = log --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty
+
+undo = reset HEAD~1 --mixed
+rhh = reset --hard HEAD
+s = status
+sw = switch
+c = clone
+co = checkout
+b = branch
+cob = checkout -b
+del = branch -d
+uncommit = reset --soft HEAD~1
+cleanout = !git clean -df && git checkout -- .
+
+# Output the current branch name
+get = !git rev-parse --abbrev-ref HEAD
+
+# Shortcut to add, commit and push in one command.
+out = "!f() { git add \"$1\" && git commit -m \"$2\" && git push origin; }; f"

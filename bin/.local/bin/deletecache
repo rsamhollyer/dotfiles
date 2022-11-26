@@ -1,0 +1,7 @@
+#!/bin/env bash
+
+remove_content=($(ls ~/.cache | grep -v 'wal'))
+
+for i in "${remove_content[@]}"; do
+    rm -rf ~/.cache/"$i"
+done

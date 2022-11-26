@@ -1,0 +1,82 @@
+#!/bin/env bash
+
+#####################################################
+# ______  ___________ _    ____  ___
+# | ___ \/  ___| ___ \ |  | |  \/  |
+# | |_/ /\ `--.| |_/ / |  | | .  . |
+# | ___ \ `--. \  __/| |/\| | |\/| |
+# | |_/ //\__/ / |   \  /\  / |  | |
+# \____/ \____/\_|    \/  \/\_|  |_/
+#
+#####################################################
+THIRD_MONITOR=$(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}')
+
+##############################
+# AUTOSTART
+##############################
+pgrep -x sxhkd >/dev/null || sxhkd &
+
+#POLYBAR
+~/.config/polybar/scripts/launch.sh
+
+##############################
+# MONITORS
+##############################
+bspc monitor eDP -d 11 12 13 14 15
+bspc monitor HDMI-A-0 -d 1 2 3 4 5
+bspc monitor "$THIRD_MONITOR" -d 6 7 8 9 10
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
+
+##############################
+# COLORS
+##############################
+bspc config focused_border_color "#FFA066"
+bspc config normal_border_color "#717C7C"
+bspc config active_border_color "#D27E99"
+
+##############################
+# BSPWM CONFIGURATIONS
+##############################
+bspc config border_width 2
+bspc config borderless_monocle false
+bspc config window_gap 20
+bspc config split_ratio 0.50
+bspc config gapless_monocle true
+bspc config focus_follows_pointer true
+bspc config center_pseudo_tiled true
+bspc config directional_focus_tightness low
+bspc config top_padding 30
+
+##############################
+# WINDOW RULES
+##############################
+bspc rule -r "*"
+bspc rule -a '*' rectangle="1800x1200+0+0" center=true
+bspc rule -a Slack:*:* desktop=10 state=tiled # Make sure to toggle full screen in the application
+bspc rule -a Pacfinder rectangle="1800x1200+0+0" state=floating center=true
+bspc rule -a Timeshift-gtk state=floating rectangle="1000x1000+0+0" center=true
+bspc rule -a feh:feh state=floating rectangle="1800x1200+0+0" center=true
+bspc rule -a Nsxiv:nsxiv state=floating rectangle="1800x1200+0+0" center=true
+bspc rule -a Xfce4-power-manager-settings state=floating center=true
+bspc rule -a Gpick state=floating center=true
+bspc rule -a Pavucontrol state=floating center=true
+bspc rule -a Lxappearance state=floating rectangle="1000x1000+0+0" center=true
+bspc rule -a Wpg state=floating rectangle="1000x1000+0+0" center=true
+bspc rule -a copyq:copyq state=floating rectangle="1000x1000+0+0" center=true
+bspc rule -a Gimp-2.10 state=floating rectangle="1800x1200+0+0" center=true
+bspc rule -a Evince state=floating rectangle="1800x1200+0+0" center=true
+bspc rule -a Nm-connection-editor state=floating rectangle="1800x1200+0+0" center=true
+bspc rule -a Virt-manager state=floating rectangle='1200x1000+0+0' center=true
+bspc rule -a Dconf-editor state=floating rectangle="1200x1000+0+0" center=true
+bspc rule -a SpeedCrunch state=floating rectangle="1060x750+0+0" center=true
+bspc rule -a firefox:Devtools state=floating rectangle="1800x1200+0+0" center=true
+bspc rule -a "polkit-dumb-agent":"polkit-dumb-agent" state=pseudo_tiled rectangle="400x300+0+0" center=true
+bspc rule -a "cataclysm-tiles":"cataclysm-tiles" state=fullscreen
+bspc rule -a "*:*:Open File" state=floating rectangle="1200x800+0+0" center=true
+bspc rule -a "*:*:scpad" state=floating rectangle="1500x750+0+0" sticky=true center=true
+bspc rule -a "*:*:cava" state=floating rectangle="1200x800+1254+300" center=false
+bspc rule -a "*:*:ncmpcpp" state=floating rectangle="1000x500+100+100" center=false
+bspc rule -a "*:*:pipes" state=floating rectangle="1000x500+100+800" center=false
+bspc config external_rules_command "$HOME/.config/bspwm/external_rules"

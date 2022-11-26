@@ -1,0 +1,100 @@
+import:
+  - ~/.config/alacritty/colors/catppuccin-mocha.yml
+
+window:
+  padding:
+    x: 30
+    y: 30
+
+  decorations: full
+  dynamic_padding: true
+  opacity: 0.90
+
+  dynamic_title: true
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 12000
+  multiplier: 5
+  faux_multiplier: 5
+  auto_scroll: true
+  tabspace: 4
+
+font:
+  size: 11.5
+
+  offset:
+    x: 0
+    y: 0
+
+  custom_cursor_colors: false
+  scale_with_dpi: false
+  draw_bold_text_with_bright_colors: false
+
+  normal:
+    # family: Dank Mono
+    # family: Cascursive
+    # family: Gintronic
+    # family: Operator Mono
+    # family: MonoLisa
+    # family: Danum Gothic
+    # family: Fisa Code
+    # family: Lemonade
+    family: Lexsa
+    # family: Macon
+    # family: Recursive
+    # family: The Mix iScript
+  style: Regular
+
+  bold:
+    # family: Dank Mono
+    # family: Cascursive
+    # family: Gintronic
+    # family: Operator Mono
+    family: MonoLisa
+    # family: Danum Gothic
+    # family: Fisa Code
+    # family: Lemonade
+    # family: Lexsa
+    # family: Macon
+    # family: Recursive
+    # family: The Mix iScript
+    style: Black
+
+  italic:
+    # family: Dank Mono
+    family: Cascursive
+    # family: Gintronic
+    # family: Operator Mono
+    # family: MonoLisa
+    # family: Danum Gothic
+    # family: Fisa Code
+    # family: Lemonade
+    # family: Lexsa
+    # family: Macon
+    # family: Recursive
+    # family: The Mix iScript
+    style: Italic
+
+  bold_italic:
+    # family: Dank Mono
+    # family: Cascursive
+    family: Gintronic
+    # family: Operator Mono
+    # family: MonoLisa
+    # family: Danum Gothic
+    # family: Fisa Code
+    # family: Lemonade
+    # family: Lexsa
+    # family: Macon
+    # family: Recursive
+    # family: The Mix iScript
+    style: Bold Italic
+
+cursor:
+  style:
+    shape: Block
+    blinking: On
+    blink_interval: 500

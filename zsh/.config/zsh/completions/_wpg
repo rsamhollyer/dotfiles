@@ -1,0 +1,111 @@
+#compdef wpg
+
+_colorschemes() {
+    local -a colorschemes
+    colorschemes=(`wpg -l`)
+    _describe 'colorschemes' colorschemes
+}
+
+_templates() {
+	local -a templates
+	templates=(`wpg -tl`)
+	_describe 'templates' templates
+}
+
+_backends() {
+    local -a backends
+    backends=(`wpg --backend`)
+    _describe 'backends' backends
+}
+
+_themes() {
+    local -a themes
+    themes=(`wpg --theme`)
+    _describe 'themes' themes
+}
+
+_light_themes() {
+	local -a light_themes
+	light_themes=(`wpg -L --theme`)
+	_describe 'light_themes' light_themes
+}
+
+_wpg() {
+    local state optforcolorschemes
+    # themes
+    optforcolorschemes=(-s -e -d -z -m -A -LA --brt --sat -R)
+    # themes, filenames
+    optvariable=(-i -o)
+    # themes, pywal themes
+    optvariabletheme=(-Ti)
+    # filenames
+    optforgeneric=(--link -a -La -aL -ta -at --update)
+    # templates
+    optfortemplates=(-td -dt)
+    # pywal backends
+    optforbackends=(--backend)
+    # pywal themes
+    optforthemes=(--theme)
+	# pywal light themes
+	optforlightthemes=(-L --light)
+
+    _arguments \
+        '1: :->generic' \
+        '*: :->listcolorschemes'
+
+    case $state in
+        (generic)
+            _gnu_generic
+            ;;
+        (listcolorschemes)
+            if [[ $CURRENT < 5 || ${words[2]} != "-s" ]]; then
+                for opt in $optforcolorschemes; do
+                    if [[ $opt = ${words[2]} ]]; then
+                        _colorschemes
+                    fi
+                done
+                for opt in $optvariable; do
+                    if [[ $opt = ${words[2]} && $CURRENT < 4 ]]; then
+                        _colorschemes
+                    elif [[ $opt = ${words[2]} ]]; then
+                        _gnu_generic
+                    fi
+                done
+                for opt in $optvariabletheme; do
+                    if [[ $opt = ${words[2]} && $CURRENT < 4 ]]; then
+                        _colorschemes
+                    elif [[ $opt = ${words[2]} ]]; then
+                        _themes
+                    fi
+                done
+                for opt in $optforgeneric; do
+                    if [[ $opt = ${words[2]} ]]; then
+                        _gnu_generic
+                    fi
+                done
+                for opt in $optfortemplates; do
+                    if [[ $opt = ${words[2]} ]]; then
+                        _templates
+                    fi
+                done
+                for opt in $optforbackends; do
+                    if [[ $opt = ${words[2]} ]]; then
+                        _backends
+                    fi
+                done
+                for opt in $optforthemes; do
+                    if [[ $opt = ${words[2]} ]]; then
+                        _themes
+                    fi
+                done
+				for opt in $optforlightthemes; do
+					if [[ $opt = ${words[2]} && "--theme" = ${words[3]} ]]; then
+						_light_themes
+					fi
+				done
+			fi
+			;;
+	esac
+}
+
+_wpg "$@"

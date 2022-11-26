@@ -1,0 +1,40 @@
+! Mineshaft theme
+
+! Special
+*.foreground:   #f8f8f2
+*.background:   #2b2b2b
+*.cursorColor:  #f8f8f2
+
+! Black
+*.color0:       #2b2b2b
+*.color8:       #d4d0ab
+
+! Red
+*.color1:       #ffa07a
+*.color9:       #ffa07a
+
+! Green
+*.color2:       #abe338
+*.color10:      #abe338
+
+! Yellow
+*.color3:       #ffd700
+*.color11:      #ffd700
+
+! Blue
+*.color4:       #00e0e0
+*.color12:      #00e0e0
+
+! Magenta
+*.color5:       #dcc6e0
+*.color13:      #e3aaa2
+
+! Cyan
+*.color6:       #00e0e0
+*.color14:      #00e0e0
+
+! White
+*.color7:       #f8f8f2
+*.color15:      #f8f8f2
+
+! Mineshaft theme ends

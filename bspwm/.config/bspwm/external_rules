@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+wid=$1
+class=$2
+instance=$3
+title=$(xdotool getwindowname "$wid")
+# Associative Array https://linuxhint.com/associative_array_bash/
+
+small_screen="state=floating rectangle='400*400+0+0' center=true"
+
+declare -A title_arr=(
+    ["Confirm to replace files"]=1
+    ["File Operation Progress"]=1
+    ["Terminator Preferences"]=1
+    ["Choose Terminal Text Color"]=1
+    ["Choose Palette Color"]=1
+)
+
+if [[ "$class" == "Terminator" || "$class" == "Thunar" || "$instance" == "Terminator" || "$instance" == "Thunar" ]]; then
+    [[ -z "$title" ]] && echo "$small_screen"
+fi
+
+[[ -n "${title_arr[$title]}" || "$title" == "Rename"* ]] && echo "$small_screen"

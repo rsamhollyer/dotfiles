@@ -1,0 +1,14 @@
+{
+	"auths": {
+		"https://index.docker.io/v1/": {
+			"auth": "cnNhbWhvbGx5ZXI6YmFja2JvbmUgaG91ciBBRkZJQU5DRQ=="
+		}
+	},
+	"configFormat": "table {{.ID}}\t{{.Name}}\t{{.CreatedAt}}\t{{.UpdatedAt}}",
+	"psFormat": "table {{.ID}}\\t{{.Image}}\\t{{.Status}}\\t{{.Names}}",
+	"imagesFormat": "table {{.ID}}\\t{{.Repository}}\\t{{.Tag}}\\t{{.CreatedSince}}\\t{{.Size}}",
+	"networksFormat": "table {{.ID}}\t{{.Name}}\t{{.Driver}}\t{{.Scope}}",
+	"nodesFormat": "table {{.ID}} {{if .Self}}*{{else}} {{end}}\t{{.Hostname}}\t{{.Status}}\t{{.Availability}}\t{{.ManagerStatus}}",
+	"volumesFormat": "table {{.Driver}}\t{{.Name}}",
+	"servicesFormat": "table {{.ID}}\t{{.Name}}\t{{.Mode}}\t{{.Replicas}}\t{{.Image}}\t{{.Ports}}"
+}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=simple terminal
+Comment=simple-terminal emulator for X
+Icon=st
+Exec=tabbed -r 2 st -w ''
+Categories=System;TerminalEmulator
+StartupWMClass=st-256color

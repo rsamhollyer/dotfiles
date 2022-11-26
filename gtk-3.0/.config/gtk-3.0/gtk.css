@@ -1,0 +1,83 @@
+/* better readability */
+menu separator {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+popover.background separator.horizontal {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+treeview {
+  padding: 2px;
+  -GtkTreeView-horizontal-separator: 5;
+}
+
+.dim-label,
+.titlebar.subtitle {
+  opacity: 0.8;
+}
+
+progressbar.horizontal trough,
+progressbar.horizontal progress {
+  min-height: 8px;
+}
+
+progressbar.vertical trough,
+progressbar.vertical progress {
+  min-width: 8px;
+}
+
+levelbar trough {
+  min-height: 7px;
+}
+
+/* custom changes */
+filechooser #pathbarbox {
+  background: none;
+}
+
+toolbutton button {
+  -gtk-icon-style: symbolic;
+}
+
+/* dialogs */
+* {
+  -GtkDialog-action-area-border: 5;
+}
+
+messagedialog {
+  -GtkDialog-action-area-border: 0;
+  -GtkWidget-window-dragging: true;
+}
+
+messagedialog .dialog-action-area button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+messagedialog .titlebar .title {
+  margin-top: 1px;
+  opacity: 0.7;
+}
+
+messagedialog .titlebar {
+  min-height: 0;
+}
+
+messagedialog .dialog-vbox {
+  margin-top: 11px;
+}
+
+/* sync with GTK4 */
+.titlebar > .right,
+.titlebar > headerbar > .right {
+  margin-left: -6px;
+}
+
+VteTerminal,
+TerminalScreen,
+vte-terminal {
+  padding: 40px 40px 40px 40px;
+}

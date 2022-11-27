@@ -53,15 +53,6 @@ hyper + {_,shift + }e
 hyper + {Return,KP_Enter}
       ~/.local/bin/bspwm_scpad;
 
-# CLIPMENU https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofiRQQR
-{hyper,super} + comma
-    CM_LAUNCHER=rofi clipmenu \
-        -location 1 \
-        -m -3 \
-        -no-show-icons \
-        -theme-str '* \{ font: 12px; \}' \
-        -theme-str 'listview \{ spacing: 0; \}' \
-        -theme-str 'window \{ width: 20em; \}'
 ## BTOP
 {super,hyper} + semicolon
     tdrop -am -w 70% -h 75% -x 15% -y 13% xfce4-terminal --title=BTOP --role=BTOP -x btop;
@@ -94,6 +85,9 @@ hyper + d
 hyper + f
     $FILE_MANAGER;
 
+hyper + r
+    ~/.local/bin/bspwm_scpad_ranger;
+
 # XKEYCAPS
 super + x
     /usr/bin/xkeycaps;
@@ -118,6 +112,17 @@ hyper + F2
 # Alacritty Color Picker
 hyper + F3
     sh ~/.local/bin/alacritty_color.sh
+
+
+# CLIPMENU https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofiRQQR
+{hyper,super} + comma
+    CM_LAUNCHER=rofi clipmenu \
+        -location 1 \
+        -m -3 \
+        -no-show-icons \
+        -theme-str '* \{ font: 12px; \}' \
+        -theme-str 'listview \{ spacing: 0; \}' \
+        -theme-str 'window \{ width: 20em; \}'
 
 # WINDOW MANAGEMENT
 hyper + {z,x,c,v}

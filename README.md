@@ -13,3 +13,7 @@ Currently, this only supports BSPWM. When time allows, I'll be able to test and 
 ### Cava + NCMPCPP + Pipes.sh
 
 ![media](.github/assets/Media.png)
+
+## LunarVim ScratchPad
+
+![lvim](.github/assets/Lunarvim.png)

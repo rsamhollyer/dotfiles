@@ -10,9 +10,6 @@
 hyper + shift + {Return,KP_Enter}
     alacritty --class cava,cava -t cava -e cava & alacritty --class ncmcpp,ncmcpp -t ncmpcpp -e ncmpcpp & alacritty --class pipes,pipes -t pipes -e pipes.sh
 
-# hyper + ctrl + {Return,KP_Enter}
-#     alacritty -t ncmpcpp -e ncmpcpp;
-
 # MANULLY TILE
 ctrl + hyper + {a,s,z,w}
     bspc node -p {west,east,south,north}
@@ -54,7 +51,7 @@ hyper + {_,shift + }e
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}
-      ~/.local/bin/scpad;
+      ~/.local/bin/bspwm_scpad;
 
 # CLIPMENU https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofiRQQR
 {hyper,super} + comma
@@ -91,7 +88,7 @@ super + a
 
 # NVIM
 hyper + d
-    tdrop -am alacritty --class="NVIM" --title="nvim" -e "/home/sam/.local/bin/lvim";
+    ~/.local/bin/bspwm_scpad_nvim;
 
 # FILE MANAGER
 hyper + f

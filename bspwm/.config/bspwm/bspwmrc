@@ -47,7 +47,8 @@ bspc config gapless_monocle true
 bspc config focus_follows_pointer true
 bspc config center_pseudo_tiled true
 bspc config directional_focus_tightness low
-bspc config top_padding 30
+# Padding ideally should match your polybar height value
+bspc config top_padding 35
 
 ##############################
 # WINDOW RULES
@@ -75,7 +76,7 @@ bspc rule -a firefox:Devtools state=floating rectangle="1800x1200+0+0" center=tr
 bspc rule -a "polkit-dumb-agent":"polkit-dumb-agent" state=pseudo_tiled rectangle="400x300+0+0" center=true
 bspc rule -a "cataclysm-tiles":"cataclysm-tiles" state=fullscreen
 bspc rule -a "*:*:Open File" state=floating rectangle="1200x800+0+0" center=true
-bspc rule -a "*:*:scpad" state=floating rectangle="1500x750+0+0" sticky=true center=true
+bspc rule -a "*:*:bspwm_scpad" state=floating rectangle="1500x750+0+0" sticky=true center=true
 bspc rule -a "*:*:cava" state=floating rectangle="1200x800+1254+300" center=false
 bspc rule -a "*:*:ncmpcpp" state=floating rectangle="1000x500+100+100" center=false
 bspc rule -a "*:*:pipes" state=floating rectangle="1000x500+100+800" center=false

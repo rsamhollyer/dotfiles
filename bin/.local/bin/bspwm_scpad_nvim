@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# Created By: Jake@Linux
+# Created On: Sat 03 Sep 2022 03:56:04 PM CDT
+# Project: bspwm scratchpad
+
+# This is a BSPWM specific scratchpad for Neovim
+
+winclass=$(xdotool search --class bspwm_nvim)
+
+if
+    [ -z "$winclass" ]
+then
+    winclass=$(xdotool search --role bspwm_nvim)
+fi
+
+if [ -z "$winclass" ]; then
+    alacritty --class bspwm_nvim,bspwm_nvim -t bspwm_nvim -e "/home/sam/.local/bin/lvim" &
+else
+    if [ ! -f /tmp/bspwm_nvim ]; then
+        touch /tmp/bspwm_nvim && xdo hide "$winclass"
+    elif [ -f /tmp/bspwm_nvim ]; then
+        rm /tmp/bspwm_nvim && xdo show "$winclass"
+    fi
+fi

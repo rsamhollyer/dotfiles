@@ -2,10 +2,14 @@
 
 Currently, this only supports BSPWM. When time allows, I'll be able to test and configure DWM.
 
-## Desktop
-
-![desktop](.github/assets/Empty_Desktop.png)
-
-## Polybar
+### Polybar
 
 ![bar](.github/assets/Bar.png)
+
+### ScratchPad Alacritty
+
+![scpad](.github/assets/Alacritty.png)
+
+### Cava + NCMPCPP + Pipes.sh
+
+![media](.github/assets/Media.png)

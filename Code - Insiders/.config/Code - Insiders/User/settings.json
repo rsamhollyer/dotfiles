@@ -149,7 +149,7 @@
 		"*": true,
 		"yaml": true,
 		"plaintext": true,
-		"markdown": false
+		"markdown": true
 	},
 	"path-autocomplete.extensionOnImport": true,
 	"git.mergeEditor": true,

@@ -116,7 +116,7 @@ hyper + F1
 
 ## Wifi Menu
 hyper + F2
-    sh /home/sam/.config/rofi/wifi-menu.sh;
+    sh /home/sam/.local/bin/wifimenu;
 
 # Alacritty Color Picker
 hyper + F3

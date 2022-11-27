@@ -1,127 +1,118 @@
 configuration {
-	show-icons:		false;
-	sidebar-mode: 	false;
-	hover-select: true;
-	me-select-entry: "";
-	me-accept-entry: [MousePrimary];
+	font:							"Lexsa 20";
+    show-icons:                     true;
+	icon-theme: 					"Papirus";
+    display-drun: 					"";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+    fullscreen:                     false;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
 }
-*{
-	font: "Danum Gothic 12";			//Font
-	//Colors
-	foreground:#f8f8f2; 				//Text
-	background:#0A1229; 				//Background
-	accent:#00BCD4; 					//Highlight
-	foreground-selection:@foreground; 	//Selection_fg
-	background-selection:#e34039; 		//Selection_bg
 
-	transparent:					#ffffff00;
-	background-color:				@transparent;
-	text-color:						@foreground;
-	selected-normal-foreground:		@foreground-selection;
-	normal-foreground:       		@foreground;
-	alternate-normal-background:	@transparent;
-	selected-urgent-foreground:  	@foreground;
-	urgent-foreground:           	@foreground;
-	alternate-urgent-background: 	@background;
-	active-foreground:           	@accent;
-	selected-active-foreground:  	@background-selection;
-	alternate-normal-foreground: 	@foreground;
-	alternate-active-background: 	@background;
-	bordercolor:                 	@background;
-	normal-background:           	@transparent;
-	selected-normal-background:  	@background-selection;
-	separatorcolor:              	@accent;
-	urgent-background:           	@accent;
-	alternate-urgent-foreground: 	@foreground;
-	selected-urgent-background:  	@accent;
-	alternate-active-foreground: 	@foreground;
-	selected-active-background:  	@transparent;
-	active-background:           	@transparent;
-}
+@import "./colors/tokyonight.rasi"
+
 window {
-	text-color:			@foreground;
-	background-color:	@background;
-	border-radius: 		6px;
-	padding: 			10;
+    transparency:                   "real";
+    background-color:               @background;
+    text-color:                     @foreground;
+	border:							0px 0px 0px 0px;
+	border-color:					@active;
+    border-radius:                  0px;
+	width:							600px;
+    location:                       center;
+    x-offset:                       0;
+    y-offset:                       0;
 }
-mainbox {
-	border:		0;
-	padding: 	0;
+
+prompt {
+    enabled: 						true;
+	padding: 						6px 7px 4px 7px;
+	background-color: 				@background-alt;
+	text-color: 					@foreground;
 }
-textbox {
-	text-color: @foreground;
+
+textbox-prompt-colon {
+	padding: 						6px 7px 4px 7px;
+	background-color: 				@active;
+	text-color: 					@foreground;
+	expand: false;
+	str: "";
+	font:							"Lexsa 20";
 }
-listview {
-	spacing:		4px;
-	dynamic:		true;
-	fixed-height:	false;
-	border:			0;
-	scrollbar:		false;
-	text-color:		@separatorcolor;
-}
-element {
-	border:			0;
-	padding:		0;
-	border-radius:	4px;
-}
-element-text {
-	background-color: inherit;
-	text-color:       inherit;
-}
-element.normal.normal {
-	text-color:			@normal-foreground;
-	background-color:	@normal-background;
-}
-element.normal.urgent {
-	text-color:			@urgent-foreground;
-	background-color:	@urgent-background;
-}
-element.normal.active {
-	text-color:			@active-foreground;
-	background-color:	@active-background;
-}
-element.selected.normal {
-	text-color:			@selected-normal-foreground;
-	background-color:	@selected-normal-background;
-}
-element.selected.urgent {
-	text-color:			@selected-urgent-foreground;
-	background-color:	@selected-urgent-background;
-}
-element.selected.active {
-	text-color:			@selected-active-foreground;
-	background-color:	@selected-active-background;
-}
-element.alternate.normal {
-	text-color:			@alternate-normal-foreground;
-	background-color:	@alternate-normal-background;
-}
-element.alternate.urgent {
-	text-color:			@alternate-urgent-foreground;
-	background-color:	@alternate-urgent-background;
-}
-element.alternate.active {
-	text-color:			@alternate-active-foreground;
-	background-color:	@alternate-active-background;
-}
-mode-switcher {
-	border:	0;
-}
-button selected {
-	text-color:			@selected-normal-foreground;
-	background-color:	@selected-normal-background;
-}
-button normal {
-	text-color:	@foreground;
-}
-inputbar {
-	children: [textbox-prompt-colon,entry];
-}
-textbox-prompt-colon{
-	expand:	false;
-	margin: 0;
-	str:	":";
-}
+
 entry {
-	placeholder:	"";
+    background-color:               @background;
+    text-color:                     @foreground;
+    placeholder-color:              @foreground;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Search...";
+	padding: 						6px;
+    blink:                          true;
+}
+
+inputbar {
+	children: 						[ textbox-prompt-colon, prompt ];
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    expand:                         false;
+	border:							0px;
+    border-radius:                  0px;
+	border-color:					@active;
+    margin:                         0px;
+    padding:                        0px;
+}
+
+listview {
+    background-color:               @background;
+    padding:                        0px;
+    columns:                        1;
+    lines:                          8;
+    spacing:                        6px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @background;
+	border:							0px;
+    border-radius:                  0px;
+	border-color:					@active;
+    children:                       [ inputbar, listview ];
+    spacing:                       	6px;
+    padding:                        6px;
+}
+
+element {
+    background-color:               @background;
+    text-color:                     @foreground;
+    orientation:                    horizontal;
+    border-radius:                  0px;
+	padding: 						3px 3px 3px -12px;
+}
+
+element-icon {
+    background-color:               transparent;
+    text-color:               		inherit;
+    size:                           24px;
+    border:                         0px;
+}
+
+element-text {
+    background-color:               transparent;
+    text-color:               		inherit;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0.5;
+    margin:                         0px 2.5px 0px 2.5px;
+}
+
+element selected {
+    background-color:               @selected;
+    text-color:                     @foreground;
+	border:							0px 0px 0px 0px;
+    border-radius:                  0px;
+    border-color:                  	@active;
 }

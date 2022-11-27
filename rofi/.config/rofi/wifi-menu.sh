@@ -4,7 +4,7 @@
 #It uses and requires nmcli
 
 get_match() {
-    selection=$(echo -e "$1" | rofi -dmenu -p "$2" -config ~/.dotfiles/rofi/config.rasi)
+    selection=$(echo -e "$1" | rofi -dmenu -p "$2" -config ~/.config/rofi/config.rasi)
     [[ -z "$selection" ]] && exit 1
     does_match_=$(echo -e "$1" | grep "$selection")
     [[ -n "$1" ]] && [[ -z "$does_match_" ]] && exit 1

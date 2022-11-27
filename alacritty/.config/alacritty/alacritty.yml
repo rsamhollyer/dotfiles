@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/colors/catppuccin-mocha.yml
+  - ~/.config/alacritty/colors/tokyonight.yml
 
 window:
   padding:

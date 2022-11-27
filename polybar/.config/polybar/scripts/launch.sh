@@ -4,7 +4,7 @@
 killall -qw polybar
 
 # Wait until the processes have been shutdown
-while pgrep -x polybar >/dev/null; do sleep 1; done
+while pgrep -x polybar >/dev/null; do sleep .25; done
 
 ## Launch
 

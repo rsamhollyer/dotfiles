@@ -80,8 +80,8 @@ bspc rule -a "scratchpad_term:scratchpad_term:scratchpad_term" state=floating re
 bspc rule -a "bspwm_scpad_nvim:bspwm_scpad_nvim:bspwm_scpad_nvim" state=tiled sticky=true
 bspc rule -a "bspwm_scpad_gotop:bspwm_scpad_gotop:bspwm_scpad_gotop" state=floating rectangle="1800x800+0+0" sticky=true center=true
 bspc rule -a "bspwm_scpad_ranger:bspwm_scpad_ranger:bspwm_scpad_ranger" state=floating rectangle="1800x800+0+0" sticky=true center=true
-bspc rule -a "cava:cava:cava" state=floating rectangle="1199x800+1253+300" center=false
-bspc rule -a "ncmpcpp:ncmpcpp:ncmpcpp" state=floating rectangle="1000x500+100+100" center=false
-bspc rule -a "pipes:pipes:pipes" state=floating rectangle="1000x500+100+800" center=false
+bspc rule -a "*:*:cava" state=floating rectangle="1200x800+1200+300" center=false
+bspc rule -a "*:*:ncmpcpp" state=floating rectangle="1000x500+100+100" center=false
+bspc rule -a "*:*:pipes" state=floating rectangle="1000x500+100+800" center=false
 
 bspc config external_rules_command "$HOME/.config/bspwm/external_rules"

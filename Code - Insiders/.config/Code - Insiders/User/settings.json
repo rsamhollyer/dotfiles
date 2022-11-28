@@ -107,7 +107,8 @@
 		"diffEditor.diagonalFill": "#99cbf3",
 		"diffEditor.removedTextBackground": "#da646433",
 		"diffEditor.insertedTextBackground": "#7bd42833",
-		"diffEditor.border": "#ffffff"
+		"diffEditor.border": "#ffffff",
+		"icon.foreground": "#FF9E64"
 	},
 	"explorer.confirmDragAndDrop": false,
 	"workbench.editor.untitled.hint": "hidden",

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Created By: Jake@Linux
+# Created On: Sat 03 Sep 2022 03:56:04 PM CDT
+# Project: bspwm scratchpad
+
+# This is a BSPWM specific scratchpad for a terminal
+
+winclass=$(xdotool search --class scratchpad_term)
+
+if [ -z "$winclass" ]; then
+    alacritty --class scratchpad_term,scratchpad_term -t scratchpad_term
+else
+    if [ ! -f /tmp/scratchpad_term ]; then
+        touch /tmp/scratchpad_term && xdo hide "$winclass"
+    elif [ -f /tmp/scratchpad_term ]; then
+        rm /tmp/scratchpad_term && xdo show "$winclass"
+    fi
+fi

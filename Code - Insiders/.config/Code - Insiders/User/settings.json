@@ -290,7 +290,7 @@
 		"*.react.js": "javascriptreact",
 		"*.jsx": "javascriptreact",
 		"*.tsx": "typescriptreact",
-		"sxhkdrc": "ini",
+		"sxhkdrc": "sxhkdrc",
 		"bspwmrc": "shellscript",
 		"external_rules": "shellscript",
 		"config": "properties",

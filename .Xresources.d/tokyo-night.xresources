@@ -1,12 +1,12 @@
 ! Tokyo Night theme
 
 ! Special
-*.foreground:            #A9B1D6
-*.background:            #1A1B26
+*.background:            #24283B
+*.foreground:            #C0CAF5
 
 ! Black
 *.color0:                #1A1B26
-*.color8:                #4E5173
+*.color8:                #414868
 
 ! Red
 *.color1:                #F7768E
@@ -25,15 +25,15 @@
 *.color12:               #7AA2F7
 
 ! Magenta
-*.color5:                #9A7ECC
-*.color13:               #9A7ECC
+*.color5:                #BB9AF7
+*.color13:               #BB9AF7
 
 ! Cyan
-*.color6:                #4ABAAF
-*.color14:               #4ABAAF
+*.color6:                #7DCFFF
+*.color14:               #7DCFFF
 
 ! White
-*.color7:                #ACB0D0
-*.color15:               #ACB0D0
+*.color7:                #A9B1D6
+*.color15:               #C0CAF5
 
 ! Tokyo Night theme ends

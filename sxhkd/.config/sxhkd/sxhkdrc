@@ -53,11 +53,11 @@ hyper + {_,shift + }e
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}
-      ~/.local/bin/bspwm_scpad_term;
+      ~/.local/bin/scratchpad_term &
 
 ## BTOP
 hyper + semicolon
-    ~/.local/bin/bspwm_scpad_gotop;
+    ~/.local/bin/bspwm_scpad_gotop &
 
 ## SPEED CRUNCH (Calculator)
 hyper + b
@@ -81,14 +81,14 @@ super + a
 
 # NVIM
 hyper + d
-    ~/.local/bin/bspwm_scpad_nvim;
+    ~/.local/bin/bspwm_scpad_nvim &
 
 # FILE MANAGER
 hyper + f
     $FILE_MANAGER;
 
 hyper + r
-    ~/.local/bin/bspwm_scpad_ranger;
+    ~/.local/bin/bspwm_scpad_ranger &
 
 # XKEYCAPS
 super + x

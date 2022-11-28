@@ -76,7 +76,7 @@ bspc rule -a firefox:Devtools state=floating rectangle="1800x1200+0+0" center=tr
 bspc rule -a "polkit-dumb-agent":"polkit-dumb-agent" state=pseudo_tiled rectangle="400x300+0+0" center=true
 bspc rule -a "cataclysm-tiles":"cataclysm-tiles" state=fullscreen
 bspc rule -a "*:*:Open File" state=floating rectangle="1200x800+0+0" center=true
-bspc rule -a "bspwm_scpad_term:bspwm_scpad_term:bspwm_scpad_term" state=floating rectangle="1500x750+0+0" sticky=true center=true
+bspc rule -a "scratchpad_term:scratchpad_term:scratchpad_term" state=floating rectangle="1500x750+0+0" sticky=true center=true
 bspc rule -a "bspwm_scpad_nvim:bspwm_scpad_nvim:bspwm_scpad_nvim" state=tiled sticky=true
 bspc rule -a "bspwm_scpad_gotop:bspwm_scpad_gotop:bspwm_scpad_gotop" state=floating rectangle="1800x800+0+0" sticky=true center=true
 bspc rule -a "bspwm_scpad_ranger:bspwm_scpad_ranger:bspwm_scpad_ranger" state=floating rectangle="1800x800+0+0" sticky=true center=true

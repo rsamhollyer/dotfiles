@@ -8,12 +8,6 @@
 
 winclass=$(xdotool search --class bspwm_scpad_gotop)
 
-if
-    [ -z "$winclass" ]
-then
-    winclass=$(xdotool search --role bspwm_scpad_gotop)
-fi
-
 if [ -z "$winclass" ]; then
     alacritty --class bspwm_scpad_gotop,bspwm_scpad_gotop -t bspwm_scpad_gotop -e gotop &
 else

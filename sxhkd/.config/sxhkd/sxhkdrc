@@ -53,7 +53,7 @@ hyper + {_,shift + }e
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}
-      ~/.local/bin/bspwm_scpad;
+      ~/.local/bin/bspwm_scpad_term;
 
 ## BTOP
 hyper + semicolon

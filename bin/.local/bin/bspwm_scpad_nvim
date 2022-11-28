@@ -8,12 +8,6 @@
 
 winclass=$(xdotool search --class bspwm_nvim)
 
-if
-    [ -z "$winclass" ]
-then
-    winclass=$(xdotool search --role bspwm_nvim)
-fi
-
 if [ -z "$winclass" ]; then
     alacritty --class bspwm_nvim,bspwm_nvim -t bspwm_nvim -e "/home/sam/.local/bin/lvim" &
 else

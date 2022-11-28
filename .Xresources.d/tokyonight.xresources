@@ -36,4 +36,8 @@
 *.color7:                #A9B1D6
 *.color15:               #C0CAF5
 
+! Red
+*.color16:               #FF9E64
+*.color17:               #DB4B4B
+
 ! Tokyo Night theme ends

@@ -8,7 +8,9 @@
 
 # MUSIC & CAVA
 hyper + shift + {Return,KP_Enter}
-    alacritty --class cava,cava -t cava -e cava & alacritty --class ncmcpp,ncmcpp -t ncmpcpp -e ncmpcpp & alacritty --class pipes,pipes -t pipes -e pipes.sh
+    alacritty --class cava,cava -t cava -e cava & \
+    alacritty --class ncmcpp,ncmcpp -t ncmpcpp -e ncmpcpp & \
+    alacritty --class pipes,pipes -t pipes -e pipes.sh
 
 # MANULLY TILE
 ctrl + hyper + {a,s,z,w}
@@ -54,8 +56,8 @@ hyper + {Return,KP_Enter}
       ~/.local/bin/bspwm_scpad;
 
 ## BTOP
-{super,hyper} + semicolon
-    tdrop -am -w 70% -h 75% -x 15% -y 13% xfce4-terminal --title=BTOP --role=BTOP -x btop;
+hyper + semicolon
+    ~/.local/bin/bspwm_scpad_gotop;
 
 ## SPEED CRUNCH (Calculator)
 hyper + b

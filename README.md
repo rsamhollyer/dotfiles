@@ -17,3 +17,11 @@ Currently, this only supports BSPWM. When time allows, I'll be able to test and 
 ## LunarVim ScratchPad
 
 ![lvim](.github/assets/Lunarvim.png)
+
+## VSCode Insiders
+
+![vsci](.github/assets/VSCode.png)
+
+## Gotop
+
+![gotop](.github/assets/Gotop.png)

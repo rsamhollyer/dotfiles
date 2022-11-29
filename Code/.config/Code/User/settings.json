@@ -20,7 +20,14 @@
 				"scope": ["support.function.go"],
 				"settings": {
 					"foreground": "#8EC07C",
-					"fontStyle": "italic bold "
+					"fontStyle": "italic bold"
+				}
+			},
+			{
+				"scope": ["punctuation.definition.comment"],
+				"settings": {
+					"foreground": "#d9f890c7",
+					"fontStyle": "bold"
 				}
 			}
 		]

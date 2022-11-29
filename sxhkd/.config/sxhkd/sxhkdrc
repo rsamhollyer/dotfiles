@@ -77,7 +77,7 @@ super + a
 
 # VS CODE
 {super,hyper} + s
-    code-insiders;
+    code &
 
 # NVIM
 hyper + d

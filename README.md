@@ -18,7 +18,7 @@ Currently, this only supports BSPWM. When time allows, I'll be able to test and 
 
 ![lvim](.github/assets/Lunarvim.png)
 
-## VSCode Insiders
+## VSCode
 
 ![vsci](.github/assets/VSCode.png)
 

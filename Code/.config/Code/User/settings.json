@@ -141,8 +141,7 @@
 	"python.formatting.blackArgs": ["--line-length=90"],
 	"isort.args": ["--profile=black"],
 	"[python]": {
-		"editor.formatOnSave": true,
-		"editor.formatOnType": true
+		"editor.formatOnSave": true
 	},
 	"python.analysis.completeFunctionParens": true,
 	"python.defaultInterpreterPath": "/home/sam/.local/share/pyenv/versions/3.12-dev/bin/python",
@@ -310,7 +309,7 @@
 		"*.service": "properties",
 		".xsettingsd": "ini"
 	},
-	"workbench.colorTheme": "Tokyo Night",
+	"workbench.colorTheme": "Tokyo Night Storm",
 	"githubPullRequests.pullBranch": "never",
 	"go.toolsManagement.autoUpdate": true,
 	"scm.repositories.visible": 0,

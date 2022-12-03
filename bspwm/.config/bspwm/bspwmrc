@@ -10,7 +10,7 @@
 #
 #####################################################
 THIRD_MONITOR=$(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}')
-
+source ~/.Xresources
 ##############################
 # AUTOSTART
 ##############################
@@ -32,9 +32,9 @@ bspc config merge_overlapping_monitors true
 ##############################
 # COLORS
 ##############################
-bspc config focused_border_color "#FFA066"
-bspc config normal_border_color "#717C7C"
-bspc config active_border_color "#D27E99"
+bspc config focused_border_color "#9ECE6A"
+bspc config normal_border_color "#FF9E64"
+bspc config active_border_color "#7DCFFF"
 
 ##############################
 # BSPWM CONFIGURATIONS

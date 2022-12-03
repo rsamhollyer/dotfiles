@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+declare -A colors
+
+while IFS="	    " read -r key value; do
+    printf -v colors["$key"] "%s" "$value"
+    colors[$key]=$value
+done < <(xrdb -query | grep -P "^\*color[0-17]:")
+
+echo "${colors[*]}"

@@ -19,7 +19,6 @@
 			{
 				"scope": ["support.function.go"],
 				"settings": {
-					"foreground": "#8EC07C",
 					"fontStyle": "italic bold"
 				}
 			},
@@ -219,6 +218,9 @@
 	"[toml]": {
 		"editor.defaultFormatter": "be5invis.toml"
 	},
+	"[awk]": {
+		"editor.semanticHighlighting.enabled": true
+	},
 
 	"[jsonc][json][dockercompose]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -236,7 +238,9 @@
 	"[dockerfile]": {
 		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
-
+	"gopls": {
+		"experimentalWorkspaceModule": true
+	},
 	"shellcheck.enableQuickFix": true,
 
 	"yaml.completion": true,

@@ -42,8 +42,8 @@ startup_screen = "playlist"
 
 # PROGRESS BAR
 # ---
-progressbar_look = "━━━"
-#progressbar_look = "▃▃▃"
+# progressbar_look = "━━━"
+progressbar_look = "▃▃▃"
 progressbar_elapsed_color = "5"
 progressbar_color = "black"
 
@@ -74,3 +74,7 @@ song_list_format = " {%t $R   $8%a$8}|{%f $R   $8%l$8} $8"
 song_status_format = "$b$6$7[$8      $7]$6 $2 $7{$8 %b }|{$8 %t }|{$8 %f }$7 $8"
 
 song_window_title_format = "Now Playing .."
+
+# LIBRARY
+# ---
+allow_for_physical_item_deletion = yes

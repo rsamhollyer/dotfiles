@@ -114,7 +114,7 @@
 		"diffEditor.removedTextBackground": "#da646433",
 		"diffEditor.insertedTextBackground": "#7bd42833",
 		"diffEditor.border": "#ffffff",
-		"icon.foreground": "#FF9E64"
+		"icon.foreground": "#FF9E64",
 	},
 	"explorer.confirmDragAndDrop": false,
 	"workbench.editor.untitled.hint": "hidden",
@@ -279,7 +279,6 @@
 	"xml.codeLens.enabled": false,
 	"xml.format.closingBracketNewLine": true,
 	"gitlens.hovers.currentLine.over": "line",
-	"workbench.productIconTheme": "icons-carbon",
 
 	"typescript.preferences.importModuleSpecifier": "relative",
 	"Lua.telemetry.enable": false,
@@ -313,7 +312,7 @@
 		"*.service": "properties",
 		".xsettingsd": "ini"
 	},
-	"workbench.colorTheme": "Tokyo Night Storm",
+	"workbench.colorTheme": "Catppuccin Mocha",
 	"githubPullRequests.pullBranch": "never",
 	"go.toolsManagement.autoUpdate": true,
 	"scm.repositories.visible": 0,

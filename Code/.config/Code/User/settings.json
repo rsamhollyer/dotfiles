@@ -318,5 +318,6 @@
 	"scm.repositories.visible": 0,
 	"tabnine.experimentalAutoImports": true,
 	"cmake.configureOnOpen": false,
-	"window.zoomLevel": 1.25
+	"window.zoomLevel": 1.25,
+	"workbench.productIconTheme": "icons-carbon"
 }

@@ -19,4 +19,8 @@ return require('packer').startup(function(use)
 
 	use('folke/tokyonight.nvim')
 
+	use('theprimeagen/harpoon')
+
+	use('mbbill/undotree')
+
 end)

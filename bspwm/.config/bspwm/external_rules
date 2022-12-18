@@ -14,6 +14,9 @@ declare -A title_arr=(
     ["Terminator Preferences"]=1
     ["Choose Terminal Text Color"]=1
     ["Choose Palette Color"]=1
+    ["Create New Folder"]=1
+    ["Attention"]=1
+    ["New Empty File..."]=1
 )
 
 if [[ "$class" == "Terminator" || "$class" == "Thunar" || "$instance" == "Terminator" || "$instance" == "Thunar" ]]; then

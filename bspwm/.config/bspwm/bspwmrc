@@ -10,7 +10,7 @@
 #
 #####################################################
 THIRD_MONITOR=$(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}')
-source ~/.Xresources
+
 ##############################
 # AUTOSTART
 ##############################

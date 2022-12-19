@@ -71,6 +71,10 @@ hyper + a
 super + shift + s
     deepin-screenshot;
 
+# STEAM
+hyper + super + s
+    /usr/bin/steam &
+
 # SLACK
 super + a
     slack;

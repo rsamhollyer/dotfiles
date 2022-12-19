@@ -98,6 +98,10 @@ hyper + r
 hyper + shift + x
     xkeycaps;
 
+# MUTE
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+
 # ROFI
 ## Menu
 {super,hyper} + space

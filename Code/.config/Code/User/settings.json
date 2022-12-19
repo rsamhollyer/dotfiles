@@ -4,26 +4,37 @@
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
 			{
-				"scope": ["storage.type.js"],
+				"scope": [
+					"storage.type.js"
+				],
 				"settings": {
 					"fontStyle": "italic bold"
 				}
 			},
 			{
-				"scope": ["comment", "comment.block", "comment.block.documentation", "comment.line"],
+				"scope": [
+					"comment",
+					"comment.block",
+					"comment.block.documentation",
+					"comment.line"
+				],
 				"settings": {
 					"fontStyle": "italic bold",
 					"foreground": "#d9f890c7"
 				}
 			},
 			{
-				"scope": ["support.function.go"],
+				"scope": [
+					"support.function.go"
+				],
 				"settings": {
 					"fontStyle": "italic bold"
 				}
 			},
 			{
-				"scope": ["punctuation.definition.comment"],
+				"scope": [
+					"punctuation.definition.comment"
+				],
 				"settings": {
 					"foreground": "#d9f890c7",
 					"fontStyle": "bold"
@@ -31,7 +42,6 @@
 			}
 		]
 	},
-
 	"editor.hover.enabled": true,
 	"editor.linkedEditing": true,
 	"editor.suggestSelection": "first",
@@ -136,9 +146,15 @@
 	"python.linting.enabled": true,
 	"python.formatting.provider": "black",
 	"python.formatting.blackPath": "/home/sam/.local/bin/black",
-	"isort.path": ["/home/sam/.local/bin/isort"],
-	"python.formatting.blackArgs": ["--line-length=90"],
-	"isort.args": ["--profile=black"],
+	"isort.path": [
+		"/home/sam/.local/bin/isort"
+	],
+	"python.formatting.blackArgs": [
+		"--line-length=90"
+	],
+	"isort.args": [
+		"--profile=black"
+	],
 	"[python]": {
 		"editor.formatOnSave": true
 	},
@@ -187,11 +203,9 @@
 		"editor.defaultFormatter": "vscode.html-language-features",
 		"editor.matchBrackets": "always"
 	},
-
 	"[css][scss][less]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
-
 	"css.format.maxPreserveNewLines": 1,
 	"css.format.enable": true,
 	"css.format.newlineBetweenRules": true,
@@ -206,43 +220,35 @@
 	"less.format.newlineBetweenRules": true,
 	"less.format.newlineBetweenSelectors": true,
 	"less.format.spaceAroundSelectorSeparator": true,
-
 	"[php]": {
 		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
 	},
-
 	"intelephense.format.braces": "k&r",
 	"intelephense.format.enable": true,
 	"intelephense.diagnostics.enable": true,
-
 	"[toml]": {
 		"editor.defaultFormatter": "be5invis.toml"
 	},
 	"[awk]": {
 		"editor.semanticHighlighting.enabled": true
 	},
-
 	"[jsonc][json][dockercompose]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-
 	"[yaml][yml]": {
 		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
-
-	"[shellscript]": {
-		"editor.defaultFormatter": "foxundermoon.shell-format",
-		"editor.formatOnSave": true
-	},
-
+	// "[shellscript]": {
+	// 	"editor.defaultFormatter": "foxundermoon.shell-format",
+	// 	"editor.formatOnSave": false
+	// },
 	"[dockerfile]": {
 		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
 	"gopls": {
 		"experimentalWorkspaceModule": true
 	},
-	"shellcheck.enableQuickFix": true,
-
+	"shellcheck.enableQuickFix": false,
 	"yaml.completion": true,
 	"yaml.format.bracketSpacing": true,
 	"yaml.format.printWidth": 100,
@@ -250,15 +256,6 @@
 	"yaml.format.enable": true,
 	"yaml.hover": true,
 	"yaml.validate": true,
-	"prettier.arrowParens": "avoid",
-	"prettier.useTabs": true,
-	"prettier.tabWidth": 2,
-	"prettier.trailingComma": "all",
-	"prettier.embeddedLanguageFormatting": "auto",
-	"prettier.proseWrap": "always",
-	"prettier.bracketSpacing": true,
-	"prettier.printWidth": 100,
-	"prettier.withNodeModules": false,
 	"html.format.enable": true,
 	"html.format.templating": true,
 	"html.autoClosingTags": true,
@@ -279,7 +276,6 @@
 	"xml.codeLens.enabled": false,
 	"xml.format.closingBracketNewLine": true,
 	"gitlens.hovers.currentLine.over": "line",
-
 	"typescript.preferences.importModuleSpecifier": "relative",
 	"Lua.telemetry.enable": false,
 	"telemetry.telemetryLevel": "all",
@@ -294,7 +290,9 @@
 		"rgba(144,66,73,0.1)",
 		"rgba(102,40,98,0.1)"
 	],
-	"indentRainbow.ignoreErrorLanguages": ["*"],
+	"indentRainbow.ignoreErrorLanguages": [
+		"*"
+	],
 	"files.associations": {
 		"*.html": "html",
 		"*.react.js": "javascriptreact",

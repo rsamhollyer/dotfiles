@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/sam/.gtkrc-2.0.mine"
-gtk-theme-name="Nordic-darker"
-gtk-icon-theme-name="Arc"
+gtk-theme-name="Tokyonight-Dark-B"
+gtk-icon-theme-name="Tokyonight-Light"
 gtk-font-name="Recursive 14"
 gtk-cursor-theme-name="Catppuccin-Latte-Green-Cursors"
 gtk-cursor-theme-size=0

@@ -17,6 +17,7 @@ declare -A title_arr=(
     ["Create New Folder"]=1
     ["Attention"]=1
     ["New Empty File..."]=1
+    ["Empty Trash"]=1
 )
 
 if [[ "$class" == "Terminator" || "$class" == "Thunar" || "$instance" == "Terminator" || "$instance" == "Thunar" ]]; then

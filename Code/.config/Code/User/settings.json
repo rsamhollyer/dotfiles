@@ -238,17 +238,17 @@
 	"[yaml][yml]": {
 		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
-	// "[shellscript]": {
-	// 	"editor.defaultFormatter": "foxundermoon.shell-format",
-	// 	"editor.formatOnSave": false
-	// },
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format",
+		"editor.formatOnSave": true
+	},
 	"[dockerfile]": {
 		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
 	"gopls": {
 		"experimentalWorkspaceModule": true
 	},
-	"shellcheck.enableQuickFix": false,
+	"shellcheck.enableQuickFix": true,
 	"yaml.completion": true,
 	"yaml.format.bracketSpacing": true,
 	"yaml.format.printWidth": 100,

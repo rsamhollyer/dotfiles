@@ -92,6 +92,9 @@
 	"terminal.integrated.lineHeight": 1,
 	"terminal.integrated.gpuAcceleration": "on",
 	"workbench.colorCustomizations": {
+		"scrollbarSlider.background": "#4E5173",
+		"scrollbarSlider.hoverBackground": "#ACB0D0",
+		"scrollbarSlider.activeBackground": "#A9B1D6",
 		"sideBar.border": "#DCFFFF",
 		"sideBar.background": "#33324400",
 		"editorHoverWidget.border": "#c76228",

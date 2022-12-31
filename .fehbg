@@ -1,0 +1,2 @@
+#!/bin/env bash
+ feh --no-fehbg --bg-max /home/sam/.config/wallpapers/cthulaide.png

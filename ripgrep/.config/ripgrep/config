@@ -1,0 +1,36 @@
+## Shamlessly copied from https://github.com/hantaotaohan/dotfiles/blob/master/.ripgreprc
+
+# Exclude directories.
+--glob=!{*.map,.git,node_modules,doc,vendor,pack/minpac,docs/database}
+
+# Exclude file types.
+--glob=!*.{lock}
+
+# Exclude files.
+--glob=!{package-lock.json}
+
+# Don't let ripgrep vomit really long lines to my terminal, and show a preview.
+--max-columns=0
+--max-columns-preview
+
+# Because who cares about case!?
+--smart-case
+
+# I don't like to not see hidden files.
+--hidden
+
+# Follow symbolic links.
+--follow
+
+# Don't respect ignore files (.gitignore, .ignore, etc.).
+--no-ignore
+
+# Sort by file path.
+--sort=path
+
+--heading
+--color=always
+--colors=match:none
+--colors=match:bg:0x33,0x66,0xFF
+--colors=match:fg:red
+--colors=match:style:bold

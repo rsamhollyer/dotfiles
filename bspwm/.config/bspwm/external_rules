@@ -25,3 +25,12 @@ if [[ "$class" == "Terminator" || "$class" == "Thunar" || "$instance" == "Termin
 fi
 
 [[ -n "${title_arr[$title]}" || "$title" == "Rename"* ]] && echo "$small_screen"
+
+[[ "$title" == "Steam" ]] && echo "desktop=7"
+
+[[ "$title" = "Dwarf Fortress" ]] && echo "desktop=8"
+{
+    echo "CLASS: $class"
+    echo "INSTANCE: $instance"
+    echo "TITLE: $title"
+} >>/tmp/external_rules

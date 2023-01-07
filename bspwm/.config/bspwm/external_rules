@@ -26,7 +26,7 @@ fi
 
 [[ -n "${title_arr[$title]}" || "$title" == "Rename"* ]] && echo "$small_screen"
 
-[[ "$title" == "Steam" ]] && echo "desktop=7"
+[[ "$title" == "Steam" || "$title" = "Steam - News" ]] && echo "desktop=7"
 
 [[ "$title" = "Dwarf Fortress" ]] && echo "desktop=8"
 {

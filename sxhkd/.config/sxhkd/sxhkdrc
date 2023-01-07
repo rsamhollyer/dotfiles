@@ -163,7 +163,7 @@ hyper + {Left,Right}
     bspc node -d {prev,next}.local --follow;
 
 # alternate between the tiled and monocle layout
-super + m
+{hyper,super} + m
     bspc desktop -l next;
 
 # set the node flags

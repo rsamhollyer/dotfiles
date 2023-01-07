@@ -40,6 +40,7 @@ bspc config active_border_color "#7DCFFF"
 # BSPWM CONFIGURATIONS
 ##############################
 bspc config border_width 2
+bspc config ignore_ewmh_fullscreen all
 bspc config borderless_monocle false
 bspc config window_gap 20
 bspc config split_ratio 0.50

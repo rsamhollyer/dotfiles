@@ -159,7 +159,8 @@
 		"--profile=black"
 	],
 	"[python]": {
-		"editor.formatOnSave": true
+		"editor.formatOnSave": true,
+		"editor.formatOnType": true
 	},
 	"python.analysis.completeFunctionParens": true,
 	"python.defaultInterpreterPath": "/home/sam/.local/share/pyenv/versions/3.12-dev/bin/python",

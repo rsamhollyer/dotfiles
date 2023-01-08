@@ -98,8 +98,8 @@ hyper + r
 hyper + shift + x
     xkeycaps;
 
-# MUTE
-{XF86AudioMute,XF86AudioPlay}
+# MUTE - NextTime 75 keyboard's knob is mapped to XF86AudioPlay
+{XF86AudioMute,XF86AudioPlay} 
     pactl set-sink-mute 0 toggle
 
 # ROFI

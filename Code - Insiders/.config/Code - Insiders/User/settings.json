@@ -52,7 +52,7 @@
 	"editor.cursorBlinking": "expand",
 	"editor.cursorStyle": "line",
 	"editor.cursorWidth": 3,
-	"editor.cursorSmoothCaretAnimation": true,
+	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.bracketPairColorization.enabled": true,
 	// "editor.fontFamily": "Dank Mono",
 	// "editor.fontFamily": "Gintronic",

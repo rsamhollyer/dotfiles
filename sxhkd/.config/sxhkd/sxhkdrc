@@ -99,7 +99,7 @@ hyper + shift + x
     xkeycaps;
 
 # MUTE
-XF86AudioMute
+{XF86AudioMute,XF86AudioPlay}
     pactl set-sink-mute 0 toggle
 
 # ROFI

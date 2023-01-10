@@ -67,7 +67,7 @@
 	// "editor.fontFamily": "Recursive",
 	// "editor.fontFamily": "The Mix iScript",
 	"editor.fontWeight": "400",
-	"editor.fontSize": 16,
+	"editor.fontSize": 13,
 	"editor.lineHeight": 1.5,
 	"editor.fontLigatures": true,
 	"editor.quickSuggestions": {
@@ -320,6 +320,6 @@
 	"scm.repositories.visible": 0,
 	"tabnine.experimentalAutoImports": true,
 	"cmake.configureOnOpen": false,
-	"window.zoomLevel": 1.25,
-	"workbench.productIconTheme": "icons-carbon"
+	"workbench.productIconTheme": "icons-carbon",
+	"window.zoomLevel": 1.33
 }

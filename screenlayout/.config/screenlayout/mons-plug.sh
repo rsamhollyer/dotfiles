@@ -13,11 +13,11 @@ disconnect_dp
 
 case ${MONS_NUMBER} in
 3)
-  xrandr --output "$eDP" --off --output HDMI-A-0 --primary --mode 2560x1440 --rate 143.86 --pos 0x0 --rotate normal --output "$DP" --mode 2560x1440 --pos 2560x0 --rotate normal
+  xrandr --output "$eDP" --off --output "$HDMI" --primary --mode 2560x1440 --rate 143.86 --pos 0x0 --rotate normal --output "$DP" --mode 2560x1440 --pos 2560x0 --rotate normal
 
   ;;
 2)
-  xrandr --output "$eDP" --mode 1920x1080 --pos 0x0 --output HDMI-A-0 --primary --mode 2560x1440 --rate 143.86 --pos 1920x0 --rotate normal
+  xrandr --output "$eDP" --mode 1920x1080 --pos 0x0 --output "$HDMI" --primary --mode 2560x1440 --rate 143.86 --pos 1920x0 --rotate normal
 
   ;;
 
@@ -31,5 +31,4 @@ esac
 pgrep -x sxhkd >/dev/null || sxhkd &
 ~/.fehbg &
 bspc wm -r
-# [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exit 0

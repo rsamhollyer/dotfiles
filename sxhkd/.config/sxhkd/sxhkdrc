@@ -102,6 +102,10 @@ hyper + shift + x
 {XF86AudioMute,XF86AudioPlay} 
     pactl set-sink-mute 0 toggle
 
+# PAVUCONTROL
+{hyper,super} + p
+    pavucontrol;
+
 # ROFI
 ## Menu
 {super,hyper} + space

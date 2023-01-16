@@ -7,20 +7,22 @@ xrdb -load ~/.Xresources
 # shellcheck source=/dev/null
 [[ -f ~/.config/zsh/.zprofile ]] && source ~/.config/zsh/.zprofile
 
-/usr/bin/dunst &
-/usr/bin/xfce4-power-manager &
-/usr/bin/xmousepasteblock &
-/usr/bin/numlockx &
-/usr/bin/polkit-dumb-agent &
-/usr/bin/mons -a -x ~/.config/screenlayout/mons-plug.sh &
-pgrep -x sxhkd >/dev/null || sxhkd &
-pgrep -x redshift >/dev/null || redshift -P -c ~/.config/redshift.conf &
+sh ~/.local/bin/bspwm_start
 
-pkill picom
-while pgrep -x picom >/dev/null; do sleep .2; done
-picom &
+# /usr/bin/dunst &
+# /usr/bin/xfce4-power-manager &
+# /usr/bin/xmousepasteblock &
+# /usr/bin/numlockx &
+# /usr/bin/polkit-dumb-agent &
+# /usr/bin/mons -a -x ~/.config/screenlayout/mons-plug.sh &
+# pgrep -x sxhkd >/dev/null || sxhkd &
+# pgrep -x redshift >/dev/null || redshift -P -c ~/.config/redshift.conf &
 
-pgrep -x pipewire >/dev/null || /usr/bin/pipewire &
-pgrep -x pipewire-pulse >/dev/null || /usr/bin/pipewire-pulse &
-pgrep -x wireplumber >/dev/null || /usr/bin/wireplumber &
-clipmenud &
+# pkill picom
+# while pgrep -x picom >/dev/null; do sleep .2; done
+# picom &
+
+# pgrep -x pipewire >/dev/null || /usr/bin/pipewire &
+# pgrep -x pipewire-pulse >/dev/null || /usr/bin/pipewire-pulse &
+# pgrep -x wireplumber >/dev/null || /usr/bin/wireplumber &
+# clipmenud &

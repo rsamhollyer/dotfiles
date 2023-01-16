@@ -95,3 +95,4 @@ bindkey '^[[3;5~' kill-word     # Ctrl + delete
 
 # do not suggest . and .. when doing cd <TAB>
 zstyle ':completion:*' special-dirs false
+eval "$(pyenv virtualenv-init -)"

@@ -67,7 +67,7 @@
 	// "editor.fontFamily": "Recursive",
 	// "editor.fontFamily": "The Mix iScript",
 	"editor.fontWeight": "400",
-	"editor.fontSize": 13,
+	"editor.fontSize": 15,
 	"editor.lineHeight": 1.5,
 	"editor.fontLigatures": true,
 	"editor.quickSuggestions": {
@@ -87,7 +87,7 @@
 	"editor.largeFileOptimizations": false,
 	"editor.minimap.enabled": false,
 	"terminal.integrated.fontFamily": "DankMono Nerd Font",
-	"terminal.integrated.fontSize": 18,
+	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.fontWeightBold": 400,
 	"terminal.integrated.lineHeight": 1,
 	"terminal.integrated.gpuAcceleration": "on",

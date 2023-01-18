@@ -1,4 +1,3 @@
 #!/bin/env bash
 
-df -h --output=avail,pcent | awk 'FNR == 4 {print $1,$2}'
-exit
+df -aH --output=avail,pcent | awk 'FNR == 7 {print $1,$2}'

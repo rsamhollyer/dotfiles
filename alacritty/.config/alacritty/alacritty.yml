@@ -42,8 +42,8 @@ font:
     # family: Danum Gothic
     # family: Fisa Code
     # family: Lemonade
-    family: Lexsa
-    # family: Macon
+    # family: Lexsa
+    family: Macon
     # family: Recursive
     # family: The Mix iScript
   style: Regular
@@ -53,19 +53,19 @@ font:
     # family: Cascursive
     # family: Gintronic
     # family: Operator Mono
-    family: MonoLisa
+    # family: MonoLisa
     # family: Danum Gothic
     # family: Fisa Code
     # family: Lemonade
     # family: Lexsa
-    # family: Macon
+    family: Macon
     # family: Recursive
     # family: The Mix iScript
     style: Black
 
   italic:
-    # family: Dank Mono
-    family: Cascursive
+    family: Dank Mono
+    # family: Cascursive
     # family: Gintronic
     # family: Operator Mono
     # family: MonoLisa

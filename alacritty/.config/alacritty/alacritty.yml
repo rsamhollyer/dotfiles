@@ -8,7 +8,7 @@ window:
 
   decorations: full
   dynamic_padding: true
-  opacity: 0.90
+  opacity: .9
 
   dynamic_title: true
   class:

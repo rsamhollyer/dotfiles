@@ -29,6 +29,9 @@ fi
 [[ "$title" == "Steam" || "$title" = "Steam - News" ]] && echo "desktop=7"
 
 [[ "$title" = "Dwarf Fortress" ]] && echo "desktop=8"
+
+[[ "$title" = "Steam - News" ]] && echo "state=floating"
+
 {
     echo "CLASS: $class"
     echo "INSTANCE: $instance"

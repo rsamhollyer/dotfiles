@@ -31,6 +31,7 @@ fi
 [[ "$title" = "Dwarf Fortress" ]] && echo "desktop=8"
 
 [[ "$title" = "Steam - News" ]] && echo "state=floating"
+[[ "$class" == "Steam" && $title == "Friends List" ]] && echo "state=floating desktop=7 rectangle=700x700+0+0"
 
 {
     echo "CLASS: $class"

@@ -1,8 +1,3 @@
-fd() {
-    preview="git diff $@ --color=always -- {-1}"
-    git diff "$@" --name-only | fzf -m --ansi --previe"w $preview"ew
-}
-
 extract() {
     if [ -f "$1" ]; then
         case $1 in

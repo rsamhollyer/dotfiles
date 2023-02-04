@@ -80,7 +80,7 @@ export PATH
 export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
 autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-$HOST-$ZSH_VERSION"
 
-source $HOME/.config/oh-my-zsh/oh-my-zsh.sh
+source "$HOME"/.config/oh-my-zsh/oh-my-zsh.sh
 
 export ARCHFLAGS="-arch x86_64"
 typeset -aU path
@@ -91,8 +91,30 @@ bindkey '^H' backward-kill-word # Ctrl + backspace
 bindkey '^[[3;5~' kill-word     # Ctrl + delete
 
 # FORGIT
-[[ -f $HOME/.local/forgit/forgit.plugin.zsh ]] && source $HOME/.local/forgit/forgit.plugin.zsh
+[[ -f $HOME/.local/forgit/forgit.plugin.zsh ]] && source "$HOME"/.local/forgit/forgit.plugin.zsh
 
 # do not suggest . and .. when doing cd <TAB>
 zstyle ':completion:*' special-dirs false
 eval "$(pyenv virtualenv-init -)"
+
+extract() {
+    if [ -f "$1" ]; then
+        case $1 in
+        *.tar.bz2) tar xvjf "$1" ;;
+        *.tar.gz) tar xvzf "$1" ;;
+        *.tar.xz) tar xf "$1" ;;
+        *.bz2) bunzip2 "$1" ;;
+        *.rar) unrar x "$1" ;;
+        *.gz) gunzip "$1" ;;
+        *.tar) tar xvf "$1" ;;
+        *.tbz2) tar xvjf "$1" ;;
+        *.tgz) tar xvzf "$1" ;;
+        *.zip) unzip "$1" ;;
+        *.Z) uncompress "$1" ;;
+        *.7z) 7z x "$1" ;;
+        *) echo "don't know how to extract '$1'..." ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}

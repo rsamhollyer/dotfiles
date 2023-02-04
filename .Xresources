@@ -21,4 +21,4 @@ tabbed.selfgcolor:   #d6d8eb
 tabbed.normfgcolor:  #9294a8
 tabbed.normbgcolor:  #353b45
 
-#include "/home/sam/.Xresources.d/tokyo-night.xresources"
+#include "/home/sam/.Xresources.d/tokyonight.xresources"

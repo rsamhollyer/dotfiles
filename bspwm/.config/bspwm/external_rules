@@ -33,6 +33,8 @@ fi
 [[ "$title" = "Steam - News" ]] && echo "state=floating"
 [[ "$class" == "Steam" && $title == "Friends List" ]] && echo "state=floating desktop=7 rectangle=700x700+0+0"
 
+[[ "$title" = "Z:\home\sam\.local\share\Steam\steamapps\common\Dwarf Fortress\Dwarf Fortress.exe" ]] && echo "state=floating desktop=7 rectangle=100x100+0+0"
+
 {
     echo "CLASS: $class"
     echo "INSTANCE: $instance"

@@ -58,6 +58,7 @@ bspc rule -a Evince state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Nm-connection-editor state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Virt-manager state=floating rectangle='1200x1000+0+0' center=true
 bspc rule -a Dconf-editor state=floating rectangle="1200x1000+0+0" center=true
+bspc rule -a 'File-roller' state=floating rectangle="1200x1000+0+0" center=true
 bspc rule -a SpeedCrunch state=floating rectangle="1060x750+0+0" center=true
 bspc rule -a firefox:Devtools state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a "polkit-dumb-agent":"polkit-dumb-agent" state=pseudo_tiled rectangle="400x300+0+0" center=true

@@ -1,11 +1,10 @@
-export ZSH="/home/sam/.config/oh-my-zsh"
+export ZSH="$ZDOTDIR/ohmyzsh"
 
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
 
 zstyle ':omz:update' mode auto # update automatically without asking
 
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
@@ -17,15 +16,12 @@ plugins=(
     docker-compose
     zsh-autosuggestions
     zsh-syntax-highlighting
-    zsh-nvm
-    zsh-pyenv
-    fuzzy-sys
-    fuzzy-kill
     sudo
     pip
     rust
     gcloud
     colored-man-pages
+    pyenv
 )
 
 export HISTFILE="$XDG_STATE_HOME/zsh/zsh-history"
@@ -48,39 +44,26 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt histignorealldups
 
-export NVM_COMPLETION=true
-export NVM_AUTO_USE=true
-
 fpath=($HOME/.config/zsh/completions $fpath)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-# User configuration
-
 export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 eval "$(starship init zsh)"
 
-# FZF
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 
-if [[ -d "$HOME/.local/bin" ]]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# PATH
-# Prepend Path
-path+=($HOME/.config/rofi/applets/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin" "$HOME/.config/composer/vendor/bin" "$HOME/.config/rofi/scripts")
+path+=("$HOME"/.local/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin")
 export PATH
 
 # Place completion dump file (zcompdump) in cache directory using the OMZ variable ZSH_COMPDUMP
 export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$HOST-$ZSH_VERSION"
 autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump-$HOST-$ZSH_VERSION"
 
-source "$HOME"/.config/oh-my-zsh/oh-my-zsh.sh
+source "$ZSH"/oh-my-zsh.sh
 
 export ARCHFLAGS="-arch x86_64"
 typeset -aU path
@@ -90,12 +73,14 @@ bindkey '^ ' autosuggest-accept
 bindkey '^H' backward-kill-word # Ctrl + backspace
 bindkey '^[[3;5~' kill-word     # Ctrl + delete
 
-# FORGIT
-[[ -f $HOME/.local/forgit/forgit.plugin.zsh ]] && source "$HOME"/.local/forgit/forgit.plugin.zsh
-
 # do not suggest . and .. when doing cd <TAB>
 zstyle ':completion:*' special-dirs false
+
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 extract() {
     if [ -f "$1" ]; then

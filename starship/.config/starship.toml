@@ -1,0 +1,110 @@
+command_timeout = 5000
+
+[battery]
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+full_symbol = "🔋 "
+
+[[battery.display]]
+style = "bold red"
+threshold = 30
+
+[cmd_duration]
+format = " [$duration]($style)"
+min_time = 5_000
+
+[directory]
+format = " [$path]($style)[$lock_symbol]($lock_style) "
+read_only = ""
+style = "bold blue"
+truncation_length = 5
+
+[git_branch]
+format = '\[[$symbol$branch]($style)\]'
+style = "bold purple"
+truncation_length = 12
+
+[git_commit]
+commit_hash_length = 8
+style = "bold orange"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\)'
+
+[git_status]
+ahead = "🏎 💨  ${count}"
+behind = "😰  ${count}"
+conflicted = "🏳  ${count}"
+deleted = "🗑  ${count}"
+diverged = "🏎 💨x${ahead_count} 🐢x${behind_count}"
+modified = "📝 ${count}"
+renamed = "👅"
+staged = '[++\($count\)](green)'
+stashed = "📦"
+untracked = "🤷 ${count}"
+up_to_date = "✓"
+
+[hostname]
+disabled = true
+
+[memory_usage]
+format = '\[$symbol[$ram( | $swap)]($style)\]'
+
+[package]
+format = '\[[$symbol$version]($style)\]'
+
+[nodejs]
+format = '\[[$symbol($version)]($style)\]'
+
+[python]
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+
+[ruby]
+format = '\[[$symbol($version)]($style)\]'
+
+[rust]
+format = '\[[$symbol($version)]($style)\]'
+
+[golang]
+format = '\[[$symbol($version)]($style)\]'
+
+[php]
+format = '\[[$symbol($version)]($style)\]'
+
+[scala]
+format = '\[[$symbol($version)]($style)\]'
+
+[nix_shell]
+format = '\[[$symbol$state( \($name\))]($style)\]'
+
+[julia]
+format = '\[[$symbol($version)]($style)\]'
+
+[java]
+format = '\[[$symbol($version)]($style)\]'
+
+[docker_context]
+format = '\[[$symbol$context]($style)\]'
+
+[aws]
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+
+[conda]
+format = '\[[$symbol$environment]($style)\]'
+
+[dart]
+format = '\[[$symbol($version)]($style)\]'
+
+[vagrant]
+format = '\[[$symbol($version)]($style)\]'
+
+[time]
+disabled = true
+format = "$time($style) "
+style = "dimmed green"
+time_format = "%T"
+
+[username]
+disabled = true
+[gcloud]
+disabled = true

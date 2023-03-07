@@ -1,44 +1,30 @@
 #!/bin/env bash
 
-#####################################################
-# ______  ___________ _    ____  ___
-# | ___ \/  ___| ___ \ |  | |  \/  |
-# | |_/ /\ `--.| |_/ / |  | | .  . |
-# | ___ \ `--. \  __/| |/\| | |\/| |
-# | |_/ //\__/ / |   \  /\  / |  | |
-# \____/ \____/\_|    \/  \/\_|  |_/
-#
-#####################################################
-THIRD_MONITOR=$(xrandr -q | grep 'DisplayPort-[0-9] connected' | awk '{print $1}')
-
-##############################
-# AUTOSTART
-##############################
+#############
+# AUTOSTART #
+#############
 pgrep -x sxhkd >/dev/null || sxhkd &
-
-#POLYBAR
 ~/.config/polybar/scripts/launch.sh
 
-##############################
-# MONITORS
-##############################
-bspc monitor eDP -d 11 12 13 14 15
-bspc monitor HDMI-A-0 -d 1 2 3 4 5
-bspc monitor "$THIRD_MONITOR" -d 6 7 8 9 10
+############
+# MONITORS #
+############
+bspc monitor DisplayPort-0 -d 1 2 3 4 5
+bspc monitor DisplayPort-1 -d 6 7 8 9 10
 bspc config remove_disabled_monitors true
-bspc config remove_unplugged_monitors true
-bspc config merge_overlapping_monitors true
+bspc config remove_unplugged_monirots true
+bpsc config merge_overlapping_monitors true
 
-##############################
-# COLORS
-##############################
+##########
+# COLORS #
+##########
 bspc config focused_border_color "#9ECE6A"
 bspc config normal_border_color "#FF9E64"
 bspc config active_border_color "#7DCFFF"
 
-##############################
-# BSPWM CONFIGURATIONS
-##############################
+###########
+# CONFIGS #
+###########
 bspc config border_width 2
 bspc config ignore_ewmh_fullscreen all
 bspc config borderless_monocle false
@@ -51,9 +37,9 @@ bspc config directional_focus_tightness low
 # Padding ideally should match your polybar height value
 bspc config top_padding 35
 
-##############################
-# WINDOW RULES
-##############################
+#########
+# RULES #
+#########
 bspc rule -r "*"
 bspc rule -a '*' rectangle="1800x1200+0+0" center=true
 bspc rule -a Slack:*:* desktop=10 state=tiled # Make sure to toggle full screen in the application

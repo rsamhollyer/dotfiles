@@ -28,7 +28,7 @@ fi
 
 [[ "$title" == "Steam" || "$title" = "Steam - News" ]] && echo "desktop=7"
 
-[[ "$title" = "Dwarf Fortress" ]] && echo "desktop=8"
+[[ "$title" == "Dwarf Fortress - Steam" ]] && echo "state=tiled desktop=8"
 
 [[ "$title" = "Steam - News" ]] && echo "state=floating"
 [[ "$class" == "Steam" && $title == "Friends List" ]] && echo "state=floating desktop=7 rectangle=700x700+0+0"

@@ -1,5 +1,5 @@
 #!/bin/env bash
-walls_dir=$HOME/.config/wallpapers
+walls_dir=$HOME/Pictures/wallpapers
 prepend_command="feh --no-fehbg --bg-fill"
 
 for file in "$walls_dir"/*; do

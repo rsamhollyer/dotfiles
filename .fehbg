@@ -1,2 +1,2 @@
 #!/bin/env bash
-feh --no-fehbg --bg-max /home/sam/Pictures/wallpapers/tokyo-lady.png
+ feh --no-fehbg --bg-fill /home/sam/Pictures/wallpapers/tokyo-astronauts.png

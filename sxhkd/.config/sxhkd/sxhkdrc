@@ -1,10 +1,131 @@
-#  ______   __     __   ___   ___   ___   ___   ______
-# /_____/\ /__/\ /__/\ /__/\ /__/\ /___/\/__/\ /_____/\
-# \::::_\/_\ \::\\:.\ \\::\ \\  \ \\::.\ \\ \ \\:::_ \ \
-#  \:\/___/\\_\::_\:_\/ \::\/_\ .\ \\:: \/_) \ \\:\ \ \ \
-#   \_::._\:\ _\/__\_\_/\\:: ___::\ \\:. __  ( ( \:\ \ \ \
-#     /____\:\\ \ \ \::\ \\: \ \\::\ \\: \ )  \ \ \:\/.:| |
-#     \_____\/ \_\/  \__\/ \__\/ \::\/ \__\/\__\/  \____/_/
+# RELOAD SXHKD
+{super,hyper} + q
+    pkill -x sxhkd && sxhkd &
+
+# CLOSE AND KILL
+hyper + {_,shift + }w
+    bspc node -{c,k}
+
+# RESTART AND QUIT
+hyper + {_,shift + }e
+    bspc {wm -r,quit};
+
+# BROWSER
+{super,hyper} + a
+	$BROWSER --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end;
+
+# FILE MANAGER
+{super,hyper} + f
+	$FILE_MANAGER;
+
+hyper + r
+    ~/.local/bin/bspwm_scpad_ranger &
+
+# VS CODE
+{super,hyper} + s
+    code-insiders &
+
+# PAVUCONTROL
+{hyper,super} + p
+    pavucontrol;
+
+# STEAM
+hyper + super + s
+    /usr/bin/steam &
+
+# SLACK
+super + z
+    slack;
+
+# NVIM
+hyper + d
+    ~/.local/bin/bspwm_scpad_nvim &
+
+# TERMINAL
+{super,hyper} + apostrophe
+    alacritty;
+
+# SCRATCH PADS
+## Terminal
+hyper + {Return,KP_Enter}
+      ~/.local/bin/scratchpad_term &
+
+## BTOP
+hyper + semicolon
+    ~/.local/bin/bspwm_scpad_gotop &
+
+# LEFT MONITOR
+super + {_,shift + }{1-5}
+    bspc {desktop -f,node -d} {1-5} --follow;
+
+# RIGHT MONITOR
+hyper + {_,shift + }{1-5}
+    bspc {desktop -f,node -d} {6-9,10} --follow;
+
+# MOVE TO NEXT DESKTOP
+hyper + {Left,Right}
+    bspc node -d {prev,next}.local --follow;
+
+# MANULLY TILE
+ctrl + hyper + {a,s,z,w}
+    bspc node -p {west,east,south,north}
+
+# WINDOW MANAGEMENT
+hyper + {z,x,c,v}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen};
+
+# alternate between the tiled and monocle layout
+{hyper,super} + m
+    bspc desktop -l next;
+
+# focus the next/previous window in the current desktop
+super + alt + {_,shift + }c
+    bspc node -f {next,prev}.local.!hidden.window;
+
+# focus the next/previous desktop in the current monitor
+hyper + bracket{left,right}
+    bspc desktop -f {prev,next}.local;
+
+# focus the last node/desktop
+super + {grave,Tab}
+    bspc {node,desktop} -f last;
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+    bspc node -g {marked,locked,sticky,private};
+
+# MOVE AND RESIZE
+# Resize a Node Window
+# - Horizontal Shrink, Vertical Grow, Vertical Shrink, Horizontal Grow
+hyper + {h,j,k,l}
+    {bspc node -z right -20 0;bspc node -z left +20 0, \
+    bspc node -z top 0 -20; \
+    bspc node -z bottom 0 +20, \
+    bspc node -z top 0 +20; \
+    bspc node -z bottom 0 -20, \
+    bspc node -z right +20 0; \
+    bspc node -z left -20 0}    
+
+# move a floating window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0};
+
+# VOLUME
+# Change volume
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%;
+
+# Change volume
+super + {k,j}
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%;
+
+# Change volume, chunky
+super + shift + {k,j}
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}10%;
+
+# MUTE - NextTime 75 keyboard's knob is mapped to XF86AudioPlay
+{XF86AudioMute,XF86AudioPlay} 
+    pactl set-sink-mute 0 toggle
 
 # MUSIC & CAVA
 hyper + shift + {Return,KP_Enter}
@@ -23,88 +144,6 @@ hyper + slash
 # Rotate tree
 super + shift + {d,a}
     bspc node @/ -C {forward,backward}
-
-# GENERATE PASSWORD https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#generate-a-random-password-to-clipboard
-super + r ; g ; p
-    tr -dc "a-zA-Z0-9_#@.-" < /dev/urandom | head -c 14 | xclip -selection clipboard
-
-# SWITCH DISPLAYS
-super + shift + m
-    bash $HOME/.local/bin/docked
-
-# RELOAD SXHKD
-{super,hyper} + q
-    pkill -x sxhkd && sxhkd & \
-    dunstify 'sxhkd reloaded'
-
-# CLOSE AND KILL
-hyper + {_,shift + }w
-    bspc node -{c,k}
-
-# RESTART AND QUIT
-hyper + {_,shift + }e
-    bspc {wm -r,quit}; \
-    dunstify 'bspc reloaded'
-
-# TERMINAL
-{super,hyper} + apostrophe
-    alacritty;
-
-# SCRATCH PADS
-## Terminal
-hyper + {Return,KP_Enter}
-      ~/.local/bin/scratchpad_term &
-
-## BTOP
-hyper + semicolon
-    ~/.local/bin/bspwm_scpad_gotop &
-
-## SPEED CRUNCH (Calculator)
-hyper + b
-    tdrop -am -w 25% -h 25% -x 37% -y 37% speedcrunch
-
-# BROWSER
-hyper + a
-    $BROWSER --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end;
-
-# SCROT
-super + shift + s
-    deepin-screenshot;
-
-# STEAM
-hyper + super + s
-    /usr/bin/steam &
-
-# SLACK
-super + a
-    slack;
-
-# VS CODE
-{super,hyper} + s
-    code-insiders &
-
-# NVIM
-hyper + d
-    ~/.local/bin/bspwm_scpad_nvim &
-
-# FILE MANAGER
-hyper + f
-    $FILE_MANAGER;
-
-hyper + r
-    ~/.local/bin/bspwm_scpad_ranger &
-
-# XKEYCAPS
-hyper + shift + x
-    xkeycaps;
-
-# MUTE - NextTime 75 keyboard's knob is mapped to XF86AudioPlay
-{XF86AudioMute,XF86AudioPlay} 
-    pactl set-sink-mute 0 toggle
-
-# PAVUCONTROL
-{hyper,super} + p
-    pavucontrol;
 
 # ROFI
 ## Menu
@@ -126,88 +165,3 @@ hyper + F2
 # Alacritty Color Picker
 hyper + F3
     sh ~/.local/bin/alacritty_color.sh
-
-
-# CLIPMENU https://my-take-on.tech/2020/07/03/some-tricks-for-sxhkd-and-bspwm/#access-clipmenu-via-rofiRQQR
-{hyper,super} + comma
-    CM_LAUNCHER=rofi clipmenu \
-        -location 1 \
-        -m -3 \
-        -no-show-icons \
-        -theme-str '* \{ font: 12px; \}' \
-        -theme-str 'listview \{ spacing: 0; \}' \
-        -theme-str 'window \{ width: 20em; \}'
-
-# WINDOW MANAGEMENT
-hyper + {z,x,c,v}
-    bspc node -t {tiled,pseudo_tiled,floating,fullscreen};
-
-# focus the next/previous window in the current desktop
-super + alt + {_,shift + }c
-    bspc node -f {next,prev}.local.!hidden.window;
-
-# focus the next/previous desktop in the current monitor
-hyper + bracket{left,right}
-    bspc desktop -f {prev,next}.local;
-
-# focus the last node/desktop
-super + {grave,Tab}
-    bspc {node,desktop} -f last;
-
-# LEFT MONITOR
-super + {_,shift + }{1-5}
-    bspc {desktop -f,node -d} {1-5} --follow;
-
-# RIGHT MONITOR
-hyper + {_,shift + }{1-5}
-    bspc {desktop -f,node -d} {6-9,10} --follow;
-
-# MOVE TO NEXT DESKTOP
-hyper + {Left,Right}
-    bspc node -d {prev,next}.local --follow;
-
-# alternate between the tiled and monocle layout
-{hyper,super} + m
-    bspc desktop -l next;
-
-# set the node flags
-super + ctrl + {m,x,y,z}
-    bspc node -g {marked,locked,sticky,private};
-
-# MOVE AND RESIZE
-# Resize a Node Window
-# - Horizontal Shrink, Vertical Grow, Vertical Shrink, Horizontal Grow
-hyper + {h,j,k,l}
-    {bspc node -z right -20 0;bspc node -z left +20 0, \
-    bspc node -z top 0 -20; \
-    bspc node -z bottom 0 +20, \
-    bspc node -z top 0 +20; \
-    bspc node -z bottom 0 -20, \
-    bspc node -z right +20 0; \
-    bspc node -z left -20 0}
-
-
-# move a floating window
-super + {Left,Down,Up,Right}
-    bspc node -v {-20 0,0 20,0 -20,20 0};
-
-# BRIGHTNESS
-
-XF86MonBrightnessUp
-    xbacklight -inc 10;
-
-XF86MonBrightnessDown
-    xbacklight -dec 10;
-
-# VOLUME
-# Change volume
-XF86Audio{Raise,Lower}Volume
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%;
-
-# Change volume
-super + {k,j}
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%;
-
-# Change volume, chunky
-super + shift + {k,j}
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}10%;

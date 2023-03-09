@@ -50,7 +50,7 @@ bspc rule -a Nsxiv:nsxiv state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Xfce4-power-manager-settings state=floating center=true
 bspc rule -a Gpick state=floating center=true
 bspc rule -a Pavucontrol state=floating center=true
-bspc rule -a Lxappearance state=floating rectangle="1000x1000+0+0" center=true
+bspc rule -a Lxappearance state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Wpg state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a copyq:copyq state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a Gimp-2.10 state=floating rectangle="1800x1200+0+0" center=true
@@ -66,8 +66,8 @@ bspc rule -a "cataclysm-tiles":"cataclysm-tiles" state=fullscreen
 bspc rule -a "*:*:Open File" state=floating rectangle="1200x800+0+0" center=true
 bspc rule -a "scratchpad_term:scratchpad_term:scratchpad_term" state=floating rectangle="2000x1000+0+0" sticky=true center=true
 bspc rule -a "bspwm_scpad_nvim:bspwm_scpad_nvim:bspwm_scpad_nvim" state=tiled sticky=true
-bspc rule -a "bspwm_scpad_gotop:bspwm_scpad_gotop:bspwm_scpad_gotop" state=floating rectangle="1800x1000+0+0" sticky=true center=true
-bspc rule -a "bspwm_scpad_ranger:bspwm_scpad_ranger:bspwm_scpad_ranger" state=floating rectangle="1800x800+0+0" sticky=true center=true
+bspc rule -a "bspwm_scpad_gotop:bspwm_scpad_gotop:bspwm_scpad_gotop" state=floating rectangle="2000x1400+0+0" sticky=true center=true
+bspc rule -a "bspwm_scpad_ranger:bspwm_scpad_ranger:bspwm_scpad_ranger" state=floating rectangle="2000x1000+0+0" sticky=true center=true
 bspc rule -a "*:*:cava" state=floating rectangle="1200x800+1200+300" center=false
 bspc rule -a "*:*:ncmpcpp" state=floating rectangle="1000x500+100+100" center=false
 bspc rule -a "*:*:pipes" state=floating rectangle="1000x500+100+800" center=false

@@ -322,5 +322,6 @@
 	"tabnine.experimentalAutoImports": true,
 	"cmake.configureOnOpen": false,
 	"workbench.productIconTheme": "icons-carbon",
-	"window.zoomLevel": 1.33
+	"window.zoomLevel": 1.33,
+	"tabnine.receiveBetaChannelUpdates": true
 }

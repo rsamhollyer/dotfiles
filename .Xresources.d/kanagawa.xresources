@@ -1,8 +1,8 @@
 ! Kanagawa theme
 
 ! Special
-*.foreground:       #DCD7BA
 *.background:       #1F1F28
+*.foreground:       #DCD7BA
 
 ! Black
 *.color0:           #090618

@@ -315,7 +315,7 @@
 		"*.service": "properties",
 		".xsettingsd": "ini"
 	},
-	"workbench.colorTheme": "Tokyo Night Gogh",
+	"workbench.colorTheme": "Catppuccin Mocha",
 	"githubPullRequests.pullBranch": "never",
 	"go.toolsManagement.autoUpdate": true,
 	"scm.repositories.visible": 0,

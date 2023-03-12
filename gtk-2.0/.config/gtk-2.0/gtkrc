@@ -1,6 +1,6 @@
-gtk-theme-name="Tokyonight-Storm-B"
-gtk-icon-theme-name="Tokyonight-Moon"
-gtk-font-name="Recursive Mono Casual Static Bold 16"
+gtk-theme-name="Catppuccin-Macchiato-B-LB"
+gtk-icon-theme-name="Catppuccin-Mocha"
+gtk-font-name="Recursive Mono Casual Static Bold 15"
 gtk-cursor-theme-name="Catppuccin-Latte-Peach-Cursors"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH

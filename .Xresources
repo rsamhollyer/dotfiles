@@ -8,7 +8,7 @@ Xft.lcdfilter: lcddefault
 ! window padding
 st.borderpx: 25
 
-Xcursor.theme: Catppuccin-Latte-Green-Cursors
+Xcursor.theme: Catppuccin-Latte-Peach-Cursors
 Xcursor.size: 0
 
 st.font: Recursive:size=16:style:antialias=true

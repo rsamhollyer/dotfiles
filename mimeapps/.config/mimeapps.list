@@ -12,6 +12,7 @@ text/plain=-insiders.desktop
 image/png=nsxiv.desktop
 image/jpg=nsxiv.desktop
 image/jpeg=nsxiv.desktop
+application/pdf=masterpdfeditor5.desktop
 
 [Added Associations]
 application/x-shellscript=-insiders.desktop
@@ -23,7 +24,7 @@ image/jpg=nsxiv.desktop
 image/jpeg=nsxiv.desktop
 x-scheme-handler/http=vivaldi-stable.desktop
 x-scheme-handler/https=vivaldi-stable.desktop
-application/pdf=masterpdfeditor4.desktop
+application/pdf=masterpdfeditor5.desktop
 application/x-executable=-insiders.desktop
 application/xml=-insiders.desktop
 application/json=-insiders.desktop

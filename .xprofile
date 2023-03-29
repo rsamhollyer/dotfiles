@@ -2,6 +2,8 @@
 xrdb -load ~/.Xresources
 xrdb -merge ~/.Xresources
 
+xrandr --output DisplayPort-0 --primary --mode 2560x1440 --rate 164.83 --output DisplayPort-1 --mode 2560x1440 --rate 164.83
+
 [[ -f ~/.config/zsh/.zshenv ]] && source ~/.config/zsh/.zshenv
 
 sxhkd &
@@ -12,7 +14,7 @@ dunst &
 
 /usr/bin/numlockx &
 /usr/bin/polkit-dumb-agent &
-
+redshift -Pc ~/.config/redshift.conf &
 pgrep -x redshift >/dev/null || redshift -P -c ~/.config/redshift.conf &
 pgrep -x pipewire >/dev/null || /usr/bin/pipewire &
 pgrep -x pipewire-pulse >/dev/null || /usr/bin/pipewire-pulse &

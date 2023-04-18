@@ -190,7 +190,7 @@
 		"editor.semanticHighlighting.enabled": true,
 		"editor.formatOnSave": true
 	},
-	"rust-analyzer.checkOnSave.command": "clippy",
+	"rust-analyzer.checkOnSave": true,
 	"rust-analyzer.trace.server": "verbose",
 	"rust-analyzer.cargo.autoreload": true,
 	"rust-analyzer.completion.autoimport.enable": true,
@@ -239,7 +239,7 @@
 		"editor.semanticHighlighting.enabled": true
 	},
 	"[jsonc][json][dockercompose]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
+		"editor.defaultFormatter": "vscode.json-language-features",
 	},
 	"[yaml][yml]": {
 		"editor.defaultFormatter": "redhat.vscode-yaml"
@@ -323,5 +323,6 @@
 	"cmake.configureOnOpen": false,
 	"workbench.productIconTheme": "icons-carbon",
 	"window.zoomLevel": 1.33,
-	"tabnine.receiveBetaChannelUpdates": true
+	"tabnine.receiveBetaChannelUpdates": true,
+	"git.openRepositoryInParentFolders": "never"
 }

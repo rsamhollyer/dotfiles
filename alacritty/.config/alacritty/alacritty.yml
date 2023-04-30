@@ -35,7 +35,9 @@ font:
 
   normal:
     # family: Dank Mono
-    family: Cascursive
+    # family: Maple Mono
+    family: ComicMono NF
+    # family: Cascursive
     # family: Gintronic
     # family: Operator Mono
     # family: MonoLisa

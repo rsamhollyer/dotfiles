@@ -47,6 +47,7 @@ bspc rule -a Pacfinder rectangle="1800x1200+0+0" state=floating center=true
 bspc rule -a Timeshift-gtk state=floating rectangle="1000x1000+0+0" center=true
 bspc rule -a feh:feh state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Nsxiv:nsxiv state=floating rectangle="1800x1200+0+0" center=true
+bspc rule -a Qalculate-gtk:qalculate-gtk state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a Xfce4-power-manager-settings state=floating center=true
 bspc rule -a Gpick state=floating center=true
 bspc rule -a Pavucontrol state=floating center=true

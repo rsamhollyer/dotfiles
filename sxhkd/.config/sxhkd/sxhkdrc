@@ -45,6 +45,10 @@ hyper + d
 {super,hyper} + apostrophe
     alacritty;
 
+# CALCULATOR
+super + c
+    qalculate-gtk;
+
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}

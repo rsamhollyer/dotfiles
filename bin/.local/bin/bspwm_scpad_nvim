@@ -9,7 +9,7 @@
 winclass=$(xdotool search --class bspwm_nvim)
 
 if [ -z "$winclass" ]; then
-    alacritty --class bspwm_nvim,bspwm_nvim -t bspwm_nvim -e "/home/sam/.local/bin/nvim" &
+    alacritty --class bspwm_nvim,bspwm_nvim -t bspwm_nvim -e "/home/sam/.local/bin/lvim" &
 else
     if [ ! -f /tmp/bspwm_nvim ]; then
         touch /tmp/bspwm_nvim && xdo hide "$winclass"

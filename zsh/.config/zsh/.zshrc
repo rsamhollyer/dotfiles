@@ -47,7 +47,7 @@ fpath=($HOME/.config/zsh/completions $fpath)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 export MANPATH="/usr/local/man:$MANPATH"
-
+export MANPAGER='lvim +Man!'
 export LANG=en_US.UTF-8
 
 eval "$(starship init zsh)"

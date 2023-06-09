@@ -8,7 +8,7 @@ xrandr --output DisplayPort-0 --primary --mode 2560x1440 --rate 164.83 --output 
 xfce4-power-manager &
 sxhkd &
 dunst &
-/usr/bin/picom &
+/usr/bin/picom --unredir-if-possible &
 
 [[ -f ~/.fehbg ]] && ~/.fehbg &
 
@@ -16,6 +16,6 @@ dunst &
 /usr/bin/polkit-dumb-agent &
 redshift -Pc ~/.config/redshift.conf &
 pgrep -x redshift >/dev/null || redshift -P -c ~/.config/redshift.conf &
-pgrep -x pipewire >/dev/null || /usr/bin/pipewire &
-pgrep -x pipewire-pulse >/dev/null || /usr/bin/pipewire-pulse &
-pgrep -x wireplumber >/dev/null || /usr/bin/wireplumber &
+# pgrep -x pipewire >/dev/null || /usr/bin/pipewire &
+# pgrep -x pipewire-pulse >/dev/null || /usr/bin/pipewire-pulse &
+# pgrep -x wireplumber >/dev/null || /usr/bin/wireplumber &

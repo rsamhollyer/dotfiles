@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+APPLICATIONS_PATH="$HOME/.local/programs"
+CODE_PATH="$APPLICATIONS_PATH/VSCode-linux-x64"
+PRODUCT_JSON="$CODE_PATH/resources/app/product.json"
+[ -f "$PRODUCT_JSON" ] && VERSION=$(cat "$PRODUCT_JSON" | jq -r '.commit') || VERSION="latest"
+UPDATE_URL="https://update.code.visualstudio.com/api/update/linux-x64/insider/$VERSION"
+
+echo "Fetching $UPDATE_URL..."
+UPDATE_RESPONSE_FILE=$(mktemp)
+UPDATE_RESPONSE_CODE=$(curl --silent --output "$UPDATE_RESPONSE_FILE" --write-out "%{http_code}" "$UPDATE_URL")
+
+if [ "$UPDATE_RESPONSE_CODE" -ne 200 ]; then
+    echo "Got $UPDATE_RESPONSE_CODE from server, update not available"
+    exit 0
+fi
+
+UPDATE_RESPONSE=$(cat "$UPDATE_RESPONSE_FILE")
+rm "$UPDATE_RESPONSE_FILE"
+
+AVAILABLE_PRODUCT_VERSION=$(echo "$UPDATE_RESPONSE" | jq -r '.productVersion')
+HASH=$(echo "$UPDATE_RESPONSE" | jq -r '.sha256hash')
+DOWNLOAD_URL=$(echo "$UPDATE_RESPONSE" | jq -r '.url')
+
+echo "Found update: $AVAILABLE_PRODUCT_VERSION"
+echo "Downloading $DOWNLOAD_URL..."
+DOWNLOAD_PATH=$(mktemp)
+curl "$DOWNLOAD_URL" --output "$DOWNLOAD_PATH"
+
+echo "Downloaded to $DOWNLOAD_PATH"
+echo -n "Hash check: "
+echo "$HASH  $DOWNLOAD_PATH" | sha256sum -c
+
+echo "Removing old version..."
+rm -rf "$CODE_PATH"
+
+echo "Extracting to $CODE_PATH..."
+mkdir -p "$CODE_PATH"
+tar xzf "$DOWNLOAD_PATH" -C "$CODE_PATH" --strip 1
+rm "$DOWNLOAD_PATH"

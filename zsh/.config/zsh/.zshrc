@@ -55,7 +55,7 @@ eval "$(starship init zsh)"
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 
-path+=("$HOME"/.local/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin")
+path+=("$HOME"/.local/bin "$CARGO_HOME/bin" "$XDG_DATA_HOME/bin" /usr/local/go/bin "$GOPATH/bin" "$HOME/.local/programs/VSCode-linux-x64/bin")
 export PATH
 
 # Place completion dump file (zcompdump) in cache directory using the OMZ variable ZSH_COMPDUMP

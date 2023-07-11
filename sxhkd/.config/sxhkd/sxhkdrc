@@ -23,7 +23,7 @@ hyper + r
 
 # VS CODE
 {super,hyper} + s
-    code-insiders &
+    ~/.local/programs/VSCode-linux-x64/bin/code-insiders &
 
 # PAVUCONTROL
 {hyper,super} + p

@@ -74,5 +74,6 @@ bspc rule -a "*:*:ncmpcpp" state=floating rectangle="1000x500+100+100" center=fa
 bspc rule -a "*:*:pipes" state=floating rectangle="1000x500+100+800" center=false
 bspc rule -a "dosbox-staging" state=tiled desktop=8
 bspc rule -a "ck3:ck3" state=tiled desktop=8
+bspc rule -a "stellaris:stellaris" state=fullscreen desktop=8
 
 bspc config external_rules_command "$HOME/.config/bspwm/external_rules"

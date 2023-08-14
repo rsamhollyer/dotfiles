@@ -12,7 +12,7 @@ hyper + {_,shift + }e
 
 # BROWSER
 {super,hyper} + a
-	$BROWSER --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end;
+	$BROWSER --enable-features=VaapiVideoDecoder --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end;
 
 # FILE MANAGER
 {super,hyper} + f

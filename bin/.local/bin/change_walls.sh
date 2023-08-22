@@ -15,7 +15,7 @@ if [[ -z ${choice} ]]; then
 else
     # Else, set that wallpaper theme
     printf "#!/bin/env bash\n%s $prepend_command $walls_dir/$choice" >~/.fehbg
-    picom --experimental-backends -b &
+    picom &
     ~/.fehbg &
     pkill -USR1 -x sxhkd
 fi

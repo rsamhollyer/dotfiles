@@ -24,7 +24,9 @@ if [[ "$class" == "Thunar" || "$instance" == "Thunar" ]]; then
     [[ -z "$title" ]] && echo "$small_screen"
 fi
 
-[[ -n "${title_arr[$title]}" || "$title" == "Rename"* ]] && echo "$small_screen"
+if [[ -n "$title" ]]; then
+    [[ -n "${title_arr[$title]}" || "$title" == "Rename"* ]] && echo "$small_screen"
+fi
 
 [[ "$title" == "Steam" || "$title" = "Steam - News" ]] && echo "desktop=7"
 

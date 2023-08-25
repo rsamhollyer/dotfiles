@@ -67,7 +67,7 @@ bspc rule -a "cataclysm-tiles":"cataclysm-tiles" state=fullscreen
 bspc rule -a "*:*:Open File" state=floating rectangle="1200x800+0+0" center=true
 bspc rule -a "scratchpad_term:scratchpad_term:scratchpad_term" state=floating rectangle="2300x1000+0+0" sticky=true center=true
 bspc rule -a "bspwm_scpad_nvim:bspwm_scpad_nvim:bspwm_scpad_nvim" state=tiled sticky=true
-bspc rule -a "bspwm_scpad_gotop:bspwm_scpad_gotop:bspwm_scpad_gotop" state=floating rectangle="2300x1300+0+0" sticky=true center=true
+bspc rule -a "bspwm_scpad_btop:bspwm_scpad_btop:bspwm_scpad_btop" state=floating rectangle="2300x1300+0+0" sticky=true center=true
 bspc rule -a "bspwm_scpad_ranger:bspwm_scpad_ranger:bspwm_scpad_ranger" state=floating rectangle="2300x1000+0+0" sticky=true center=true
 bspc rule -a "*:*:cava" state=floating rectangle="1200x800+1200+300" center=false
 bspc rule -a "*:*:ncmpcpp" state=floating rectangle="1000x500+100+100" center=false

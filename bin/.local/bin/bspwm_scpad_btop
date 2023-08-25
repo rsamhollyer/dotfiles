@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Created By: Jake@Linux
+# Created On: Sat 03 Sep 2022 03:56:04 PM CDT
+# Project: bspwm scratchpad
+
+winclass=$(xdotool search --class bspwm_scpad_btop)
+
+if [ -z "$winclass" ]; then
+    alacritty --class bspwm_scpad_btop,bspwm_scpad_btop -t bspwm_scpad_btop -e btop &
+else
+    if [ ! -f /tmp/bspwm_scpad_btop ]; then
+        touch /tmp/bspwm_scpad_btop && xdo hide "$winclass"
+    elif [ -f /tmp/bspwm_scpad_btop ]; then
+        rm /tmp/bspwm_scpad_btop && xdo show "$winclass"
+    fi
+fi

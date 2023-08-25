@@ -56,7 +56,7 @@ hyper + {Return,KP_Enter}
 
 ## BTOP
 hyper + semicolon
-    ~/.local/bin/bspwm_scpad_gotop &
+    ~/.local/bin/bspwm_scpad_btop &
 
 # LEFT MONITOR
 super + {_,shift + }{1-5}

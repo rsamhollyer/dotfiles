@@ -30,7 +30,7 @@ hyper + r
     pavucontrol;
 
 # STEAM
-hyper + super + s
+hyper + t
     /usr/bin/steam-runtime &
 
 # SLACK

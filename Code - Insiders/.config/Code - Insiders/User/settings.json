@@ -177,10 +177,11 @@
 		"listCount": 20
 	},
 	"github.copilot.enable": {
-		"*": true,
-		"yaml": true,
+		"*": false,
 		"plaintext": true,
-		"markdown": true
+		"markdown": true,
+		"scminput": false,
+		"yaml": true
 	},
 	"path-autocomplete.extensionOnImport": true,
 	"git.mergeEditor": true,
@@ -326,5 +327,7 @@
 	"workbench.productIconTheme": "icons-carbon",
 	"window.zoomLevel": 1.33,
 	"tabnine.receiveBetaChannelUpdates": true,
-	"git.openRepositoryInParentFolders": "never"
+	"git.openRepositoryInParentFolders": "never",
+	"javascript.preferences.importModuleSpecifierEnding": "minimal",
+	"typescript.preferences.importModuleSpecifierEnding": "minimal"
 }

@@ -14,6 +14,9 @@ hyper + {_,shift + }e
 {super,hyper} + a
 	$BROWSER --enable-features=VaapiVideoDecoder --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end;
 
+hyper + {_,shift + }a
+    firefox
+
 # FILE MANAGER
 {super,hyper} + f
 	$FILE_MANAGER;

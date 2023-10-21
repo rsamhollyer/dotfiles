@@ -8,12 +8,12 @@ xrandr --output DisplayPort-0 --primary --mode 2560x1440 --rate 164.83 --output 
 xfce4-power-manager &
 sxhkd &
 dunst &
-/usr/bin/picom &
+picom &
 
 [[ -f ~/.fehbg ]] && ~/.fehbg &
 
-/usr/bin/numlockx &
-/usr/bin/polkit-dumb-agent &
+numlockx &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 redshift -Pc ~/.config/redshift.conf &
 pgrep -x redshift >/dev/null || redshift -P -c ~/.config/redshift.conf &
 # pgrep -x pipewire >/dev/null || /usr/bin/pipewire &

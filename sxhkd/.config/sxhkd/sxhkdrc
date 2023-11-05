@@ -11,11 +11,14 @@ hyper + {_,shift + }e
     bspc {wm -r,quit};
 
 # BROWSER
-{super,hyper} + a
-	$BROWSER --enable-features=VaapiVideoDecoder --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end;
+# {super,hyper} + a
+# 	$BROWSER --enable-features=VaapiVideoDecoder --flag-switches-begin --debug-packed-apps --silent-debugger-extension-api --flag-switches-end;
 
-hyper + {_,shift + }a
-    firefox
+# hyper + {_,shift + }a
+#     firefox
+
+{super,hyper} + a
+    $BROWSER;
 
 # FILE MANAGER
 {super,hyper} + f

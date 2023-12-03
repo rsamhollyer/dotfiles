@@ -40,6 +40,7 @@ bspc config top_padding 35
 #########
 # RULES #
 #########
+# class:instance:title
 bspc rule -r "*"
 bspc rule -a '*' rectangle="1800x1200+0+0" center=true
 bspc rule -a Slack:*:* desktop=10 state=tiled # Make sure to toggle full screen in the application
@@ -75,6 +76,9 @@ bspc rule -a "*:*:pipes" state=floating rectangle="1000x500+100+800" center=fals
 bspc rule -a "steam:steamwebhelper:Steam - Browser" state=floating rectangle="1800x1200+0+0" center=true
 bspc rule -a "dosbox-staging" state=tiled desktop=8
 bspc rule -a "ck3:ck3" state=tiled desktop=8
+bspc rule -a "Project Zomboid:Project Zomboid" state=tiled desktop=8
 bspc rule -a "stellaris:stellaris" state=fullscreen desktop=8
+bspc rule -a "*:*:Sins of a Solar Empire: Rebellion" state=fullscreen desktop=8
+bspc rule -a "*:*:Homeworld Remastered" state=fullscreen desktop=8
 
 bspc config external_rules_command "$HOME/.config/bspwm/external_rules"

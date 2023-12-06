@@ -80,5 +80,6 @@ bspc rule -a "Project Zomboid:Project Zomboid" state=tiled desktop=8
 bspc rule -a "stellaris:stellaris" state=fullscreen desktop=8
 bspc rule -a "*:*:Sins of a Solar Empire: Rebellion" state=fullscreen desktop=8
 bspc rule -a "*:*:Homeworld Remastered" state=fullscreen desktop=8
+bspc rule -a "*:*:Stardock Launcher" state=floating desktop=8
 
 bspc config external_rules_command "$HOME/.config/bspwm/external_rules"

@@ -55,6 +55,10 @@ hyper + d
 super + c
     qalculate-gtk;
 
+# SCROT
+hyper + super + s
+    /usr/bin/flameshot gui;
+
 # SCRATCH PADS
 ## Terminal
 hyper + {Return,KP_Enter}

@@ -42,7 +42,7 @@ bspc config top_padding 35
 #########
 # class:instance:title
 bspc rule -r "*"
-bspc rule -a '*' rectangle="1800x1200+0+0" state=floating center=true
+bspc rule -a '*' rectangle="1800x1200+0+0" center=true
 bspc rule -a Slack:*:* desktop=10 state=tiled # Make sure to toggle full screen in the application
 bspc rule -a Pacfinder rectangle="1800x1200+0+0" state=floating center=true
 bspc rule -a Timeshift-gtk state=floating rectangle="1000x1000+0+0" center=true

@@ -1,0 +1,33 @@
+import = ["/home/sam/.config/alacritty/colors/gruvbox-dark.toml"]
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "ComicMono NF"
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 12000
+multiplier = 5
+
+[window]
+decorations = "full"
+dynamic_padding = true
+dynamic_title = true
+opacity = 0.9
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 30
+y = 30

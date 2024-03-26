@@ -42,7 +42,7 @@ bspc config top_padding 35
 #########
 # class:instance:title
 bspc rule -r "*"
-bspc rule -a '*' rectangle="1800x1200+0+0" center=true
+bspc rule -a '*' center=true
 bspc rule -a Slack:*:* desktop=10 state=tiled # Make sure to toggle full screen in the application
 bspc rule -a Pacfinder rectangle="1800x1200+0+0" state=floating center=true
 bspc rule -a Timeshift-gtk state=floating rectangle="1000x1000+0+0" center=true
@@ -81,5 +81,6 @@ bspc rule -a "stellaris:stellaris" state=fullscreen desktop=8
 bspc rule -a "*:*:Sins of a Solar Empire: Rebellion" state=fullscreen desktop=8
 bspc rule -a "*:*:Homeworld Remastered" state=fullscreen desktop=8
 bspc rule -a "*:*:Stardock Launcher" state=floating desktop=8
+bscpc rule -a "SOS Launcher:SOS Launcher" state=floating desktop=8
 
 bspc config external_rules_command "$HOME/.config/bspwm/external_rules"

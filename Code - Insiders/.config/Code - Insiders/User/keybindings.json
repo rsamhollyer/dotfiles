@@ -441,5 +441,10 @@
 		"key": "shift+alt+left",
 		"command": "-editor.action.smartSelect.shrink",
 		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "-github.copilot.acceptCursorPanelSolution",
+		"when": "github.copilot.activated && github.copilot.panelVisible"
 	}
 ]

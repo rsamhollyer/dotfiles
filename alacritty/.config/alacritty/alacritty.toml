@@ -1,4 +1,4 @@
-import = ["/home/sam/.config/alacritty/colors/gruvbox-dark.toml"]
+import = ["/home/sam/.config/alacritty/colors/tokyonight.toml"]
 
 [cursor.style]
 blinking = "On"

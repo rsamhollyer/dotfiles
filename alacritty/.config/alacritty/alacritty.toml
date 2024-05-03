@@ -1,4 +1,4 @@
-import = ["/home/sam/.config/alacritty/colors/tokyonight.toml"]
+import = ["/home/sam/.config/alacritty/colors/dracula.toml"]
 
 [cursor.style]
 blinking = "On"

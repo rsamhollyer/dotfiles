@@ -22,7 +22,7 @@ multiplier = 5
 decorations = "full"
 dynamic_padding = true
 dynamic_title = true
-opacity = 0.9
+opacity = 0.995
 
 [window.class]
 general = "Alacritty"

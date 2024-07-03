@@ -2,13 +2,13 @@
 xrdb -load ~/.Xresources
 xrdb -merge ~/.Xresources
 
-xrandr --output DisplayPort-0 --primary --mode 2560x1440 --rate 164.83 --output DisplayPort-1 --mode 2560x1440 --rate 164.83
+xrandr --output DisplayPort-0 --primary --mode 2560x1440 --rate 119.88 --output DisplayPort-1 --mode 2560x1440 --rate 119.88
 
 [[ -f ~/.config/zsh/.zshenv ]] && source ~/.config/zsh/.zshenv
 xfce4-power-manager &
 sxhkd &
 dunst &
-picom &
+# picom &
 
 [[ -f ~/.fehbg ]] && ~/.fehbg &
 

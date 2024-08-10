@@ -10,7 +10,6 @@ plugins=(
     git
     wd
     ng
-    ripgrep
     docker
     docker-compose
     zsh-autosuggestions

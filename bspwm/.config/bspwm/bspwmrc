@@ -13,7 +13,7 @@ bspc monitor DisplayPort-0 -d 1 2 3 4 5
 bspc monitor DisplayPort-1 -d 6 7 8 9 10
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
-bpsc config merge_overlapping_monitors true
+# bpsc config merge_overlapping_monitors true
 
 ##########
 # COLORS #
@@ -81,7 +81,7 @@ bspc rule -a "stellaris:stellaris" state=fullscreen desktop=8
 bspc rule -a "*:*:Sins of a Solar Empire: Rebellion" state=fullscreen desktop=8
 bspc rule -a "*:*:Homeworld Remastered" state=fullscreen desktop=8
 bspc rule -a "*:*:Stardock Launcher" state=floating desktop=8
-bscpc rule -a "SOS Launcher:SOS Launcher" state=floating desktop=8
-bscpc rule -a "*:*:UBOAT" desktop=8
+bspc rule -a "SOS Launcher:SOS Launcher" state=floating desktop=8
+bspc rule -a "*:*:UBOAT" desktop=8
 
 bspc config external_rules_command "$HOME/.config/bspwm/external_rules"

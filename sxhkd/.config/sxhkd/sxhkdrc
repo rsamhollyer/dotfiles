@@ -70,11 +70,11 @@ hyper + semicolon
 
 # LEFT MONITOR
 super + {_,shift + }{1-5}
-    bspc {desktop -f,node -d} {1-5} --follow;
+    bspc {desktop -f,node -d} {1-5};
 
 # RIGHT MONITOR
 hyper + {_,shift + }{1-5}
-    bspc {desktop -f,node -d} {6-9,10} --follow;
+    bspc {desktop -f,node -d} {6-9,10};
 
 # MOVE TO NEXT DESKTOP
 hyper + {Left,Right}

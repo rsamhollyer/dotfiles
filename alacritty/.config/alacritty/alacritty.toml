@@ -1,3 +1,4 @@
+[general]
 import = ["/home/sam/.config/alacritty/colors/dracula.toml"]
 
 [cursor.style]

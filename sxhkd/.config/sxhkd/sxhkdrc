@@ -41,7 +41,7 @@ hyper + t
 
 # SLACK
 super + z
-    slack;
+    /usr/bin/slack --gtk-version=3;
 
 # NVIM
 hyper + d

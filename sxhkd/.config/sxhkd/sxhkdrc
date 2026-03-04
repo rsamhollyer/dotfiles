@@ -33,11 +33,11 @@ hyper + r
 
 # PAVUCONTROL
 {hyper,super} + p
-    pavucontrol;
+    /home/sam/.local/bin/toggle-pavucontrol;
 
 # STEAM
 hyper + t
-    /usr/bin/steam-runtime &
+    /usr/bin/steam &
 
 # SLACK
 super + z
@@ -127,11 +127,11 @@ super + {Left,Down,Up,Right}
 # VOLUME
 # Change volume
 XF86Audio{Raise,Lower}Volume
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%;
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1%;
 
 # Change volume
 super + {k,j}
-    pactl set-sink-volume @DEFAULT_SINK@ {+,-}2%;
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}1%;
 
 # Change volume, chunky
 super + shift + {k,j}

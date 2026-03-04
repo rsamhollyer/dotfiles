@@ -83,5 +83,6 @@ bspc rule -a "*:*:Homeworld Remastered" state=fullscreen desktop=8
 bspc rule -a "*:*:Stardock Launcher" state=floating desktop=8
 bspc rule -a "SOS Launcher:SOS Launcher" state=floating desktop=8
 bspc rule -a "*:*:UBOAT" desktop=8
+bspc rule -a "pavucontrol:pavucontrol:*" state=floating
 
 bspc config external_rules_command "$HOME/.config/bspwm/external_rules"

@@ -19,7 +19,6 @@ plugins=(
     rust
     gcloud
     colored-man-pages
-    pyenv
 )
 
 export HISTFILE="$XDG_STATE_HOME/zsh/zsh-history"
@@ -74,10 +73,6 @@ bindkey '^[[3;5~' kill-word     # Ctrl + delete
 # do not suggest . and .. when doing cd <TAB>
 zstyle ':completion:*' special-dirs false
 
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 extract() {
@@ -103,3 +98,5 @@ extract() {
 }
 
 fastfetch
+
+. "$HOME/.local/share/../bin/env"

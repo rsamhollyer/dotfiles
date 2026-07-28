@@ -12,7 +12,6 @@ plugins=(
     ng
     docker
     docker-compose
-    zsh-autosuggestions
     zsh-syntax-highlighting
     sudo
     pip
@@ -29,7 +28,6 @@ export LESSHISTFILE=/dev/null
 HISTSIZE=8000
 SAVEHIST=5000
 
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
 setopt globdots
 
 # remove dups
@@ -100,3 +98,5 @@ extract() {
 fastfetch
 
 . "$HOME/.local/share/../bin/env"
+# Iris Autocomplete
+eval "$(iris init zsh)"

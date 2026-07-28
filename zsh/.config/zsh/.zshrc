@@ -98,5 +98,6 @@ extract() {
 fastfetch
 
 . "$HOME/.local/share/../bin/env"
+
 # Iris Autocomplete
 eval "$(iris init zsh)"

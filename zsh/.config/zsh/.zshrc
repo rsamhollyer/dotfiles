@@ -99,5 +99,4 @@ fastfetch
 
 . "$HOME/.local/share/../bin/env"
 
-# Iris Autocomplete
-eval "$(iris init zsh)"
+eval "$(deja init zsh)"

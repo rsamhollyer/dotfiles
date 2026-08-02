@@ -100,3 +100,4 @@ fastfetch
 . "$HOME/.local/share/../bin/env"
 
 eval "$(deja init zsh)"
+export DEJA_CYCLE_KEY="^W"

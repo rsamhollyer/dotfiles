@@ -78,7 +78,7 @@ hyper + {_,shift + }{1-5}
 
 # MOVE TO NEXT DESKTOP
 hyper + {Left,Right}
-    bspc node -d {prev,next}.local --follow;
+    bspc node -d {prev,next}.local;
 
 # MANULLY TILE
 ctrl + hyper + {a,s,z,w}

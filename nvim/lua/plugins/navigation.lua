@@ -14,7 +14,16 @@ return {
 			{ "<leader>e", "<cmd>Neotree toggle<CR>", desc = "File tree" },
 			{ "<leader>E", "<cmd>Neotree reveal<CR>", desc = "Reveal current file in tree" },
 		},
-		opts = { filesystem = { follow_current_file = { enabled = true } } },
+		opts = {
+			filesystem = {
+				follow_current_file = { enabled = true },
+				filtered_items = {
+					visible = true,
+					hide_dotfiles = false,
+					hide_gitignored = false,
+				},
+			},
+		},
 	},
 
 	-- Fuzzy finder

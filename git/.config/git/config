@@ -90,3 +90,4 @@ get = !git rev-parse --abbrev-ref HEAD
 
 # Shortcut to add, commit and push in one command.
 out = "!f() { git add \"$1\" && git commit -m \"$2\" && git push origin; }; f"
+ac = "!f() { git add -A && git commit -m \"$1\"; }; f"

@@ -3,7 +3,7 @@ name = Sam Hollyer
 email = rsamhollyer@gmail.com
 
 [core]
-editor = lvim
+editor = nvim
 excludesfile = /home/sam/.config/git/.gitignore_global
 pager = delta --line-numbers
 autocrlf = input # Force replacing CRLF line endings with LF

@@ -69,12 +69,23 @@ hyper + semicolon
     ~/.local/bin/bspwm_scpad_btop &
 
 # LEFT MONITOR
-super + {_,shift + }{1-5}
-    bspc {desktop -f,node -d} {1-5} --follow
+# super + {_,shift + }{1-5}
+#     bspc {desktop -f,node -d} {1-5} --follow
+
+super + {1-5}
+    bspc desktop -f {1-5}
+
+super + shift + {1-5}
+    bspc node -d {1-5} --follow
 
 # RIGHT MONITOR
-hyper + {_,shift + }{1-5}
-    bspc {desktop -f,node -d} {6-9,10} --follow
+# hyper + {_,shift + }{1-5}
+#     bspc {desktop -f,node -d} {6-9,10} --follow
+hyper + {1-5}
+    bspc desktop -f {6-9,10}
+
+hyper + shift + {1-5}
+    bspc node -d {6-9,10} --follow
 
 # MOVE TO NEXT DESKTOP
 hyper + {Left,Right}
@@ -147,9 +158,6 @@ hyper + shift + {Return,KP_Enter}
     alacritty --class ncmcpp,ncmcpp -t ncmpcpp -e ncmpcpp & \
     alacritty --class pipes,pipes -t pipes -e pipes.sh
 
-# MANULLY TILE
-ctrl + hyper + {a,s,z,w}
-    bspc node -p {west,east,south,north}
 
 # Show help
 hyper + slash

@@ -57,7 +57,7 @@ super + c
 
 # SCROT
 hyper + super + s
-    /usr/bin/flameshot gui;
+    ksnip -r;
 
 # SCRATCH PADS
 ## Terminal

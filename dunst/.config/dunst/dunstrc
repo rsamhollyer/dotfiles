@@ -45,7 +45,8 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 64
-    icon_theme = "Papirus"
+    enable_recursive_icon_lookup = true
+    icon_theme = "Catppuccin-Mocha,Gruvbox-Dark,Kanagawa,Adwaita"
 
     ### History ###
     sticky_history = yes

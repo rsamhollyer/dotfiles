@@ -2,7 +2,8 @@
 xrdb -load ~/.Xresources
 xrdb -merge ~/.Xresources
 
-xrandr --output DisplayPort-0 --primary --mode 2560x1440 --rate 119.88 --output DisplayPort-1 --mode 2560x1440 --rate 119.88
+# xrandr --output DP-1 --primary --mode 2560x1440 --rate 164.83 --output DP-2 --mode 2560x1440 --rate 164.83
+xrandr --output DP-1 --primary --auto --output DP-2 --mode 2560x1440 --rate 164.83
 
 [[ -f ~/.config/zsh/.zshenv ]] && source ~/.config/zsh/.zshenv
 xfce4-power-manager &
@@ -14,7 +15,6 @@ dunst &
 
 numlockx &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-redshift -Pc ~/.config/redshift.conf &
 pgrep -x redshift >/dev/null || redshift -P -c ~/.config/redshift.conf &
 # pgrep -x pipewire >/dev/null || /usr/bin/pipewire &
 # pgrep -x pipewire-pulse >/dev/null || /usr/bin/pipewire-pulse &

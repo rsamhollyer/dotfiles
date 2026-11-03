@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# To update GloriousEggroll releases https://github.com/gloriouseggroll/proton-ge-custom/releases
+
+set -euo pipefail
+
+API="https://api.github.com/repos/GloriousEggroll/proton-ge-custom/releases/latest"
+DEST="$HOME/.steam/root/compatibilitytools.d"
+
+mkdir -p "$DEST"
+release=$(curl -fsSL "$API")
+
+tar_url=$(jq -r '.assets[] | select(.name | endswith("x86_64.tar.gz")) | .browser_download_url' <<<"$release")
+
+sum_url=$(jq -r '.assets[] | select(.name | endswith("x86_64.sha512sum")) | .browser_download_url' <<<"$release")
+
+if [[ -z $tar_url || -z $sum_url ]]; then
+    echo "Could not find x86_64 files in the latest release." >&2
+    exit 1
+fi
+
+tar_name=${tar_url##*/}
+name=${tar_name%.tar.gz}
+
+if [[ -d $DEST/$name ]]; then
+    echo "Already up to date: $name"
+    exit 0
+fi
+
+tmp=$(mktemp -d -p "$DEST" .gep-update.XXXXXX)
+trap 'rm -rf -- "$tmp"' EXIT
+
+echo "Downloading $name..."
+curl -fL --progress-bar -o "$tmp/$tar_name" "$tar_url"
+curl -fsSL -o "$tmp/$name.sha512sum" "$sum_url"
+
+echo "Verifying checksum..."
+(cd "$tmp" && sha512sum -c --quiet "$name.sha512sum")
+
+echo "Unpacking..."
+mkdir "$tmp/unpacked"
+tar -xzf "$tmp/$tar_name" -C "$tmp/unpacked"
+
+if [[ ! -f $tmp/unpacked/$name/compatibilitytool.vdf ]]; then
+    echo "Unexpected archive layout: no $name/compatibilitytool.vdf" >&2
+    exit 1
+fi
+
+mv "$tmp/unpacked/$name" "$DEST/$name"
+echo "Installed $name. Restart Steam, then select it under Settings > Compatibility."

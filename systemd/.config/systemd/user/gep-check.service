@@ -1,0 +1,6 @@
+[Unit]
+Description=Check for a new GE-Proton release
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/gep-check

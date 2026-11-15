@@ -20,6 +20,10 @@ hyper + {_,shift + }e
 {super,hyper} + a
     $BROWSER;
 
+# CHROME (work)
+{super,hyper} + g
+    flatpak run com.google.Chrome &
+
 # FILE MANAGER
 {super,hyper} + f
 	$FILE_MANAGER;

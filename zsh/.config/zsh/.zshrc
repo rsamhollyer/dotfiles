@@ -6,12 +6,16 @@ zstyle ':omz:update' mode auto # update automatically without asking
 
 COMPLETION_WAITING_DOTS="true"
 
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
 plugins=(
     git
     wd
     ng
     docker
     docker-compose
+    zsh-autosuggestions
     zsh-syntax-highlighting
     sudo
     pip
@@ -98,11 +102,3 @@ extract() {
 fastfetch
 
 . "$HOME/.local/share/../bin/env"
-
-eval "$(deja init zsh)"
-export DEJA_CYCLE_KEY="^W"
-if [[ -r "$HOME/.local/share/deja/init.zsh" ]]; then
-  source "$HOME/.local/share/deja/init.zsh"
-else
-  eval "$(deja init zsh)"
-fi

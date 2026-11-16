@@ -102,3 +102,14 @@ extract() {
 fastfetch
 
 . "$HOME/.local/share/../bin/env"
+
+# Separate Claude Code profile for work (own login, settings, memory, history)
+alias claude-work='CLAUDE_CONFIG_DIR="$HOME/.claude-work" claude'
+alias ar-auth='npm_config_registry=https://registry.npmjs.org npx --yes google-artifactregistry-auth --credential-config="$HOME/.config/npm/npmrc"'
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/sam/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sam/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/sam/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sam/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="$HOME/.local/share/npm/bin:$PATH"
